@@ -10,7 +10,7 @@ const WhySection = () => {
 				}
 				title={"Personalized Service"}
 				text={
-					"At Health Services FL, we start each relationship with a conversation. Our advisors get to know you and your health care needs, and then recommend the best plan for you."
+					"At Lea Insurance, we start each relationship with a conversation. Our advisors get to know you and your health care needs, and then recommend the best plan for you."
 				}
 			/>
 			<WhyCard
@@ -20,7 +20,7 @@ const WhySection = () => {
 				}
 				title={"Peace of Mind"}
 				text={
-					"You can have peace of mind knowing that Health Services FL will be there for you throughout all stages of life. Whether you're starting a family, or making a move, our advisors can help you adjust your plan as needed."
+					"You can have peace of mind knowing that Lea Insurance will be there for you throughout all stages of life. Whether you're starting a family, or making a move, our advisors can help you adjust your plan as needed."
 				}
 			/>
 			<WhyCard
@@ -30,7 +30,7 @@ const WhySection = () => {
 				}
 				title={"The Right Amount of Protection"}
 				text={
-					"Our advisors will work with you to make sure you always have the right amount of protection. With Health Services FL you can be sure that you're getting the best coverage and best price available."
+					"Our advisors will work with you to make sure you always have the right amount of protection. With Lea Insurance you can be sure that you're getting the best coverage and best price available."
 				}
 			/>
 		</section>
