@@ -22,7 +22,7 @@ const MedicareContent = () => {
 					</div>
 				</Tab.List>
 				<Tab.Panels className="flex h-full w-full p-4 sm:col-span-8 md:p-8 lg:col-span-9">
-					<span className="mr-8 hidden border border-purple border-opacity-50 sm:flex" />
+					<span className="mr-8 hidden border border-blue-800 border-opacity-50 sm:flex" />
 					<MedicareOverview />
 					<MedicareEligibility />
 					<MedicareOriginal />

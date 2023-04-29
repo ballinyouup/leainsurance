@@ -18,10 +18,10 @@ const TextSection = () => {
 					}}
 					className="flex w-full max-w-xl flex-col items-start justify-center gap-4 p-5 sm:flex-row sm:items-center sm:p-2"
 				>
-					<span className="w-40 text-start text-4xl font-bold uppercase text-purple sm:text-end">
+					<span className="w-40 text-start text-4xl font-bold uppercase text-blue-800 sm:text-end">
 						Why Choose Us
 					</span>
-					<span className="w-full border-[1.5px] border-purple sm:h-28 sm:w-fit" />
+					<span className="w-full border-[1.5px] border-blue-800 sm:h-28 sm:w-fit" />
 					<span>
 						Our plans not only offer comprehensive coverage for routine checkups
 						and major medical procedures but our agents also provide

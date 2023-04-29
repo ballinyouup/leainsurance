@@ -4,7 +4,9 @@ import FuneralSources from "./FuneralSources";
 const FuneralBenefits = () => {
 	return (
 		<Tab.Panel className="flex flex-col gap-4 text-lg">
-			<div className="pb-2 text-4xl font-bold sm:text-5xl">Benefits</div>
+			<div className="pb-2 text-4xl font-bold uppercase sm:text-5xl">
+				Benefits
+			</div>
 			<span>
 				The amount of funeral assistance you can receive depends on several
 				factors, such as:
