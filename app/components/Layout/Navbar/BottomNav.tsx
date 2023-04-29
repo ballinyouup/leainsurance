@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const BottomNav = () => {
 	return (
-		<div className="flex h-16 w-full flex-row items-center justify-between bg-blue-800 px-4 py-10">
+		<div className="flex h-16 w-full flex-row items-center justify-between bg-black px-4 py-10">
 			<Logo />
 			<div className="hidden w-fit gap-2 sm:flex">
 				<Button clear>

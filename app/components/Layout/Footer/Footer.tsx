@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 const Footer = () => {
 	return (
 		<footer
-			className={`flex w-full items-center justify-center bg-blue-900 p-6 text-lg text-white sm:p-12 ${inter.className}`}
+			className={`flex w-full items-center justify-center bg-black p-6 text-lg text-white sm:p-12 ${inter.className}`}
 		>
 			<InsuranceBlock />
 			<PoliciesBlock />
