@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
 	try {
 		const body: Form = await request.json();
 		const response = await fetch(
-			`https://api.airtable.com/v0/appX7LJE3epl1urmY/Users`,
+			`https://api.airtable.com/v0/appU4K0xQACnmxMg9/Users`,
 			{
 				headers: {
 					Authorization: `Bearer ${process.env.AIRTABLE_API_KEY as string}`,
