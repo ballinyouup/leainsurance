@@ -23,6 +23,7 @@ module.exports = {
         bubblegum: '#ff77e9',
         bermuda: '#78dcca',
         bluePrimary: "rgb(0,22,55)",
+        tealPrimary: "rgb(0,104,102)"
       },
       width: {
         "120": "30rem",

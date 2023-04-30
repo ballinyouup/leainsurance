@@ -43,7 +43,7 @@ const HomeCard: React.FC<IHomeCard> = ({
 				height={240}
 				className="min-w-[240px]"
 			/>
-			<motion.div className="absolute -left-60 top-0 z-10 flex h-full w-full flex-col bg-blue-900 bg-opacity-95 transition-all duration-500 ease-out">
+			<motion.div className="absolute -left-60 top-0 z-10 flex h-full w-full flex-col bg-tealPrimary bg-opacity-95 transition-all duration-500 ease-out">
 				<Link
 					href={href}
 					className="flex h-full w-full flex-col items-center justify-center text-lg text-white"
