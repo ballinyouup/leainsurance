@@ -14,7 +14,7 @@ const HeroTitle = () => {
 			transition={{
 				duration: 0.5,
 			}}
-			className="font-poppins max-w-xl text-5xl font-semibold uppercase text-white"
+			className="font-poppins max-w-xl text-5xl font-semibold uppercase text-white sm:text-6xl"
 		>
 			Insurance you can count on at every stage
 		</motion.span>

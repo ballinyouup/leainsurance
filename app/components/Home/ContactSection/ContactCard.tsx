@@ -163,8 +163,10 @@ const ContactCard = () => {
 				>
 					{submitLoading ? (
 						<LoadingSpinner className="dark:text-gray-600 mr-2 h-4 w-4 animate-spin fill-black text-white" />
-					) : (
+					) : formSchema.safeParse(formData).success ? (
 						"Submit"
+					) : (
+						"Enter Your Info"
 					)}
 				</button>
 			</div>
