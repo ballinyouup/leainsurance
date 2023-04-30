@@ -21,7 +21,8 @@ module.exports = {
         tahiti: '#3ab7bf',
         silver: '#ecebff',
         bubblegum: '#ff77e9',
-        bermuda: '#78dcca'
+        bermuda: '#78dcca',
+        bluePrimary: "rgb(0,22,55)",
       },
       width: {
         "120": "30rem",
