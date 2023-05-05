@@ -3,7 +3,7 @@ import Image from "next/image";
 const AboutSection = () => {
 	return (
 		<section className="flex w-full flex-col items-center justify-center gap-8 px-5 pt-8 lg:p-8">
-			<span className="z-10 w-full max-w-md rounded-xl bg-teal-900 p-4 text-center text-4xl font-bold uppercase text-white">
+			<span className="z-10 w-full max-w-md rounded-xl bg-teal-900 p-4 text-center text-4xl font-bold uppercase text-white shadow-[5px_5px_5px] shadow-black">
 				Meet your Agents
 			</span>
 			<div className="z-10 flex w-full max-w-5xl flex-col items-center gap-12 bg-white p-8 lg:flex-row">
