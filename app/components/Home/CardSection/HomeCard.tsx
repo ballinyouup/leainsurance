@@ -34,7 +34,7 @@ const HomeCard: React.FC<IHomeCard> = ({
 				delay: delay,
 				duration: 0.5,
 			}}
-			className="relative z-0 h-40 overflow-hidden rounded-lg sm:h-full [&>*]:hover:left-0"
+			className="relative z-10 h-40 overflow-hidden rounded-lg sm:h-full [&>*]:hover:left-0"
 		>
 			<Image
 				src={src}

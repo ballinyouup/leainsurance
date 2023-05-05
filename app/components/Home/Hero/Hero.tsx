@@ -5,7 +5,7 @@ import HeroTitle from "../Hero/HeroTitle";
 
 const Hero = () => {
 	return (
-		<section className="relative flex h-96 w-full flex-col items-center justify-start overflow-hidden bg-tealPrimary max-[440px]:h-[500px] sm:h-[550px] sm:bg-tealPrimary">
+		<section className="relative flex h-96 w-full flex-col items-center justify-start overflow-hidden bg-tealPrimary max-[440px]:h-[500px] sm:h-[550px] sm:bg-tealPrimary z-10">
 			<div className="absolute top-0 z-10 flex h-full w-full max-w-5xl flex-col items-start gap-5">
 				<div className="flex h-full w-full max-w-xl flex-col justify-center gap-4 px-5">
 					<HeroTitle />
