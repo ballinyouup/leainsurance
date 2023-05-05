@@ -57,7 +57,7 @@ const ContactCard = () => {
 	};
 
 	return (
-		<div className="z-10 flex h-full w-fit flex-row items-start justify-start rounded-xl border border-black border-opacity-25 bg-white px-10 py-8 lg:w-fit lg:gap-12 lg:px-16 lg:py-20">
+		<div className="z-10 flex h-full w-fit flex-row items-start justify-start rounded-xl border border-black border-opacity-25 bg-white lg:w-fit lg:gap-12 lg:px-8 lg:py-10">
 			<Image
 				src="/family.png"
 				alt="Family Image"
@@ -65,9 +65,9 @@ const ContactCard = () => {
 				height={500}
 				className="z-10 hidden lg:block"
 			/>
-			<div>
+			<div className="rounded-lg border border-slate-300 bg-slate-100 px-8 py-10">
 				<div className="flex w-full max-w-sm flex-col gap-4">
-					<span className="text-4xl sm:text-5xl font-bold uppercase text-black">
+					<span className="text-4xl font-bold uppercase text-black sm:text-5xl">
 						Contact Us
 					</span>
 					<span>
