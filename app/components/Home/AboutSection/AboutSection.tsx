@@ -6,7 +6,7 @@ const AboutSection = () => {
 			<span className="z-10 w-full max-w-md rounded-xl bg-teal-900 p-4 text-center text-4xl font-bold uppercase text-white shadow-[5px_5px_5px] shadow-black">
 				Meet your Agents
 			</span>
-			<div className="z-10 flex w-full max-w-5xl flex-col items-center gap-12 bg-white p-8 lg:flex-row">
+			<div className="z-10 flex w-fit max-w-5xl flex-col items-center gap-12 rounded-lg bg-white p-8 lg:w-full lg:flex-row">
 				<Image
 					src={"/delia.jpg"}
 					alt={"Delia Huici Picture"}
