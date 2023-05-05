@@ -67,7 +67,7 @@ const ContactCard = () => {
 			/>
 			<div>
 				<div className="flex w-full max-w-sm flex-col gap-4">
-					<span className="text-5xl font-bold uppercase text-black">
+					<span className="text-4xl sm:text-5xl font-bold uppercase text-black">
 						Contact Us
 					</span>
 					<span>

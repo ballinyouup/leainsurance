@@ -18,9 +18,11 @@ const TextSection = () => {
 					}}
 					className="z-10 flex w-full max-w-2xl flex-col items-start justify-center gap-4 p-5 sm:flex-row sm:items-center sm:p-2"
 				>
-					<span className="w-fit text-start text-4xl font-bold uppercase text-black sm:text-end sm:text-5xl">
-						Why Choose Us
-					</span>
+					<div className="flex w-fit flex-wrap text-start text-4xl font-bold uppercase text-black sm:flex-col sm:text-end sm:text-5xl">
+						<span>Why&nbsp;</span>
+						<span>Choose&nbsp;</span>
+						<span>Us</span>
+					</div>
 					<span className="w-full border-[1.5px] border-black sm:h-36 sm:w-fit" />
 					<span className="text-lg">
 						Our plans not only offer comprehensive coverage for routine checkups

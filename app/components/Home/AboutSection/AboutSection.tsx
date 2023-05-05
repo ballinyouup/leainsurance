@@ -14,15 +14,18 @@ const AboutSection = () => {
 					height={200}
 					className="rounded-lg"
 				/>
-				<span className="max-w-md text-xl text-black lg:w-192 lg:max-w-none">
-					Meet Delia Huici, a licensed insurance agent with expertise in Life
-					Insurance, Medicare/Medicaid, Obamacare, and Funeral Assistance. With
-					over 20 years of experience in the healthcare industry, Delia is
-					dedicated to helping clients obtain the best insurance coverage
-					possible. Trustworthy and knowledgeable, she can assist you in
-					choosing the right insurance plan and provide guidance with claims.
-					Contact Delia today to learn more about her services.
-				</span>
+				<div className="w-full max-w-md lg:max-w-lg">
+					<h3 className="text-2xl font-bold">Delia Huici</h3>
+					<span className="text-base text-black sm:text-lg lg:w-192">
+						Meet Delia Huici, a licensed insurance agent with expertise in Life
+						Insurance, Medicare/Medicaid, Obamacare, and Funeral Assistance.
+						With over 20 years of experience in the healthcare industry, Delia
+						is dedicated to helping clients obtain the best insurance coverage
+						possible. Trustworthy and knowledgeable, she can assist you in
+						choosing the right insurance plan and provide guidance with claims.
+						Contact Delia today to learn more about her services.
+					</span>
+				</div>
 			</div>
 		</section>
 	);
