@@ -10,7 +10,8 @@ const MobileMenuItems = () => {
 				src={"/medicareIcon.png"}
 				alt={"Medicare icon"}
 				width={24}
-				height={24}
+				height={20}
+				className="h-6"
 			/>
 			<Link href="/medicare">Medicare</Link>
 		</Menu.Item>,
@@ -20,6 +21,7 @@ const MobileMenuItems = () => {
 				alt={"Obamacare icon"}
 				width={24}
 				height={24}
+				className="h-6"
 			/>
 			<Link href="/obamacare" className="hover:underline">
 				Obamacare
