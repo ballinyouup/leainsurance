@@ -26,7 +26,7 @@ export default function Page() {
 				<HomeCardSection />
 				<WhySection />
 				<AboutSection />
-				<Divider />
+				<Divider white />
 				<ContactSection />
 				<svg
 					id="visual"
