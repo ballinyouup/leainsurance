@@ -4,9 +4,9 @@ const AboutSection = () => {
 	return (
 		<section className="flex w-full flex-col items-center justify-center gap-8 px-5 pt-8 lg:p-8">
 			<span className="z-10 w-full max-w-md rounded-xl bg-teal-900 p-4 text-center text-4xl font-bold uppercase text-white">
-				Meet your Agent
+				Meet your Agents
 			</span>
-			<div className="z-10 flex w-full max-w-5xl flex-col items-center gap-12 lg:flex-row">
+			<div className="z-10 flex w-full max-w-5xl flex-col items-center gap-12 bg-white p-8 lg:flex-row">
 				<Image
 					src={"/delia.jpg"}
 					alt={"Delia Huici Picture"}
@@ -14,7 +14,7 @@ const AboutSection = () => {
 					height={200}
 					className="rounded-lg"
 				/>
-				<span className="max-w-md text-xl lg:w-192 lg:max-w-none">
+				<span className="max-w-md text-xl text-black lg:w-192 lg:max-w-none">
 					Meet Delia Huici, a licensed insurance agent with expertise in Life
 					Insurance, Medicare/Medicaid, Obamacare, and Funeral Assistance. With
 					over 20 years of experience in the healthcare industry, Delia is
