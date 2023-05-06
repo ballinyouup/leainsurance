@@ -1,10 +1,22 @@
-import { Form } from "@/app/components/Home/ContactSection/ContactCard";
+import { z } from "zod";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
+const firstName = z.string().min(2).max(32);
+const lastName = z.string().min(2).max(32);
+const email = z.string().email("Invalid Email").min(4).max(48);
+const phoneNumber = z.string().min(14).max(14);
+
+const formSchema = z.object({
+	firstName: firstName,
+	lastName: lastName,
+	email: email,
+	phoneNumber: phoneNumber,
+});
 export async function POST(request: NextRequest) {
 	try {
-		const body: Form = await request.json();
+		const body = await request.json();
+		const parsedBody = formSchema.parse(body);
 		const response = await fetch(
 			`https://api.airtable.com/v0/appU4K0xQACnmxMg9/Users`,
 			{
@@ -16,10 +28,10 @@ export async function POST(request: NextRequest) {
 					records: [
 						{
 							fields: {
-								"First Name": body.firstName,
-								"Last Name": body.lastName,
-								"Phone Number": body.phoneNumber,
-								Email: body.email,
+								"First Name": parsedBody.firstName,
+								"Last Name": parsedBody.lastName,
+								"Phone Number": parsedBody.phoneNumber,
+								Email: parsedBody.email,
 							},
 						},
 					],
@@ -28,9 +40,12 @@ export async function POST(request: NextRequest) {
 			}
 		);
 		if (response.status === 200) {
-			return new NextResponse("Success");
+			return new NextResponse("Success", { status: 200 });
+		} else {
+			return new NextResponse("Error", { status: response.status });
 		}
 	} catch (error) {
-		return new NextResponse("Error");
+		console.error(error);
+		return new NextResponse("Error", { status: 500 });
 	}
 }

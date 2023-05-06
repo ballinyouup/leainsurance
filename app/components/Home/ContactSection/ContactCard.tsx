@@ -9,7 +9,7 @@ const lastName = z.string().min(2).max(32);
 const email = z.string().email("Invalid Email").min(4).max(48);
 const phoneNumber = z.string().min(14).max(14);
 
-const formSchema = z.object({
+export const formSchema = z.object({
 	firstName: firstName,
 	lastName: lastName,
 	email: email,
@@ -34,6 +34,9 @@ const ContactCard = () => {
 				const response = await fetch("/api/submit", {
 					body: JSON.stringify(formData),
 					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
 				});
 				if (response.status === 200) {
 					toast.success("Successfully submitted form!");
@@ -74,7 +77,13 @@ const ContactCard = () => {
 						Fill out this form and our team will get back to you within 24 hours
 					</span>
 				</div>
-				<div className="flex w-full max-w-sm flex-col gap-1">
+				<form
+					onSubmit={(e) => {
+						e.preventDefault();
+						handleSubmit();
+					}}
+					className="flex w-full max-w-sm flex-col gap-1"
+				>
 					<div className="flex gap-2 sm:gap-4">
 						<div className="flex flex-col">
 							<label>First Name:</label>
@@ -161,7 +170,7 @@ const ContactCard = () => {
 						required
 					/>
 					<button
-						onClick={handleSubmit}
+						type="submit"
 						disabled={!formSchema.safeParse(formData).success}
 						className={
 							!formSchema.safeParse(formData).success
@@ -177,7 +186,7 @@ const ContactCard = () => {
 							"Enter Your Info"
 						)}
 					</button>
-				</div>
+				</form>
 			</div>
 		</div>
 	);
