@@ -11,7 +11,7 @@ const HeroButton = () => {
 				</button>
 			</Button>
 			<Button>
-				<a href="tel:+17864447717">Call Today</a>
+				<a href="tel:+18886854221">Call Today</a>
 			</Button>
 		</div>
 	);

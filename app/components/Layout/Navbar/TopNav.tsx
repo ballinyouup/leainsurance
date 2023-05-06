@@ -23,7 +23,7 @@ const TopNav = () => {
 							},
 						}}
 						className="flex flex-row items-center gap-2 p-1"
-						href="tel:+17864447717"
+						href="tel:+18886854221"
 						whileHover={{
 							scale: 1.05,
 							transition: {
@@ -39,7 +39,7 @@ const TopNav = () => {
 							height={24}
 						/>
 						<span className="whitespace-nowrap text-sm font-semibold text-white">
-							Call 1+(786)-444-7717
+							Call +1(888)-685-4221
 						</span>
 					</motion.a>
 				</div>
