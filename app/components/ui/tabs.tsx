@@ -11,7 +11,15 @@ import { Input } from "$/input";
 import { Label } from "$/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "$/tabs";
 
-const TabComponent = ({}) => {
+interface TabComponent {
+	tabs: {
+		trigger: string;
+		title: string;
+		description: string;
+	}[];
+}
+
+const TabComponent: React.FC<TabComponent> = ({ tabs }) => {
 	return (
 		<Tabs defaultValue="account" className="w-[400px]">
 			<TabsList className="grid w-full grid-cols-2">
