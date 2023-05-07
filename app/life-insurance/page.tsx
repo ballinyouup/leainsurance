@@ -26,7 +26,6 @@ export default function Page() {
 						src="/familyreal.jpg"
 						width={600}
 						height={600}
-						unoptimized
 					/>
 				</div>
 				<Tabs
