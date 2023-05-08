@@ -61,18 +61,19 @@ const Contact = () => {
 		}
 	};
 	return (
-		<section className="relative flex h-full w-full items-center justify-center gap-20 px-5 lg:flex-row lg:py-20">
-			<div className="z-10 flex h-full w-fit flex-row items-start justify-start rounded-xl border border-black border-opacity-25 bg-white lg:w-fit lg:gap-12 lg:px-8 lg:py-10">
+		<section className="relative mt-8 flex h-full w-full items-center justify-center gap-20 px-5 lg:mt-0 lg:flex-row lg:py-20">
+			<div className="z-10 flex h-full w-fit flex-row items-start justify-start rounded-xl border-opacity-25 bg-background md:border md:border-primary-foreground lg:w-fit lg:gap-12 lg:px-8 lg:py-10">
 				<Image
 					src="/family.png"
 					alt="Family Image"
 					width={500}
 					height={500}
 					className="z-10 hidden lg:block"
+					quality="100"
 				/>
-				<div className="rounded-lg border border-slate-300 bg-slate-100 px-8 py-10">
-					<div className="flex w-full max-w-sm flex-col gap-4">
-						<span className="text-4xl font-bold uppercase text-black sm:text-5xl">
+				<div className="rounded-lg border border-muted-foreground bg-muted px-8 py-10">
+					<div className="flex w-full max-w-sm flex-col gap-4 text-primary">
+						<span className="text-4xl font-bold uppercase sm:text-5xl">
 							Contact Us
 						</span>
 						<span>
@@ -85,7 +86,7 @@ const Contact = () => {
 							e.preventDefault();
 							handleSubmit();
 						}}
-						className="flex w-full max-w-sm flex-col gap-1"
+						className="mt-4 flex w-full max-w-sm flex-col gap-1 text-primary"
 					>
 						<div className="flex gap-2 sm:gap-4">
 							<div className="flex flex-col">
@@ -96,8 +97,8 @@ const Contact = () => {
 									className={
 										formData.firstName !== "" &&
 										!firstName.safeParse(formData.firstName).success
-											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 indent-3"
-											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 indent-3"
+											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 									}
 									value={formData.firstName}
 									onChange={(e) => {
@@ -117,8 +118,8 @@ const Contact = () => {
 									className={
 										formData.lastName !== "" &&
 										!lastName.safeParse(formData.lastName).success
-											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 indent-3"
-											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 indent-3"
+											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 									}
 									value={formData.lastName}
 									onChange={(e) => {
@@ -138,8 +139,8 @@ const Contact = () => {
 							className={
 								formData.email !== "" &&
 								!email.safeParse(formData.email).success
-									? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 indent-3"
-									: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 indent-3"
+									? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+									: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 							}
 							value={formData.email}
 							onChange={(e) => {
@@ -157,8 +158,8 @@ const Contact = () => {
 							className={
 								formData.phoneNumber !== "" &&
 								!phoneNumber.safeParse(formData.phoneNumber).success
-									? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 indent-3"
-									: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 indent-3"
+									? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+									: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 							}
 							value={formData.phoneNumber}
 							onChange={(e) => {
@@ -178,7 +179,7 @@ const Contact = () => {
 							disabled={!formSchema.safeParse(formData).success}
 						>
 							{submitLoading ? (
-								<LoadingSpinner className="dark:text-gray-600 mr-2 h-4 w-4 animate-spin fill-black text-white" />
+								<LoadingSpinner className="mr-2 h-4 w-4 animate-spin fill-black text-white dark:text-primary" />
 							) : formSchema.safeParse(formData).success ? (
 								"Submit"
 							) : (
