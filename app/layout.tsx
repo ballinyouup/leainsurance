@@ -1,6 +1,10 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
 import Footer from "./components/ui/footer";
 import Navbar from "./components/ui/navbar";
+import { env } from "./env.mjs";
+import QueryProvider from "./providers/query-provider";
+import { ThemeProvider } from "./providers/theme-provider";
 import "./globals.css";
 
 export const metadata = {
@@ -20,12 +24,18 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
-			<body className={inter.className}>
-				<Navbar />
-				<div>{children}</div>
-				<Footer />
-			</body>
-		</html>
+		<ClerkProvider publishableKey={env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
+			<html lang="en">
+				<body className={inter.className}>
+					<QueryProvider>
+						<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+							<Navbar />
+							<div>{children}</div>
+							<Footer />
+						</ThemeProvider>
+					</QueryProvider>
+				</body>
+			</html>
+		</ClerkProvider>
 	);
 }
