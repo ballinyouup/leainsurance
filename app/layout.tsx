@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import Footer from "./components/Layout/Footer/Footer";
-import Navbar from "./components/Layout/Navbar/Navbar";
+import Navbar from "./navbar";
 import "./globals.css";
 
 export const metadata = {
