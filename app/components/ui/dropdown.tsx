@@ -10,12 +10,16 @@ import {
 } from "$/dropdown-menu";
 import { BookDown, Stethoscope, Baby, FileHeart, Sprout } from "lucide-react";
 import Link from "next/link";
+import { Button } from "../shadcn-ui/button";
 
 const DropMenu = () => {
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger className="rounded-md p-1.5 transition-all hover:bg-primary">
-				<BookDown className="h-6 w-6 text-white" />
+			<DropdownMenuTrigger asChild className="w-full rounded-md p-1.5">
+				<Button className="flex gap-2">
+					<BookDown className="h-5 w-5 text-white" />
+					<span>Learn</span>
+				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align="end">
 				<DropdownMenuLabel>Insurance</DropdownMenuLabel>
