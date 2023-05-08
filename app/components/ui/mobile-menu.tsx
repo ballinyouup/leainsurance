@@ -13,6 +13,9 @@ import {
 	Mail,
 	Phone,
 } from "lucide-react";
+import { ThemeToggle } from "./theme-toggle";
+import { SignInButton } from "@clerk/nextjs";
+import { Button } from "../shadcn-ui/button";
 const MobileMenu = () => {
 	return (
 		<Sheet>
@@ -60,6 +63,12 @@ const MobileMenu = () => {
 					<Phone className="mr-2 h-4 w-4" />
 					<span>Call Us Today</span>
 				</Link>
+				<div className="flex w-full flex-col gap-2">
+					<ThemeToggle variant="default" />
+					<SignInButton>
+						<Button>Sign In</Button>
+					</SignInButton>
+				</div>
 			</SheetContent>
 		</Sheet>
 	);
