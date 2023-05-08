@@ -16,8 +16,8 @@ const DropMenu = () => {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild className="w-full rounded-md p-1.5">
-				<Button className="flex gap-2">
-					<BookDown className="h-4 w-4 text-white" />
+				<Button variant="ghost" className="flex gap-2 text-accent-foreground">
+					<BookDown className="h-5 w-5" />
 					<span>Learn</span>
 				</Button>
 			</DropdownMenuTrigger>
