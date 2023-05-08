@@ -1,5 +1,12 @@
 // middleware.ts
 import { NextRequest, NextResponse } from "next/server";
+import { authMiddleware } from "@clerk/nextjs";
+
+export default authMiddleware({ publicRoutes: ["/", "/medicare", "/obamacare", "/life-insurance", "/funeral-assistance"],  });
+
+export const config = {
+	matcher: ["/((?!.*\\..*|_next).*)"],
+};
 
 export function middleware(request: NextRequest) {
 	// Set CORS headers
