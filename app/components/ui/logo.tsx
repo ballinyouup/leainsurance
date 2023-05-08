@@ -4,7 +4,7 @@ const Logo = () => {
 	return (
 		<Link
 			href="/"
-			className="relative flex h-16 w-fit cursor-pointer items-center overflow-hidden rounded-lg transition-all hover:bg-primary"
+			className="relative flex h-16 w-fit cursor-pointer items-center overflow-hidden rounded-lg transition-all hover:bg-accent"
 		>
 			<Image
 				className="h-48 w-full min-w-[80px] object-cover sm:h-56"
