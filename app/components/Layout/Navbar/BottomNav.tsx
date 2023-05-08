@@ -1,4 +1,4 @@
-import Button from "../../Button/Button";
+import { Button } from "../../shadcn-ui/button";
 import MenuDropdown from "./Menu/MenuDropdown";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu/MobileMenu";
@@ -9,7 +9,7 @@ const BottomNav = () => {
 		<div className="flex h-16 w-full flex-row items-center justify-between bg-black px-4 py-10">
 			<Logo />
 			<div className="hidden w-fit gap-2 sm:flex">
-				<Button clear>
+				<Button>
 					<Link href="/">Home</Link>
 				</Button>
 				<MenuDropdown />

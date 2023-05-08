@@ -31,7 +31,7 @@ export default function Page() {
 				<Tabs
 					defaultValue="overview"
 					className="grid h-full min-h-[600px] w-full grid-cols-1 sm:grid-cols-12"
-					orientation="vertical"
+					orientation="horizontal"
 				>
 					<TabsList className="col-span-4 grid h-fit grid-cols-1">
 						<TabsTrigger value="overview">Overview</TabsTrigger>
@@ -65,7 +65,10 @@ export default function Page() {
 						</TabsTrigger>
 						<TabsTrigger value="howto">How To</TabsTrigger>
 					</TabsList>
-					<TabsContent value="overview" className="col-span-8 p-4 text-lg">
+					<TabsContent
+						value="overview"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
+					>
 						<div className="flex w-full flex-col gap-4">
 							<div className="pb-2 text-4xl font-bold sm:text-5xl">
 								OVERVIEW
@@ -89,7 +92,7 @@ export default function Page() {
 					</TabsContent>
 					<TabsContent
 						value="eligibility"
-						className="col-span-8 gap-4 p-4 text-lg"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
 					>
 						<div className="pb-2 text-4xl font-bold uppercase sm:text-5xl">
 							<span>Eligibility &&nbsp;</span>
@@ -164,7 +167,10 @@ export default function Page() {
 							modify your existing policy outside the regular enrollment period.
 						</span>
 					</TabsContent>
-					<TabsContent value="term" className="col-span-8 gap-4 p-4 text-lg">
+					<TabsContent
+						value="term"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
+					>
 						<div className="pb-2 text-4xl font-bold uppercase sm:text-5xl">
 							Term Life Insurance
 						</div>
@@ -197,7 +203,7 @@ export default function Page() {
 					</TabsContent>
 					<TabsContent
 						value="permanent"
-						className="col-span-8 gap-4 p-4 text-lg"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
 					>
 						<div className="pb-2 text-4xl font-bold uppercase sm:text-5xl">
 							Permanent Life Insurance
@@ -234,7 +240,10 @@ export default function Page() {
 							own features and risks that you should understand before buying.
 						</span>
 					</TabsContent>
-					<TabsContent value="whole" className="col-span-8 p-4 text-lg">
+					<TabsContent
+						value="whole"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
+					>
 						<div className="flex w-full flex-col gap-4">
 							<div className="pb-2 text-4xl font-bold uppercase sm:text-5xl">
 								Whole Life Insurance
@@ -286,7 +295,10 @@ export default function Page() {
 							</ul>
 						</div>
 					</TabsContent>
-					<TabsContent value="universal" className="col-span-8 p-4 text-lg">
+					<TabsContent
+						value="universal"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
+					>
 						<div className="flex flex-col gap-4 text-lg">
 							<div className="pb-2 text-4xl font-bold uppercase sm:text-5xl">
 								Universal Life Insurance
@@ -346,7 +358,10 @@ export default function Page() {
 							</ul>
 						</div>
 					</TabsContent>
-					<TabsContent value="variable" className="col-span-8 p-4 text-lg">
+					<TabsContent
+						value="variable"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
+					>
 						<div className="pb-2 text-4xl font-bold uppercase sm:text-5xl">
 							Variable Life Insurance
 						</div>
@@ -404,7 +419,10 @@ export default function Page() {
 							</li>
 						</ul>
 					</TabsContent>
-					<TabsContent value="indexed" className="col-span-8 p-4 text-lg">
+					<TabsContent
+						value="indexed"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
+					>
 						<div className="pb-2 text-4xl font-bold uppercase sm:text-5xl">
 							Indexed Insurance
 						</div>
@@ -431,7 +449,10 @@ export default function Page() {
 							returns
 						</span>
 					</TabsContent>
-					<TabsContent value="howto" className="col-span-8 p-4 text-lg">
+					<TabsContent
+						value="howto"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
+					>
 						<div className="flex flex-col pb-2 text-4xl font-bold uppercase sm:text-5xl">
 							<span>How To</span>
 						</div>
@@ -441,7 +462,7 @@ export default function Page() {
 							some questions to ask yourself before buying a life insurance
 							policy:
 						</span>
-						<ul className="list-disc">
+						<ul className="flex list-disc flex-col gap-4">
 							<li className="ml-6">
 								How much coverage do I need? The amount of coverage you need
 								depends on various factors, such as your income, your debts,

@@ -4,6 +4,7 @@ import { toast } from "react-hot-toast";
 import { z } from "zod";
 import LoadingSpinner from "../../Loading/LoadingSpinner";
 import Image from "next/image";
+import { Button } from "../../shadcn-ui/button";
 const firstName = z.string().min(2).max(32);
 const lastName = z.string().min(2).max(32);
 const email = z.string().email("Invalid Email").min(4).max(48);
@@ -169,14 +170,9 @@ const ContactCard = () => {
 						}}
 						required
 					/>
-					<button
+					<Button
 						type="submit"
 						disabled={!formSchema.safeParse(formData).success}
-						className={
-							!formSchema.safeParse(formData).success
-								? "relative mt-2 flex w-full max-w-sm items-center justify-center gap-2 overflow-hidden rounded-xl border border-transparent bg-slate-400 px-3 py-2 text-base font-bold text-white"
-								: "relative mt-2 flex w-full max-w-sm cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl border border-transparent bg-tealPrimary px-3 py-2 text-base font-bold text-white before:absolute before:-left-96 before:-top-24 before:h-60 before:w-96 before:rotate-45 before:bg-gradient-to-br before:from-transparent before:via-[rgba(255,255,255,0.5)] before:to-[rgba(255,255,255,1)] before:transition-all before:duration-[600ms] before:ease-in-out hover:border hover:border-[rgba(0,0,0,0.5)] hover:shadow-md hover:shadow-[rgba(0,0,0,0.2)] before:hover:left-full before:hover:opacity-50 active:shadow-inner active:shadow-[rgba(0,0,0,0.5)]"
-						}
 					>
 						{submitLoading ? (
 							<LoadingSpinner className="dark:text-gray-600 mr-2 h-4 w-4 animate-spin fill-black text-white" />
@@ -185,7 +181,7 @@ const ContactCard = () => {
 						) : (
 							"Enter Your Info"
 						)}
-					</button>
+					</Button>
 				</form>
 			</div>
 		</div>

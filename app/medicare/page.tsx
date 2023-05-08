@@ -47,7 +47,10 @@ export default function Page() {
 						<TabsTrigger value="costs">Costs & Coverage</TabsTrigger>
 						<TabsTrigger value="additional">Additional Benefits</TabsTrigger>
 					</TabsList>
-					<TabsContent value="overview" className="col-span-8 p-4 text-lg">
+					<TabsContent
+						value="overview"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
+					>
 						<div className="flex w-full flex-col gap-4">
 							<div className="pb-2 text-4xl font-bold sm:text-5xl">
 								OVERVIEW
@@ -76,7 +79,7 @@ export default function Page() {
 					</TabsContent>
 					<TabsContent
 						value="eligibility"
-						className="col-span-8 gap-4 p-4 text-lg"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
 					>
 						<div className="flex flex-col pb-6 text-4xl font-bold uppercase sm:text-5xl">
 							<span>Eligibility &</span>
@@ -134,7 +137,7 @@ export default function Page() {
 					</TabsContent>
 					<TabsContent
 						value="original"
-						className="col-span-8 gap-4 p-4 text-lg"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
 					>
 						<div className="flex flex-col pb-6 text-4xl font-bold sm:text-5xl">
 							<span>ORIGINAL</span>
@@ -200,7 +203,7 @@ export default function Page() {
 					</TabsContent>
 					<TabsContent
 						value="advantage"
-						className="col-span-8 gap-4 p-4 text-lg"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
 					>
 						<div className="flex flex-col pb-6 text-4xl font-bold sm:text-5xl">
 							<span>MEDICARE</span>
@@ -242,7 +245,10 @@ export default function Page() {
 							</span>
 						</div>
 					</TabsContent>
-					<TabsContent value="supplement" className="col-span-8 p-4 text-lg">
+					<TabsContent
+						value="supplement"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
+					>
 						<div className="flex w-full flex-col gap-4">
 							<div className="flex flex-col pb-2 text-4xl font-bold uppercase sm:text-5xl">
 								<span>Medicare</span>
@@ -297,7 +303,10 @@ export default function Page() {
 							</span>
 						</div>
 					</TabsContent>
-					<TabsContent value="prescription" className="col-span-8 p-4 text-lg">
+					<TabsContent
+						value="prescription"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
+					>
 						<div className="flex flex-col gap-4 text-lg">
 							<div className="flex flex-col pb-2 text-4xl font-bold uppercase sm:text-5xl">
 								<span>Prescription</span>
@@ -381,7 +390,10 @@ export default function Page() {
 							</span>
 						</div>
 					</TabsContent>
-					<TabsContent value="costs" className="col-span-8 p-4 text-lg">
+					<TabsContent
+						value="costs"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
+					>
 						<div className="flex flex-col pb-6 text-4xl font-bold uppercase sm:text-5xl">
 							<span>Costs &</span>
 							<span>Coverage</span>
@@ -470,7 +482,10 @@ export default function Page() {
 							</ul>
 						</div>
 					</TabsContent>
-					<TabsContent value="additional" className="col-span-8 p-4 text-lg">
+					<TabsContent
+						value="additional"
+						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
+					>
 						<div className="flex flex-col pb-6 text-4xl font-bold sm:text-5xl">
 							<span>ADDITIONAL</span>
 							<span>BENEFITS</span>
