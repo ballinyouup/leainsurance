@@ -54,7 +54,7 @@ const MobileMenu = () => {
 					className="flex items-center"
 				>
 					<Mail className="mr-2 h-4 w-4" />
-					<span>Google Business</span>
+					<span>Email</span>
 				</Link>
 				<Link href="tel:+18886954221" className="flex items-center">
 					<Phone className="mr-2 h-4 w-4" />
