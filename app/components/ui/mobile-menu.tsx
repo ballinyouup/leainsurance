@@ -12,6 +12,9 @@ import {
 	Store,
 	Mail,
 	Phone,
+	LayoutDashboard,
+	Wrench,
+	LogOut,
 } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import {
@@ -20,10 +23,12 @@ import {
 	SignedOut,
 	useUser,
 	UserButton,
+	useAuth,
 } from "@clerk/nextjs";
 import { Button } from "../shadcn-ui/button";
 const MobileMenu = () => {
 	const { user } = useUser();
+	const { signOut } = useAuth();
 	return (
 		<Sheet>
 			<SheetTrigger>
@@ -31,8 +36,22 @@ const MobileMenu = () => {
 			</SheetTrigger>
 			<SheetContent className="flex w-full flex-col">
 				<SignedIn>
-					<UserButton />
-					<span>Welcome {user?.firstName}</span>
+					<div className="flex flex-wrap items-center gap-3">
+						<UserButton />
+						<SheetTitle>Welcome {user?.firstName}</SheetTitle>
+					</div>
+					<Link href="/" className="flex">
+						<LayoutDashboard className="mr-2 h-4 w-4" />
+						<span>Dashboard</span>
+					</Link>
+					<Link href="/" className="flex">
+						<Wrench className="mr-2 h-4 w-4" />
+						<span>Account</span>
+					</Link>
+					<button onClick={() => signOut()} className="flex">
+						<LogOut className="mr-2 h-4 w-4" />
+						<span>Sign Out</span>
+					</button>
 				</SignedIn>
 				<SheetTitle>Insurance</SheetTitle>
 				<Link href="/medicare" className="flex items-center">

@@ -18,7 +18,7 @@ const UserButton = () => {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Avatar className="transition-all hover:border-2 hover:border-primary">
+				<Avatar className="ml-2 transition-all hover:border-2 hover:border-primary">
 					<AvatarImage src={user?.profileImageUrl} alt="Profile Image" />
 					<AvatarFallback>{user?.firstName?.charAt(0)}</AvatarFallback>
 				</Avatar>
