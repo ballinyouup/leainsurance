@@ -36,7 +36,7 @@ const UserButton = () => {
 					</Link>
 				</DropdownMenuItem>
 				<DropdownMenuItem>
-					<Link href="/" className="flex items-center">
+					<Link href="/account" className="flex items-center">
 						<Wrench className="mr-2 h-4 w-4" />
 						<span>Account</span>
 					</Link>
