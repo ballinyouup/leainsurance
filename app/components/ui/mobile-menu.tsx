@@ -14,15 +14,26 @@ import {
 	Phone,
 } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
-import { SignInButton } from "@clerk/nextjs";
+import {
+	SignInButton,
+	SignedIn,
+	SignedOut,
+	useUser,
+	UserButton,
+} from "@clerk/nextjs";
 import { Button } from "../shadcn-ui/button";
 const MobileMenu = () => {
+	const { user } = useUser();
 	return (
 		<Sheet>
 			<SheetTrigger>
 				<Menu className="h-8 w-8 text-white" />
 			</SheetTrigger>
 			<SheetContent className="flex w-full flex-col">
+				<SignedIn>
+					<UserButton />
+					<span>Welcome {user?.firstName}</span>
+				</SignedIn>
 				<SheetTitle>Insurance</SheetTitle>
 				<Link href="/medicare" className="flex items-center">
 					<Stethoscope className="mr-2 h-4 w-4" />
@@ -65,9 +76,11 @@ const MobileMenu = () => {
 				</Link>
 				<div className="flex w-full flex-col gap-2">
 					<ThemeToggle variant="default" />
-					<SignInButton>
-						<Button>Sign In</Button>
-					</SignInButton>
+					<SignedOut>
+						<SignInButton>
+							<Button>Sign In</Button>
+						</SignInButton>
+					</SignedOut>
 				</div>
 			</SheetContent>
 		</Sheet>

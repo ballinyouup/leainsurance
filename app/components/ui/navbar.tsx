@@ -1,8 +1,11 @@
 import Logo from "./logo";
 import DropMenu from "./dropdown";
 import MobileMenu from "./mobile-menu";
-import { PhoneCall } from "lucide-react";
+import { PhoneCall, User2 } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
+import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
+import { Button } from "../shadcn-ui/button";
+import UserButton from "./user-button";
 const Navbar = () => {
 	return (
 		<header className="relative z-20 flex w-full flex-col items-center">
@@ -27,9 +30,19 @@ const Navbar = () => {
 				{/** Bottom Nav Section */}
 				<div className="flex h-16 w-full flex-row items-center justify-between bg-black px-4 py-10">
 					<Logo />
-					<div className="hidden w-fit gap-2 sm:flex">
+					<div className="hidden w-fit items-center gap-2 sm:flex">
 						<ThemeToggle variant="ghost" />
 						<DropMenu />
+						<SignedOut>
+							<SignInButton>
+								<Button variant="ghost">
+									<User2 className="h-5 w-5 text-accent-foreground" />
+								</Button>
+							</SignInButton>
+						</SignedOut>
+						<SignedIn>
+							<UserButton />
+						</SignedIn>
 					</div>
 					<div className="flex w-fit sm:hidden">
 						<MobileMenu />
