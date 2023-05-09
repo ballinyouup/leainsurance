@@ -28,7 +28,7 @@ const Navbar = () => {
 				<div className="flex h-16 w-full flex-row items-center justify-between bg-black px-4 py-10">
 					<Logo />
 					<div className="hidden w-fit gap-2 sm:flex">
-						<ThemeToggle />
+						<ThemeToggle variant="ghost" />
 						<DropMenu />
 					</div>
 					<div className="flex w-fit sm:hidden">
