@@ -24,25 +24,25 @@ const UserButton = () => {
 				</Avatar>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align="end">
-				<DropdownMenuLabel className="flex flex-wrap">
+				<DropdownMenuLabel className="flex flex-wrap items-center">
 					<span>Welcome&nbsp;</span>
 					<span>{user?.firstName}</span>
 				</DropdownMenuLabel>
 				<DropdownMenuSeparator />
 				<DropdownMenuItem>
-					<Link href="/" className="flex">
+					<Link href="/" className="flex items-center">
 						<LayoutDashboard className="mr-2 h-4 w-4" />
 						<span>Dashboard</span>
 					</Link>
 				</DropdownMenuItem>
 				<DropdownMenuItem>
-					<Link href="/" className="flex">
+					<Link href="/" className="flex items-center">
 						<Wrench className="mr-2 h-4 w-4" />
 						<span>Account</span>
 					</Link>
 				</DropdownMenuItem>
 				<DropdownMenuItem>
-					<button onClick={() => signOut()} className="flex">
+					<button onClick={() => signOut()} className="flex items-center">
 						<LogOut className="mr-2 h-4 w-4" />
 						<span>Sign Out</span>
 					</button>

@@ -24,8 +24,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<ClerkProvider publishableKey={env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
-			<html lang="en">
+		<html lang="en">
+			<ClerkProvider publishableKey={env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
 				<body className={inter.className}>
 					<QueryProvider>
 						<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
@@ -35,7 +35,7 @@ export default function RootLayout({
 						</ThemeProvider>
 					</QueryProvider>
 				</body>
-			</html>
-		</ClerkProvider>
+			</ClerkProvider>
+		</html>
 	);
 }

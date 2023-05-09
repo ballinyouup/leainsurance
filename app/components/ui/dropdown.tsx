@@ -16,7 +16,7 @@ const DropMenu = () => {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild className="w-full rounded-md p-1.5">
-				<Button variant="ghost" className="flex gap-2 text-accent-foreground">
+				<Button variant="ghost" className="flex gap-2 text-accent-foreground items-center">
 					<BookDown className="h-5 w-5" />
 					<span>Learn</span>
 				</Button>
@@ -25,25 +25,25 @@ const DropMenu = () => {
 				<DropdownMenuLabel>Insurance</DropdownMenuLabel>
 				<DropdownMenuSeparator />
 				<DropdownMenuItem>
-					<Link href="/medicare" className="flex">
+					<Link href="/medicare" className="flex items-center">
 						<Stethoscope className="mr-2 h-4 w-4" />
 						<span>Medicare</span>
 					</Link>
 				</DropdownMenuItem>
 				<DropdownMenuItem>
-					<Link href="/obamacare" className="flex">
+					<Link href="/obamacare" className="flex items-center">
 						<Baby className="mr-2 h-4 w-4" />
 						<span>Obamacare</span>
 					</Link>
 				</DropdownMenuItem>
 				<DropdownMenuItem>
-					<Link href="/life-insurance" className="flex">
+					<Link href="/life-insurance" className="flex items-center">
 						<FileHeart className="mr-2 h-4 w-4" />
 						<span>Life Insurance</span>
 					</Link>
 				</DropdownMenuItem>
 				<DropdownMenuItem>
-					<Link href="/funeral-assistance" className="flex">
+					<Link href="/funeral-assistance" className="flex items-center">
 						<Sprout className="mr-2 h-4 w-4" />
 						<span>Funeral Assistance</span>
 					</Link>

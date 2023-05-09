@@ -26,6 +26,7 @@ import {
 	useAuth,
 } from "@clerk/nextjs";
 import { Button } from "../shadcn-ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "../shadcn-ui/avatar";
 const MobileMenu = () => {
 	const { user } = useUser();
 	const { signOut } = useAuth();
@@ -37,18 +38,21 @@ const MobileMenu = () => {
 			<SheetContent className="flex w-full flex-col">
 				<SignedIn>
 					<div className="flex flex-wrap items-center gap-3">
-						<UserButton />
+						<Avatar>
+							<AvatarImage src={user?.profileImageUrl} alt="Profile Image" />
+							<AvatarFallback>{user?.firstName?.charAt(0)}</AvatarFallback>
+						</Avatar>
 						<SheetTitle>Welcome {user?.firstName}</SheetTitle>
 					</div>
-					<Link href="/" className="flex">
+					<Link href="/" className="flex items-center">
 						<LayoutDashboard className="mr-2 h-4 w-4" />
 						<span>Dashboard</span>
 					</Link>
-					<Link href="/" className="flex">
+					<Link href="/" className="flex items-center">
 						<Wrench className="mr-2 h-4 w-4" />
 						<span>Account</span>
 					</Link>
-					<button onClick={() => signOut()} className="flex">
+					<button onClick={() => signOut()} className="flex items-center">
 						<LogOut className="mr-2 h-4 w-4" />
 						<span>Sign Out</span>
 					</button>
