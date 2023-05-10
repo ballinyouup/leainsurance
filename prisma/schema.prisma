@@ -19,7 +19,7 @@ datasource db {
 // This allows you to associate a User record with an Agent record if necessary.
 
 model User {
-  id        String     @id @default(uuid())
+  id        String     @id
   role      Role       @default(CLIENT)
   name      String?
   email     String?    @unique
@@ -40,7 +40,7 @@ model User {
 // This allows you to associate multiple clients with an agent and vice versa.
 
 model Agent {
-  id        String     @id @default(uuid())
+  id        String     @id
   role      Role       @default(AGENT)
   name      String?
   email     String?    @unique
