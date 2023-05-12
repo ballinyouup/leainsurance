@@ -10,102 +10,39 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// The User model represents users of the health insurance agency. 
-// Each user has a unique id that is generated automatically. 
-// The role field indicates whether the user is an AGENT or a CLIENT. 
-// The name, email, and phone fields are optional and allow you to store additional user information if necessary. 
-// The addresses, notes, and documents fields define one-to-many relationships with the Address, Note, and Document models, respectively.
-// The agent field defines a many-to-one relationship with the Agent model using the agentId field.
-// This allows you to associate a User record with an Agent record if necessary.
-
-model User {
-  id        String     @id
-  role      Role       @default(CLIENT)
-  name      String?
-  email     String?    @unique
-  phone     String?
-  addresses Address[]  @relation("UserAddresses")
-  notes     Note[]     @relation("UserNotes")
-  documents Document[] @relation("UserDocuments")
-  agent     Agent?     @relation("AssignedClients", fields: [agentId], references: [id])
-  agentId   String?
+model Account {
+  id            String     @id @unique
+  agentId       String? // nullable if an account may not have an agent
+  street1       String?
+  street2       String?
+  city          String?
+  state         String?
+  zipcode       String?
+  country       String?
+  phone         String?
+  email         String?
+  policyId      String?
+  policyPlan    String?
+  policyRenewal DateTime?
+  documents     Document[] // relation to Document
+  notes         Note[] // relation to Note
+  createdAt     DateTime   @default(now())
 }
-
-// The Agent model represents agents of the health insurance agency.
-// Each agent has a unique id that is generated automatically.
-// The role field is always set to AGENT.
-// The name, email, and phone fields are optional and allow you to store additional agent information if necessary.
-// The addresses, notes, and documents fields define one-to-many relationships with the Address, Note, and Document models, respectively.
-// The clients field defines a many-to-many relationship with the User model through the AssignedClients relation table.
-// This allows you to associate multiple clients with an agent and vice versa.
-
-model Agent {
-  id        String     @id
-  role      Role       @default(AGENT)
-  name      String?
-  email     String?    @unique
-  phone     String?
-  addresses Address[]  @relation("AgentAddresses")
-  notes     Note[]     @relation("AgentNotes")
-  documents Document[] @relation("AgentDocuments")
-  clients   User[]     @relation("AssignedClients")
-}
-
-// The Address model represents addresses associated with users or agents.
-// Each address has a unique id that is generated automatically.
-// The street, city, state, postal, and country fields allow you to store address information.
-// The users field defines a many-to-many relationship with the User model.
-// The agent field defines a many-to-one relationship with the Agent model using the agentId field.
-// This allows you to associate an Address record with an Agent record if necessary.
-
-model Address {
-  id      String  @id @default(uuid())
-  street  String
-  city    String
-  state   String
-  postal  String
-  country String
-  users   User[]  @relation("UserAddresses")
-  agent   Agent?  @relation("AgentAddresses", fields: [agentId], references: [id])
-  agentId String?
-}
-
-// The Document model represents documents associated with users or agents.
-// Each document has a unique id that is generated automatically.
-// The name and url fields allow you to store document information.
-// The createdAt field is automatically set to the current date and time.
-// The users field defines a many-to-many relationship with the User model.
-// The agent field defines a many-to-one relationship with the Agent model using the agentId field.
-// This allows you to associate a Document record with an Agent record if necessary.
 
 model Document {
   id        String   @id @default(cuid())
   name      String?
   url       String
   createdAt DateTime @default(now())
-  users     User[]   @relation("UserDocuments")
-  agent     Agent?   @relation("AgentDocuments", fields: [agentId], references: [id])
-  agentId   String?
+  accountId String // add this field
+  account   Account  @relation(fields: [accountId], references: [id]) // relation to Account
 }
-
-// The Note model represents notes associated with users or agents.
-// Each note has a unique id that is generated automatically.
-// The content field allows you to store note information.
-// The createdAt field is automatically set to the current date and time.
-// The users field defines a many-to-many relationship with the User model.
-// The agent field defines a many-to-one relationship with the Agent model using the agentId field.
-// This allows you to associate a Note record with an Agent record if necessary.
 
 model Note {
   id        String   @id @default(cuid())
+  title     String
   content   String
   createdAt DateTime @default(now())
-  users     User[]   @relation("UserNotes")
-  agent     Agent?   @relation("AgentNotes", fields: [agentId], references: [id])
-  agentId   String?
-}
-
-enum Role {
-  AGENT
-  CLIENT
+  accountId String // add this field
+  account   Account  @relation(fields: [accountId], references: [id]) // relation to Account
 }
