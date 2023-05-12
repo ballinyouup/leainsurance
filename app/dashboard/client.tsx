@@ -8,7 +8,7 @@ import {
 } from "../components/shadcn-ui/tabs";
 import { auth } from "@clerk/nextjs";
 import { prismaActions } from "../server/actions/prisma";
-import { Account } from "@prisma/client";
+import { type Account } from "@prisma/client";
 prismaActions;
 async function getData(): Promise<Payment[]> {
 	// Fetch data from your API here.
