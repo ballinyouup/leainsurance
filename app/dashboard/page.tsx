@@ -1,8 +1,8 @@
-import { Payment, columns } from "./columns";
-import { DataTable } from "./data-table";
-import { auth } from "@clerk/nextjs";
-import { env } from "../env.mjs";
-import { redirect } from "next/navigation";
+import { Payment } from "./columns";
+import { auth, clerkClient } from "@clerk/nextjs";
+import { clerkActions } from "../server/actions/clerk";
+import AgentDashboard from "./agent";
+import ClientDashboard from "./client";
 async function getData(): Promise<Payment[]> {
 	// Fetch data from your API here.
 	return [
@@ -34,18 +34,27 @@ async function getData(): Promise<Payment[]> {
 	];
 }
 
-export default async function DemoPage() {
-	const data = await getData();
+export default async function Page() {
 	const { userId } = auth();
-	if (userId !== env.ADMIN_ID) {
-		redirect("/");
+	const user = await clerkClient.users.getUser(userId!);
+
+	if (!user.publicMetadata.role && userId) {
+		await clerkActions.updateRole(userId, "client");
 	}
+
 	return (
-		<div className="flex w-full items-center justify-center">
-			<div className="grid w-full max-w-9xl grid-cols-12 justify-end gap-4 bg-primary-foreground p-10">
-				<div className="col-span-3 h-full rounded-md border">test</div>
-				<DataTable columns={columns} data={data} className="col-span-9" />
-			</div>
-		</div>
+		<>
+			{user.publicMetadata.role === "agent" ? (
+				<>
+					{/* @ts-expect-error Async Server Component */}
+					<AgentDashboard />
+				</>
+			) : (
+				<>
+					{/* @ts-expect-error Async Server Component */}
+					<ClientDashboard />
+				</>
+			)}
+		</>
 	);
 }
