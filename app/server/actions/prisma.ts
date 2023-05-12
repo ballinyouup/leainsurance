@@ -1,6 +1,5 @@
 import { prisma } from "../db";
 import { z } from "zod";
-import { toast } from "react-hot-toast";
 const formSchema = z.object({
 	email: z.string().email("Not an email").max(64).min(7),
 	streetAddress1: z.string().min(4).max(32).optional(),
@@ -26,7 +25,6 @@ export const prismaActions = {
 					email: email,
 				},
 			});
-			toast.success("Created new account");
 			return newAccount;
 		}
 	},
@@ -51,7 +49,6 @@ export const prismaActions = {
 					zipcode: parsedData.zipCode,
 				},
 			});
-			toast.success("Successfully updated account");
 			return updatedAccount;
 		} else {
 			const parsedData = formSchema.parse(formData);
@@ -66,7 +63,6 @@ export const prismaActions = {
 					zipcode: parsedData.zipCode,
 				},
 			});
-			toast.success("Successfully updated account");
 			return newAccount;
 		}
 	},
