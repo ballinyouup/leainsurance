@@ -185,7 +185,7 @@ export default function Page() {
 						<span>
 							Term life insurance is a good option if you want to cover a
 							specific financial obligation, such as a mortgage, a loan, or a
-							child's education. It can also provide income replacement for your
+							child`s education. It can also provide income replacement for your
 							dependents during your working years. However, term life insurance
 							has some drawbacks. If you outlive the term, your coverage will
 							end and you will have to renew it at a higher rate or buy a new
@@ -220,7 +220,7 @@ export default function Page() {
 						</span>
 						<span>
 							Permanent life insurance also pays dividends to policyholders
-							based on the company's performance and profitability. Dividends
+							based on the company&apos;s performance and profitability. Dividends
 							are not guaranteed, but they can be used to increase your death
 							benefit, reduce your premiums, or add more cash value to your
 							policy
@@ -266,7 +266,7 @@ export default function Page() {
 									or withdrawn for any purpose
 								</li>
 								<li className="ml-6">
-									It pays dividends to policyholders based on the company's
+									It pays dividends to policyholders based on the company&apos;s
 									performance and profitability
 								</li>
 								<li className="ml-6">
@@ -466,7 +466,7 @@ export default function Page() {
 							<li className="ml-6">
 								How much coverage do I need? The amount of coverage you need
 								depends on various factors, such as your income, your debts,
-								your expenses, and your dependents' needs. A common rule of
+								your expenses, and your dependents` needs. A common rule of
 								thumb is to multiply your annual income by 10 or 15, but you may
 								want to use a life insurance calculator or consult with a
 								financial planner to get a more accurate estimate.

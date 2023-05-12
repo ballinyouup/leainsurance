@@ -27,7 +27,7 @@ const TextSection = () => {
 					<span className="text-lg">
 						Our plans not only offer comprehensive coverage for routine checkups
 						and major medical procedures but our agents also provide
-						personalized attention and guidance to help you find the plan that's
+						personalized attention and guidance to help you find the plan that`s
 						right for you.
 					</span>
 				</motion.div>

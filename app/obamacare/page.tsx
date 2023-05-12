@@ -70,7 +70,8 @@ export default function Page() {
 							<span>
 								Obamacare offers various types of cost assistance, such as
 								premium tax credits, cost-sharing reduction subsidies, Medicaid
-								expansion, and the Children's Health Insurance Program (CHIP).
+								expansion, and the Children&apos;s Health Insurance Program
+								(CHIP).
 							</span>
 							<span>
 								Obamacare also sets minimum standards for health plans, such as
@@ -307,7 +308,7 @@ export default function Page() {
 							</li>
 							<li className="ml-6">
 								The copayment: This is a fixed amount you pay for a covered
-								service, such as a doctor's visit or a prescription drug.
+								service, such as a doctor&apos;s visit or a prescription drug.
 								Copayments vary by plan and type of service.
 							</li>
 							<li className="ml-6">

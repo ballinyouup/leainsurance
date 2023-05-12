@@ -228,13 +228,13 @@ export default function Page() {
 							<span>
 								You must follow the rules of your MA plan to get covered
 								services. For example, you may need to use providers in your
-								plan's network, get referrals from your primary care provider
+								plan&apos;s network, get referrals from your primary care provider
 								(PCP), or get prior authorization for certain services.
 							</span>
 							<span>
 								You can enroll in an MA plan during your IEP or OEP or during a
 								special enrollment period (SEP) if you qualify for one. Some
-								examples of SEPs are when you move out of your plan's service
+								examples of SEPs are when you move out of your plan&apos;s service
 								area, lose your employer-sponsored coverage, or have a change in
 								your Medicaid or Extra Help status. You can also switch from one
 								MA plan to another during the Medicare Advantage open enrollment
@@ -404,7 +404,7 @@ export default function Page() {
 									Medicare costs and benefits can vary depending on the coverage
 									you select. Original Medicare has deductibles,copayments, and
 									coinsurance, while Medicare Advantage and Medigap plans may
-									have different cost-sharing structures. Here's a brief
+									have different cost-sharing structures. Here&apos;s a brief
 									overview of some common costs and benefits associated with
 									Medicare:
 								</span>
@@ -536,7 +536,7 @@ export default function Page() {
 								</li>
 								<span>
 									To find out what additional benefits your MA plan offers, you
-									can check your plan's summary of benefits, evidence of
+									can check your plan&apos;s summary of benefits, evidence of
 									coverage, or website. You can also compare different MA plans
 									and their additional benefits using the Medicare Plan Finder
 									tool. You should also check if your plan has any rules or
