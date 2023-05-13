@@ -8,7 +8,7 @@ import {
 } from "../components/shadcn-ui/tabs";
 import { auth } from "@clerk/nextjs";
 import { prismaActions } from "../server/actions/prisma";
-prismaActions;
+import { Account } from "@prisma/client";
 async function getData(): Promise<Payment[]> {
 	// Fetch data from your API here.
 	return [
@@ -64,7 +64,7 @@ export default async function ClientDashboard() {
 						value="info"
 						className="col-span-8 flex flex-col gap-4 bg-muted-foreground p-4 text-2xl text-primary-foreground"
 					>
-						{userData && <DashboardForm userData={userData} />}
+						{<DashboardForm userData={userData as Account} />}
 					</TabsContent>
 				</Tabs>
 			</div>
