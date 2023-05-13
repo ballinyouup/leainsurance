@@ -22,7 +22,7 @@ export const prismaActions = {
 			const newAccount = await prisma.account.create({
 				data: {
 					id: userId,
-					email: email,
+					email: email ?? "",
 				},
 			});
 			return newAccount;
@@ -41,12 +41,12 @@ export const prismaActions = {
 					id: existingAccount.id,
 				},
 				data: {
-					email: parsedData.email,
-					city: parsedData.city,
-					state: parsedData.state,
-					street1: parsedData.streetAddress1,
-					street2: parsedData.streetAddress2,
-					zipcode: parsedData.zipCode,
+					email: parsedData.email ?? "",
+					city: parsedData.city ?? "",
+					state: parsedData.state ?? "",
+					street1: parsedData.streetAddress1 ?? "",
+					street2: parsedData.streetAddress2 ?? "",
+					zipcode: parsedData.zipCode ?? "",
 				},
 			});
 			return updatedAccount;
@@ -55,12 +55,12 @@ export const prismaActions = {
 			const newAccount = await prisma.account.create({
 				data: {
 					id: userId,
-					email: parsedData.email,
-					city: parsedData.city,
-					state: parsedData.state,
-					street1: parsedData.streetAddress1,
-					street2: parsedData.streetAddress2,
-					zipcode: parsedData.zipCode,
+					email: parsedData.email ?? "",
+					city: parsedData.city ?? "",
+					state: parsedData.state ?? "",
+					street1: parsedData.streetAddress1 ?? "",
+					street2: parsedData.streetAddress2 ?? "",
+					zipcode: parsedData.zipCode ?? "",
 				},
 			});
 			return newAccount;
