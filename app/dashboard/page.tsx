@@ -47,7 +47,7 @@ export default async function Page() {
 	const userData = await prismaActions.getAccount(userId as string);
 	return (
 		<>
-			{user.publicMetadata.role === "client" ? (
+			{user.publicMetadata.role === "agent" ? (
 				<>
 					<AgentDashboard />
 				</>
