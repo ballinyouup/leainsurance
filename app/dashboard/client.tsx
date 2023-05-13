@@ -39,9 +39,8 @@ async function getData(): Promise<Payment[]> {
 		// ...
 	];
 }
-export default async function ClientDashboard() {
-	const { userId } = auth();
-	const userData = await prismaActions.getAccount(userId as string);
+export default function ClientDashboard({userData}:{userData: Account}) {
+	
 	return (
 		<main className="flex w-full items-center justify-center">
 			<div className="w-full max-w-9xl">

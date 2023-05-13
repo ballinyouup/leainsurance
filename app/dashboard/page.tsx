@@ -3,6 +3,8 @@ import { auth, clerkClient } from "@clerk/nextjs";
 import { clerkActions } from "../server/actions/clerk";
 import AgentDashboard from "./agent";
 import ClientDashboard from "./client";
+import { prismaActions } from "../server/actions/prisma";
+import { Account } from "@prisma/client";
 async function getData(): Promise<Payment[]> {
 	// Fetch data from your API here.
 	return [
@@ -42,6 +44,7 @@ export default async function Page() {
 		await clerkActions.updateRole(userId, "client");
 	}
 
+	const userData = await prismaActions.getAccount(userId as string);
 	return (
 		<>
 			{user.publicMetadata.role === "agent" ? (
@@ -51,8 +54,7 @@ export default async function Page() {
 				</>
 			) : (
 				<>
-					{/* @ts-expect-error Async Server Component */}
-					<ClientDashboard />
+					<ClientDashboard userData={userData as Account} />
 				</>
 			)}
 		</>
