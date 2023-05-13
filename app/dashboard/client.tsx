@@ -39,8 +39,7 @@ async function getData(): Promise<Payment[]> {
 		// ...
 	];
 }
-export default function ClientDashboard({userData}:{userData: Account}) {
-	
+export default function ClientDashboard({ userData }: { userData: Account }) {
 	return (
 		<main className="flex w-full items-center justify-center">
 			<div className="w-full max-w-9xl">
@@ -63,7 +62,7 @@ export default function ClientDashboard({userData}:{userData: Account}) {
 						value="info"
 						className="col-span-8 flex flex-col gap-4 bg-muted-foreground p-4 text-2xl text-primary-foreground"
 					>
-						<DashboardForm userData={userData as Account} />
+						{/**<DashboardForm userData={userData as Account} />**/}
 					</TabsContent>
 				</Tabs>
 			</div>
