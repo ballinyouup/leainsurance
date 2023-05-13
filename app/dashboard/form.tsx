@@ -4,9 +4,10 @@ import { Input } from "../components/shadcn-ui/input";
 import { Label } from "../components/shadcn-ui/label";
 import { useState } from "react";
 import { z } from "zod";
-import { handleEditForm } from "../server/actions/form";
 import { useAuth } from "@clerk/nextjs";
 import { Account } from "@prisma/client";
+import { handleEditForm } from "../server/actions/form";
+
 const DashboardForm = ({ userData }: { userData: Account }) => {
 	const { userId } = useAuth();
 	const formSchema = z.object({
@@ -19,14 +20,13 @@ const DashboardForm = ({ userData }: { userData: Account }) => {
 	});
 
 	const [formData, setFormData] = useState({
-		email: userData.email,
-		streetAddress1: userData.street1,
-		streetAddress2: userData.street2,
-		city: userData.city,
-		state: userData.state,
-		zipCode: userData.zipcode,
+		email: userData?.email ?? "",
+		streetAddress1: userData?.street1 ?? "",
+		streetAddress2: userData?.street2 ?? "",
+		city: userData?.city ?? "",
+		state: userData?.state ?? "",
+		zipCode: userData?.zipcode ?? "",
 	});
-
 	const [edit, setEdit] = useState(false);
 
 	return (
