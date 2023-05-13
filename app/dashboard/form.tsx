@@ -10,7 +10,7 @@ import { Account } from "@prisma/client";
 const DashboardForm = ({ userData }: { userData: Account }) => {
 	const { userId } = useAuth();
 	const formSchema = z.object({
-		email: z.string().email("Not an email").max(64).min(7),
+		email: z.string().email().max(64).min(7).optional(),
 		streetAddress1: z.string().min(4).max(32).optional(),
 		streetAddress2: z.string().min(0).max(16).optional(),
 		city: z.string().min(1).max(17).optional(),

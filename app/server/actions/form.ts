@@ -2,7 +2,7 @@
 import { z } from "zod";
 import { prismaActions } from "./prisma";
 const formSchema = z.object({
-	email: z.string().email("Not an email").max(64).min(7),
+	email: z.string().email("Not an email").max(64).min(7).optional(),
 	streetAddress1: z.string().min(4).max(32).optional(),
 	streetAddress2: z.string().min(0).max(16).optional(),
 	city: z.string().min(1).max(17).optional(),
@@ -15,7 +15,7 @@ type Form = z.infer<typeof formSchema>;
 export async function handleEditForm(formData: Form, userId: string) {
 	const parsedData = formSchema.parse(formData);
 	const submitted = await prismaActions.updateAccount(userId, {
-		email: parsedData.email,
+		email: parsedData.email as string,
 		city: parsedData.city,
 		state: parsedData.state,
 		streetAddress1: parsedData.streetAddress1,
