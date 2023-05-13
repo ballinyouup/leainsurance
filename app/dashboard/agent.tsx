@@ -2,7 +2,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "$/tabs";
 import { Button } from "../components/shadcn-ui/button";
 import { Input } from "../components/shadcn-ui/input";
 
-export default async function AgentDashboard() {
+export default function AgentDashboard() {
 	
 	return (
 		<main className="flex w-full items-center justify-center">

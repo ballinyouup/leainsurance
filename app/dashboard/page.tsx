@@ -49,7 +49,6 @@ export default async function Page() {
 		<>
 			{user.publicMetadata.role === "agent" ? (
 				<>
-					{/* @ts-expect-error Async Server Component */}
 					<AgentDashboard />
 				</>
 			) : (
