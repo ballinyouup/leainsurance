@@ -19,12 +19,12 @@ const DashboardForm = ({ userData }: { userData: Account }) => {
 	});
 
 	const [formData, setFormData] = useState({
-		email: userData.email ?? "",
-		streetAddress1: userData.street1 ?? "",
-		streetAddress2: userData.street2 ?? "",
-		city: userData.city ?? "",
-		state: userData.state ?? "",
-		zipCode: userData.zipcode ?? "",
+		email: userData.email,
+		streetAddress1: userData.street1,
+		streetAddress2: userData.street2,
+		city: userData.city,
+		state: userData.state,
+		zipCode: userData.zipcode,
 	});
 
 	const [edit, setEdit] = useState(false);
@@ -39,7 +39,7 @@ const DashboardForm = ({ userData }: { userData: Account }) => {
 					<div className="flex flex-col gap-2">
 						<Label>Email:</Label>
 						<Input
-							value={formData.email}
+							value={formData.email ?? ""}
 							onChange={(e) => {
 								setFormData((prevFormData) => ({
 									...prevFormData,
@@ -49,7 +49,7 @@ const DashboardForm = ({ userData }: { userData: Account }) => {
 						/>
 						<Label>Street Address 1:</Label>
 						<Input
-							value={formData.streetAddress1}
+							value={formData.streetAddress1 ?? ""}
 							onChange={(e) => {
 								setFormData((prevFormData) => ({
 									...prevFormData,
@@ -59,7 +59,7 @@ const DashboardForm = ({ userData }: { userData: Account }) => {
 						/>
 						<Label>Street Address 2:</Label>
 						<Input
-							value={formData.streetAddress2}
+							value={formData.streetAddress2 ?? ""}
 							onChange={(e) => {
 								setFormData((prevFormData) => ({
 									...prevFormData,
@@ -71,7 +71,7 @@ const DashboardForm = ({ userData }: { userData: Account }) => {
 							<div className="w-full">
 								<Label>City:</Label>
 								<Input
-									value={formData.city}
+									value={formData.city ?? ""}
 									onChange={(e) => {
 										setFormData((prevFormData) => ({
 											...prevFormData,
@@ -83,7 +83,7 @@ const DashboardForm = ({ userData }: { userData: Account }) => {
 							<div className="w-full">
 								<Label>State:</Label>
 								<Input
-									value={formData.state}
+									value={formData.state ?? ""}
 									onChange={(e) => {
 										setFormData((prevFormData) => ({
 											...prevFormData,
@@ -95,7 +95,7 @@ const DashboardForm = ({ userData }: { userData: Account }) => {
 							<div className="w-full">
 								<Label>Zip Code:</Label>
 								<Input
-									value={formData.zipCode}
+									value={formData.zipCode ?? ""}
 									onChange={(e) => {
 										setFormData((prevFormData) => ({
 											...prevFormData,
@@ -110,28 +110,28 @@ const DashboardForm = ({ userData }: { userData: Account }) => {
 					<div className="flex flex-col gap-6">
 						<div className="flex w-full flex-col gap-3">
 							<Label>Email</Label>
-							<Label>{formData.email}</Label>
+							<Label>{formData.email ?? ""}</Label>
 						</div>
 						<div className="flex w-full flex-col gap-3">
 							<Label>Street Address 1:</Label>
-							<Label>{formData.streetAddress1}</Label>
+							<Label>{formData.streetAddress1 ?? ""}</Label>
 						</div>
 						<div className="flex w-full flex-col gap-3">
 							<Label>Street Address 2:</Label>
-							<Label>{formData.streetAddress2}</Label>
+							<Label>{formData.streetAddress2 ?? ""}</Label>
 						</div>
 						<div className="flex w-full gap-8">
 							<div className="flex w-full flex-col gap-3">
 								<Label>City:</Label>
-								<Label>{formData.city}</Label>
+								<Label>{formData.city ?? ""}</Label>
 							</div>
 							<div className="flex w-full flex-col gap-2">
 								<Label>State:</Label>
-								<Label>{formData.state}</Label>
+								<Label>{formData.state ?? ""}</Label>
 							</div>
 							<div className="flex w-full flex-col gap-2">
 								<Label>Zip Code:</Label>
-								<Label>{formData.zipCode}</Label>
+								<Label>{formData.zipCode ?? ""}</Label>
 							</div>
 						</div>
 					</div>
