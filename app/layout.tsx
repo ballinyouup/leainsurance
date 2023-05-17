@@ -1,8 +1,6 @@
-import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
 import Footer from "./components/ui/footer";
 import Navbar from "./components/ui/navbar";
-import { env } from "./env.mjs";
 import QueryProvider from "./providers/query-provider";
 import { ThemeProvider } from "./providers/theme-provider";
 import "./globals.css";
