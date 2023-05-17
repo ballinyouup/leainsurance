@@ -24,7 +24,6 @@ const MobileMenu = () => {
 				<Menu className="h-8 w-8 text-white" />
 			</SheetTrigger>
 			<SheetContent className="flex w-full flex-col">
-				
 				<SheetTitle>Insurance</SheetTitle>
 				<Link href="/medicare" className="flex items-center">
 					<Stethoscope className="mr-2 h-4 w-4" />
