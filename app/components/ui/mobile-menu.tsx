@@ -12,51 +12,19 @@ import {
 	Store,
 	Mail,
 	Phone,
-	LayoutDashboard,
-	Wrench,
-	LogOut,
+
 } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
-import {
-	SignInButton,
-	SignedIn,
-	SignedOut,
-	useUser,
-	UserButton,
-	useAuth,
-} from "@clerk/nextjs";
-import { Button } from "../shadcn-ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "../shadcn-ui/avatar";
+
 const MobileMenu = () => {
-	const { user } = useUser();
-	const { signOut } = useAuth();
+
 	return (
 		<Sheet>
 			<SheetTrigger>
 				<Menu className="h-8 w-8 text-white" />
 			</SheetTrigger>
 			<SheetContent className="flex w-full flex-col">
-				<SignedIn>
-					<div className="flex flex-wrap items-center gap-3">
-						<Avatar>
-							<AvatarImage src={user?.profileImageUrl} alt="Profile Image" />
-							<AvatarFallback>{user?.firstName?.charAt(0)}</AvatarFallback>
-						</Avatar>
-						<SheetTitle>Welcome {user?.firstName}</SheetTitle>
-					</div>
-					<Link href="/dashboard" className="flex items-center">
-						<LayoutDashboard className="mr-2 h-4 w-4" />
-						<span>Dashboard</span>
-					</Link>
-					<Link href="/account" className="flex items-center">
-						<Wrench className="mr-2 h-4 w-4" />
-						<span>Account</span>
-					</Link>
-					<button onClick={() => signOut()} className="flex items-center">
-						<LogOut className="mr-2 h-4 w-4" />
-						<span>Sign Out</span>
-					</button>
-				</SignedIn>
+				
 				<SheetTitle>Insurance</SheetTitle>
 				<Link href="/medicare" className="flex items-center">
 					<Stethoscope className="mr-2 h-4 w-4" />
@@ -99,11 +67,6 @@ const MobileMenu = () => {
 				</Link>
 				<div className="flex w-full flex-col gap-2">
 					<ThemeToggle variant="default" />
-					<SignedOut>
-						<SignInButton>
-							<Button>Sign In</Button>
-						</SignInButton>
-					</SignedOut>
 				</div>
 			</SheetContent>
 		</Sheet>
