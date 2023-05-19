@@ -28,7 +28,7 @@ const WhyCard: React.FC<IWhyCard> = ({ alt, src, title, text }) => {
 
 const WhySection = () => {
 	return (
-		<section className="z-10 flex w-full flex-col items-center justify-center gap-6 bg-tealPrimary px-5 py-6 sm:p-20 sm:px-0 lg:flex-row lg:items-start">
+		<section className="z-10 flex w-full flex-col items-center justify-center gap-6 bg-tealPrimary px-5 py-6 sm:p-32 sm:px-0 lg:flex-row lg:items-start">
 			<WhyCard
 				alt={"Heart Icon"}
 				src={

@@ -73,7 +73,7 @@ const Footer = () => {
 		},
 	];
 	return (
-		<footer className="flex w-full items-center justify-center text-xl text-white">
+		<footer className="-mt-1 flex w-full items-center justify-center text-xl text-white">
 			<div className="flex w-full flex-col gap-8 bg-black p-6 sm:flex-row sm:items-center sm:justify-center sm:gap-0 sm:p-12 md:max-w-9xl">
 				{/** Insurance Footer Section */}
 				<div className="flex w-full max-w-xs items-center justify-center">
