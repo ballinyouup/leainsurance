@@ -1,34 +1,71 @@
 import Image from "next/image";
-
+import Partners from "./home-partners";
 interface IWhyCard {
 	alt: string;
 	src: string;
 	title: string;
 	text: string;
+	ImageSrc: string;
+	ImageAlt: string;
+	inverted?: boolean;
 }
 
-const WhyCard: React.FC<IWhyCard> = ({ alt, src, title, text }) => {
+const WhyCard: React.FC<IWhyCard> = ({
+	alt,
+	src,
+	title,
+	text,
+	ImageSrc,
+	ImageAlt,
+	inverted = false,
+}) => {
 	return (
-		<div className="flex w-full max-w-lg flex-col gap-2 rounded-lg border border-black border-opacity-30 bg-background p-6 lg:h-80 lg:w-80">
-			<div className="w-fit rounded-lg border border-primary bg-tealPrimary p-2">
+		<div
+			className={`self-cente flex w-full max-w-7xl flex-col gap-2 rounded-lg p-8 md:flex-row ${
+				inverted ? "bg-accent text-white md:flex-row-reverse" : "text-primary"
+			}`}
+		>
+			<div
+				className={`flex w-full flex-col items-start justify-start gap-4 rounded-lg p-8 md:w-1/2`}
+			>
+				<div
+					className={`w-fit rounded-lg border border-primary ${
+						inverted ? "bg-background" : "bg-primary"
+					} p-2`}
+				>
+					<Image
+						className={inverted ? "" : "invert"}
+						alt={alt}
+						width={24}
+						height={24}
+						src={src}
+					/>
+				</div>
+				<div className="flex max-w-lg flex-col">
+					<span className="text-xl font-bold">{title}</span>
+					<span className="text-base">{text}</span>
+				</div>
+			</div>
+			<div className="relative h-40 w-full overflow-hidden rounded-lg p-2 sm:h-96 md:w-1/2">
 				<Image
-					className="h-6 w-6 invert"
-					alt={alt}
-					width={24}
-					height={24}
-					src={src}
+					src={ImageSrc}
+					alt={ImageAlt}
+					height={5000}
+					width={3333}
+					className={
+						inverted
+							? "absolute -top-40 rounded-lg"
+							: "absolute rounded-lg object-fill"
+					}
 				/>
 			</div>
-
-			<span className="text-xl font-bold text-primary">{title}</span>
-			<span className="text-base text-primary">{text}</span>
 		</div>
 	);
 };
 
 const WhySection = () => {
 	return (
-		<section className="z-10 flex w-full flex-col items-center justify-center gap-6 bg-tealPrimary px-5 py-6 sm:p-32 sm:px-0 lg:flex-row lg:items-start">
+		<section className="z-10 flex w-full flex-col items-center justify-center gap-6 bg-background lg:items-start">
 			<WhyCard
 				alt={"Heart Icon"}
 				src={
@@ -38,6 +75,8 @@ const WhySection = () => {
 				text={
 					"At L.E.A Insurance, we start each relationship with a conversation. Our advisors get to know you and your health care needs, and then recommend the best plan for you."
 				}
+				ImageSrc={"/why1image.jpg"}
+				ImageAlt={"Smiling Black man"}
 			/>
 			<WhyCard
 				alt={"Trust Icon"}
@@ -48,6 +87,9 @@ const WhySection = () => {
 				text={
 					"You can have peace of mind knowing that L.E.A Insurance will be there for you throughout all stages of life. Whether you're starting a family, or making a move, our advisors can help you adjust your plan as needed."
 				}
+				ImageSrc={"/why2image.jpg"}
+				ImageAlt={"Two Women Hugging an Older woman Smiling"}
+				inverted={true}
 			/>
 			<WhyCard
 				alt={"Doctor Icon"}
@@ -58,7 +100,10 @@ const WhySection = () => {
 				text={
 					"Our advisors will work with you to make sure you always have the right amount of protection. With L.E.A Insurance you can be sure that you're getting the best coverage and best price available."
 				}
+				ImageSrc={"/why3image.jpg"}
+				ImageAlt={"Patient consulting a doctor"}
 			/>
+			<Partners />
 		</section>
 	);
 };
