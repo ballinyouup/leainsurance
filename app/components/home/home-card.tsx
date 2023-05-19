@@ -48,7 +48,9 @@ const Card: React.FC<ICard> = ({
 					className={
 						index === 0
 							? "object-contain object-[0px_-40px] sm:object-[0px_0px] "
-							: "object-cover max-[530px]:object-[0px_-200px] sm:object-center"
+							: index === 1
+							? "object-cover object-[-200px_0px]"
+							: ""
 					}
 				/>
 			</AspectRatio>
