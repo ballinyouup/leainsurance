@@ -9,7 +9,7 @@ export default function Partners() {
 				<motion.div
 					animate={{ x: ["-50%", "50%"] }}
 					transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
-					className="flex w-[2000px] flex-nowrap items-center justify-center gap-10 rounded-lg md:w-[1600px]"
+					className="flex w-[2000px] flex-nowrap items-center justify-center gap-10 rounded-lg md:w-[3200px]"
 				>
 					<Image
 						src={"/insurance/humana.png"}
@@ -108,6 +108,7 @@ export default function Partners() {
 						width={320}
 						height={120}
 						quality={100}
+						className="-ml-10 sm:p-16"
 					/>
 				</motion.div>
 			</div>
