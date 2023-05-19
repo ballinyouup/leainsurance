@@ -7,9 +7,9 @@ export default function Partners() {
 		<section className="flex h-full w-full items-center justify-center p-5">
 			<div className="z-10 flex h-36 w-full max-w-5xl flex-col items-center justify-center self-center overflow-hidden rounded-lg bg-white">
 				<motion.div
-					animate={{ x: [-800, 800] }}
+					animate={{ x: ["-50%", "50%"] }}
 					transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
-					className="flex w-fit flex-nowrap items-center justify-center gap-10 rounded-lg"
+					className="flex w-[2000px] flex-nowrap items-center justify-center gap-10 rounded-lg md:w-[1600px]"
 				>
 					<Image
 						src={"/insurance/humana.png"}
