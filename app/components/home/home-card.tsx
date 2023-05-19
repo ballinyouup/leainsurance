@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { AspectRatio } from "../shadcn-ui/aspect-ratio";
 interface ICard {
 	src: string;
 	alt: string;
@@ -14,14 +15,7 @@ interface ICard {
 	};
 }
 
-const Card: React.FC<ICard> = ({
-	src,
-	alt,
-	delay = 0,
-	text,
-	href,
-	image,
-}) => {
+const Card: React.FC<ICard> = ({ src, alt, delay = 0, text, href, image }) => {
 	return (
 		<motion.div
 			initial={{
@@ -34,16 +28,12 @@ const Card: React.FC<ICard> = ({
 				delay: delay,
 				duration: 0.5,
 			}}
-			className="relative z-10 h-40 overflow-hidden rounded-lg sm:h-full [&>*]:hover:left-0"
+			className="relative z-10 h-40 w-full overflow-hidden rounded-lg sm:h-64"
 		>
-			<Image
-				src={src}
-				alt={alt}
-				width={240}
-				height={240}
-				className="min-w-[240px]"
-			/>
-			<motion.div className="absolute -left-60 top-0 z-10 flex h-full w-full flex-col bg-tealPrimary bg-opacity-95 transition-all duration-500 ease-out">
+			<AspectRatio ratio={3 / 4}>
+				<Image src={src} alt={alt} fill quality={100} />
+			</AspectRatio>
+			<motion.div className="absolute top-0 z-10 flex h-full w-full flex-col bg-tealPrimary bg-opacity-95 transition-all duration-500 ease-out">
 				<Link
 					href={href}
 					className="flex h-full w-full flex-col items-center justify-center text-lg text-white"
@@ -107,8 +97,8 @@ const Cards = () => {
 	];
 
 	return (
-		<section className="pb-12 lg:p-10">
-			<div className="grid h-full w-full grid-cols-[repeat(2,240px)] items-center justify-center gap-4 overflow-hidden max-[505px]:grid-cols-[repeat(1,240px)] lg:grid-cols-[repeat(4,240px)] lg:gap-6">
+		<section className="flex w-full items-center justify-center p-5 pb-12 lg:p-10">
+			<div className="grid h-full w-full max-w-5xl grid-cols-2 items-center justify-center gap-4 self-center overflow-hidden max-[505px]:grid-cols-1 lg:grid-cols-4 lg:gap-6">
 				{cards.map((card, index) => {
 					return (
 						<Card
@@ -128,4 +118,3 @@ const Cards = () => {
 };
 
 export default Cards;
-
