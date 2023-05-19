@@ -28,78 +28,163 @@ export default function Page() {
 				</div>
 				<Cards />
 				<WhySection />
-				<section className="flex w-full flex-col items-center justify-center gap-8 px-5 pt-8 lg:p-8">
-					<span className="z-10 w-full max-w-md rounded-xl bg-teal-900 p-4 text-center text-4xl font-bold uppercase text-white shadow-[5px_5px_5px] shadow-black">
-						Meet The Team
-					</span>
-					<div className="z-10 grid h-fit w-fit grid-cols-2 items-start gap-8 rounded-lg bg-background p-6 lg:grid-cols-4">
-						<div className="flex flex-col gap-4">
-							<AspectRatio ratio={3 / 4}>
-								<Image
-									src={"/LuisaPolanco.jpg"}
-									alt={"Luisa Polanco Picture"}
-									fill
-									className="rounded-lg"
-									quality={100}
-								/>
-							</AspectRatio>
-							<div>
-								<h3 className="text-xl font-bold">Luisa Polanco</h3>
-								<span className="text-base text-primary sm:text-lg lg:w-192">
-									VP of Sales & Marketing
-								</span>
-							</div>
+				<section className="flex w-full flex-col items-center justify-center gap-8 bg-tealPrimary px-5 pt-8 lg:p-8">
+					<div className="z-10 grid h-full w-full max-w-6xl grid-cols-2 items-center gap-8 rounded-lg bg-white p-6 max-[530px]:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+						<div className="hidden h-32 flex-col items-center justify-center gap-4 rounded-lg bg-accent lg:flex">
+							<span className="p-3 text-3xl font-bold uppercase text-primary-foreground text-white">
+								Our Insurance Providers:
+							</span>
 						</div>
-						<div className="flex flex-col gap-4">
-							<AspectRatio ratio={3 / 4}>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center sm:w-48 lg:w-full">
+							<AspectRatio ratio={16 / 4}>
 								<Image
-									src={"/delia.jpg"}
-									alt={"Delia Huici Picture"}
+									src={"/insurance/humana.png"}
+									alt={"Humana"}
 									fill
-									className="rounded-lg"
 									quality={100}
 								/>
 							</AspectRatio>
-							<div>
-								<h3 className="text-xl font-bold">Delia Huici</h3>
-								<span className="text-base text-primary sm:text-lg lg:w-192">
-									Manager of Sales & Marketing
-								</span>
-							</div>
 						</div>
-						<div className="flex flex-col gap-4">
-							<AspectRatio ratio={3 / 4}>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center lg:w-full">
+							<AspectRatio ratio={12 / 4}>
 								<Image
-									src={"/KimberlyCruz.jpg"}
-									alt={"Kimberly Cruz Picture"}
+									src={"/insurance/molina.png"}
+									alt={"Molina"}
 									fill
-									className="rounded-lg"
 									quality={100}
 								/>
 							</AspectRatio>
-							<div>
-								<h3 className="text-xl font-bold">Kimberly Cruz</h3>
-								<span className="text-base text-primary sm:text-lg lg:w-192">
-									Agent
-								</span>
-							</div>
 						</div>
-						<div className="flex flex-col gap-4">
-							<AspectRatio ratio={3 / 4}>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center lg:w-full">
+							<AspectRatio ratio={16 / 4}>
 								<Image
-									src={"/AshleyLegros.jpg"}
-									alt={"Ashley Legros Picture"}
+									src={"/insurance/oscar.png"}
+									alt={"Oscar"}
 									fill
-									className="rounded-lg"
 									quality={100}
 								/>
 							</AspectRatio>
-							<div>
-								<h3 className="text-xl font-bold">Ashley Legros</h3>
-								<span className="text-base text-primary sm:text-lg lg:w-192">
-									Agent
-								</span>
-							</div>
+						</div>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center lg:w-full">
+							<AspectRatio ratio={16 / 4}>
+								<Image
+									src={"/insurance/aetna.png"}
+									alt={"Aetna"}
+									fill
+									quality={100}
+								/>
+							</AspectRatio>
+						</div>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center lg:w-full">
+							<AspectRatio ratio={8 / 4}>
+								<Image
+									src={"/insurance/cigna.png"}
+									alt={"Cigna"}
+									fill
+									quality={100}
+								/>
+							</AspectRatio>
+						</div>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center lg:w-full">
+							<AspectRatio ratio={11 / 4}>
+								<Image
+									src={"/insurance/AvMed.png"}
+									alt={"AvMed"}
+									fill
+									quality={100}
+								/>
+							</AspectRatio>
+						</div>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center lg:w-full">
+							<AspectRatio ratio={8 / 4}>
+								<Image
+									src={"/insurance/ambetter.png"}
+									alt={"Ambetter"}
+									fill
+									quality={100}
+								/>
+							</AspectRatio>
+						</div>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center lg:w-full">
+							<AspectRatio ratio={10 / 4}>
+								<Image
+									src={"/insurance/devoted.png"}
+									alt={"Devoted"}
+									fill
+									quality={100}
+								/>
+							</AspectRatio>
+						</div>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center lg:w-full">
+							<AspectRatio ratio={16 / 4}>
+								<Image
+									src={"/insurance/Doctors.png"}
+									alt={"Doctors"}
+									fill
+									quality={100}
+								/>
+							</AspectRatio>
+						</div>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center lg:w-full">
+							<AspectRatio ratio={8 / 4}>
+								<Image
+									src={"/insurance/floridablue.png"}
+									alt={"Florida Blue"}
+									fill
+									quality={100}
+								/>
+							</AspectRatio>
+						</div>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center lg:w-full">
+							<AspectRatio ratio={8 / 4}>
+								<Image
+									src={"/insurance/healthsun.png"}
+									alt={"Health Sun"}
+									fill
+									quality={100}
+								/>
+							</AspectRatio>
+						</div>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center lg:w-full">
+							<AspectRatio ratio={12 / 4}>
+								<Image
+									src={"/insurance/simply.png"}
+									alt={"Simply"}
+									fill
+									quality={100}
+								/>
+							</AspectRatio>
+						</div>
+						<div className="flex w-48 flex-col gap-4 max-[530px]:justify-self-center lg:w-full">
+							<AspectRatio ratio={8 / 4}>
+								<Image
+									src={"/insurance/united.png"}
+									alt={"United"}
+									fill
+									quality={100}
+								/>
+							</AspectRatio>
+						</div>
+						<div className="flex w-40 flex-col gap-4 max-[530px]:justify-self-center lg:w-1/2 lg:justify-self-center">
+							<AspectRatio ratio={4 / 4}>
+								<Image
+									src={"/insurance/wellcare.png"}
+									alt={"Wellcare"}
+									fill
+									quality={100}
+								/>
+							</AspectRatio>
+						</div>
+						<div className="flex w-40 flex-col gap-4 rounded-lg max-md:hidden lg:justify-self-center lg:bg-accent">
+							<AspectRatio ratio={4 / 4}>
+								<Image
+									src={"/insurance/more.png"}
+									alt={"More"}
+									fill
+									quality={100}
+									className="lg:invert"
+								/>
+							</AspectRatio>
 						</div>
 					</div>
 				</section>
