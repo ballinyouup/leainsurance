@@ -4,11 +4,8 @@ import { Metadata } from "next";
 import Contact from "./components/home/home-contact";
 import WhySection from "./components/home/home-why";
 import { Separator } from "$/separator";
-import Image from "next/image";
 import Cards from "./components/home/home-card";
 import Waves from "./components/home/home-waves";
-import { AspectRatio } from "./components/shadcn-ui/aspect-ratio";
-import Partners from "./components/home/home-partners";
 export const metadata: Metadata = {
 	title: "L.E.A Insurance",
 	description:
@@ -30,7 +27,6 @@ export default function Page() {
 				<Cards />
 				<WhySection />
 				<Separator />
-				<Partners />
 				<Contact />
 				<Waves />
 			</div>
