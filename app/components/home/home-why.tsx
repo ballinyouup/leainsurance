@@ -20,44 +20,46 @@ const WhyCard: React.FC<IWhyCard> = ({
 	inverted = false,
 }) => {
 	return (
-		<div
-			className={`self-cente flex w-full max-w-7xl flex-col gap-2 rounded-lg p-8 md:flex-row ${
-				inverted ? "bg-accent text-white md:flex-row-reverse" : "text-primary"
-			}`}
-		>
+		<div className="flex w-full items-center justify-center p-5">
 			<div
-				className={`flex w-full flex-col items-start justify-start gap-4 rounded-lg p-8 md:w-1/2`}
+				className={`mt-8 flex w-full max-w-7xl flex-col gap-2 self-center rounded-lg border border-primary p-8 md:flex-row ${
+					inverted ? "bg-accent text-white md:flex-row-reverse" : "text-primary"
+				}`}
 			>
 				<div
-					className={`w-fit rounded-lg border border-primary ${
-						inverted ? "bg-accent-foreground" : "bg-accent"
-					} p-2`}
+					className={`flex w-full flex-col items-start justify-start gap-4 rounded-lg p-2 sm:p-8 md:w-1/2`}
 				>
+					<div
+						className={`w-fit rounded-lg border border-primary ${
+							inverted ? "bg-accent-foreground" : "bg-accent"
+						} p-2`}
+					>
+						<Image
+							className={inverted ? "" : "invert"}
+							alt={alt}
+							width={24}
+							height={24}
+							src={src}
+						/>
+					</div>
+					<div className="flex max-w-lg flex-col">
+						<span className="text-xl font-bold">{title}</span>
+						<span className="text-base">{text}</span>
+					</div>
+				</div>
+				<div className="relative h-40 w-full overflow-hidden rounded-lg p-2 sm:h-96 md:w-1/2">
 					<Image
-						className={inverted ? "" : "invert"}
-						alt={alt}
-						width={24}
-						height={24}
-						src={src}
+						src={ImageSrc}
+						alt={ImageAlt}
+						height={5000}
+						width={3333}
+						className={
+							inverted
+								? "absolute -top-40 rounded-lg"
+								: "absolute rounded-lg object-fill"
+						}
 					/>
 				</div>
-				<div className="flex max-w-lg flex-col">
-					<span className="text-xl font-bold">{title}</span>
-					<span className="text-base">{text}</span>
-				</div>
-			</div>
-			<div className="relative h-40 w-full overflow-hidden rounded-lg p-2 sm:h-96 md:w-1/2">
-				<Image
-					src={ImageSrc}
-					alt={ImageAlt}
-					height={5000}
-					width={3333}
-					className={
-						inverted
-							? "absolute -top-40 rounded-lg"
-							: "absolute rounded-lg object-fill"
-					}
-				/>
 			</div>
 		</div>
 	);
