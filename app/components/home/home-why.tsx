@@ -30,7 +30,7 @@ const WhyCard: React.FC<IWhyCard> = ({
 			>
 				<div
 					className={`w-fit rounded-lg border border-primary ${
-						inverted ? "bg-background" : "bg-primary"
+						inverted ? "bg-accent-foreground" : "bg-accent"
 					} p-2`}
 				>
 					<Image
