@@ -22,7 +22,7 @@ export default function Page() {
 					</div>
 					<Image
 						alt="Life Insurance Image"
-						className="relative -left-20 -top-24 w-full min-w-[1200px] mix-blend-screen brightness-50"
+						className="relative -top-24 w-full min-w-[1200px] mix-blend-screen brightness-50"
 						src="/familyreal.jpg"
 						width={600}
 						height={600}
