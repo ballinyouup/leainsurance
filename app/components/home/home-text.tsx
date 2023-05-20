@@ -23,8 +23,8 @@ const TextSection = () => {
 						<span>Choose</span>
 						<span>Us</span>
 					</div>
-					<span className="w-full border-[1.5px] border-primary sm:h-36 sm:w-fit" />
-					<span className="text-lg">
+					<span className="w-full border-[1.5px] border-primary sm:h-40 sm:w-fit" />
+					<span className="text-xl">
 						Our plans not only offer comprehensive coverage for routine checkups
 						and major medical procedures but our agents also provide
 						personalized attention and guidance to help you find the plan that`s

@@ -27,9 +27,9 @@ const MobileMenu = () => {
 			<SheetTrigger>
 				<Menu className="h-8 w-8 text-white" />
 			</SheetTrigger>
-			<SheetContent className="flex w-full flex-col">
+			<SheetContent className="flex w-full flex-col text-lg">
 				<Link href="/" className="flex items-center" onClick={handleOpen}>
-					<Home className="mr-2 h-4 w-4" />
+					<Home className="mr-2 h-6 w-6" />
 					<span>Return Home</span>
 				</Link>
 				<SheetTitle>Insurance</SheetTitle>
@@ -38,7 +38,7 @@ const MobileMenu = () => {
 					className="flex items-center"
 					onClick={handleOpen}
 				>
-					<Stethoscope className="mr-2 h-4 w-4" />
+					<Stethoscope className="mr-2 h-6 w-6" />
 					<span>Medicare</span>
 				</Link>
 				<Link
@@ -46,7 +46,7 @@ const MobileMenu = () => {
 					className="flex items-center"
 					onClick={handleOpen}
 				>
-					<Baby className="mr-2 h-4 w-4" />
+					<Baby className="mr-2 h-6 w-6" />
 					<span>Obamacare</span>
 				</Link>
 				<Link
@@ -54,7 +54,7 @@ const MobileMenu = () => {
 					className="flex items-center"
 					onClick={handleOpen}
 				>
-					<FileHeart className="mr-2 h-4 w-4" />
+					<FileHeart className="mr-2 h-6 w-6" />
 					<span>Life Insurance</span>
 				</Link>
 				<Link
@@ -62,7 +62,7 @@ const MobileMenu = () => {
 					className="flex items-center"
 					onClick={handleOpen}
 				>
-					<Sprout className="mr-2 h-4 w-4" />
+					<Sprout className="mr-2 h-6 w-6" />
 					<span>Final Expenses</span>
 				</Link>
 				<SheetTitle>Contact Us</SheetTitle>
@@ -70,22 +70,22 @@ const MobileMenu = () => {
 					href="https://www.instagram.com/leainsurance"
 					className="flex items-center"
 				>
-					<Instagram className="mr-2 h-4 w-4" />
+					<Instagram className="mr-2 h-6 w-6" />
 					<span>Instagram</span>
 				</Link>
 				<Link href="https://g.page/leainsurance" className="flex items-center">
-					<Store className="mr-2 h-4 w-4" />
+					<Store className="mr-2 h-6 w-6" />
 					<span>Google Business</span>
 				</Link>
 				<Link
 					href="mailto:lea.info@leainsurance.onmicrosoft.com"
 					className="flex items-center"
 				>
-					<Mail className="mr-2 h-4 w-4" />
+					<Mail className="mr-2 h-6 w-6" />
 					<span>Email</span>
 				</Link>
 				<Link href="tel:+18886954221" className="flex items-center">
-					<Phone className="mr-2 h-4 w-4" />
+					<Phone className="mr-2 h-6 w-6" />
 					<span>Call Us Today</span>
 				</Link>
 				<div className="flex w-full flex-col gap-2">

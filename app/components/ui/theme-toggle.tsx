@@ -13,8 +13,8 @@ export function ThemeToggle({ children, ...props }: ButtonProps) {
 			{...props}
 			onClick={() => setTheme(theme === "light" ? "dark" : "light")}
 		>
-			<Icons.moon className="rotate-0 scale-100 text-popover dark:-rotate-90 dark:scale-0" />
-			<Icons.sun className="absolute rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
+			<Icons.moon className="h-7 w-7 rotate-0 scale-100 text-popover dark:-rotate-90 dark:scale-0" />
+			<Icons.sun className="absolute h-7 w-7 rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
 			<span className="sr-only">Toggle theme</span>
 			{children}
 		</Button>

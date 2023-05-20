@@ -25,28 +25,28 @@ const DropMenu = () => {
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align="end">
-				<DropdownMenuLabel>Insurance</DropdownMenuLabel>
+				<DropdownMenuLabel className="text-lg">Insurance</DropdownMenuLabel>
 				<DropdownMenuSeparator />
 				<Link href="/medicare">
-					<DropdownMenuItem className="flex items-center">
+					<DropdownMenuItem className="flex items-center text-lg">
 						<Stethoscope className="mr-2 h-4 w-4" />
 						<span>Medicare</span>
 					</DropdownMenuItem>
 				</Link>
 				<Link href="/obamacare">
-					<DropdownMenuItem className="flex items-center">
+					<DropdownMenuItem className="flex items-center text-lg">
 						<Baby className="mr-2 h-4 w-4" />
 						<span>Obamacare</span>
 					</DropdownMenuItem>
 				</Link>
 				<Link href="/life-insurance">
-					<DropdownMenuItem className="flex items-center">
+					<DropdownMenuItem className="flex items-center text-lg">
 						<FileHeart className="mr-2 h-4 w-4" />
 						<span>Life Insurance</span>
 					</DropdownMenuItem>
 				</Link>
 				<Link href="/final-expenses">
-					<DropdownMenuItem className="flex items-center">
+					<DropdownMenuItem className="flex items-center text-lg">
 						<Sprout className="mr-2 h-4 w-4" />
 						<span>Final Expenses</span>
 					</DropdownMenuItem>

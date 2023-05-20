@@ -13,13 +13,13 @@ const Navbar = () => {
 				<div className="flex w-full flex-col items-center">
 					<div className="flex w-full flex-row items-center justify-end bg-teal-950 sm:h-6">
 						<div className="flex w-full items-center justify-center gap-3 p-0 sm:h-6 sm:justify-end sm:gap-4 sm:pr-3">
-							<span className="whitespace-nowrap text-xs font-semibold text-white">
+							<span className="whitespace-nowrap text-sm font-semibold text-white">
 								Hours: 9am - 5pm
 							</span>
 							<div className="flex items-center gap-1">
-								<PhoneCall className="h-3 w-3 text-white" />
+								<PhoneCall className="h-4 w-4 text-white" />
 
-								<span className="whitespace-nowrap text-xs font-semibold text-white">
+								<span className="whitespace-nowrap text-sm font-semibold text-white">
 									+1 (888)-695-4221
 								</span>
 							</div>

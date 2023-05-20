@@ -60,7 +60,7 @@ const Card: React.FC<ICard> = ({
 			>
 				<Link
 					href={href}
-					className="flex h-full w-full flex-col items-center justify-center text-lg text-white"
+					className="flex h-full w-full flex-col items-center justify-center text-xl text-white"
 				>
 					<span>{text}</span>
 					<Image

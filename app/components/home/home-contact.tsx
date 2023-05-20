@@ -95,11 +95,11 @@ const Contact = () => {
 						</TabsList>
 					</div>
 					<TabsContent value="clients" className="flex flex-col gap-2">
-						<div className="flex w-full max-w-sm flex-col">
+						<div className="flex w-full max-w-sm flex-col gap-4">
 							<span className="text-4xl font-bold uppercase sm:text-5xl">
 								Contact Us
 							</span>
-							<span>
+							<span className="text-xl">
 								Fill out this form and our team will get back to you within 24
 								hours
 							</span>
@@ -109,7 +109,7 @@ const Contact = () => {
 								e.preventDefault();
 								handleSubmit("client");
 							}}
-							className="mt-4 flex w-full max-w-sm flex-col gap-1 text-primary"
+							className="mt-4 flex w-full max-w-sm flex-col gap-1 text-xl text-primary"
 						>
 							<div className="flex gap-2 sm:gap-4">
 								<div className="flex flex-col">
@@ -200,6 +200,7 @@ const Contact = () => {
 							<Button
 								type="submit"
 								disabled={!formSchema.safeParse(formData).success}
+								className="mt-2 text-xl"
 							>
 								{submitLoading ? (
 									<LoadingSpinner className="mr-2 h-4 w-4 animate-spin fill-black text-white dark:text-primary" />
