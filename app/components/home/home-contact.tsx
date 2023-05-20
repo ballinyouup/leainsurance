@@ -5,7 +5,7 @@ import { z } from "zod";
 import LoadingSpinner from "../ui/spinner";
 import Image from "next/image";
 import { Button } from "../shadcn-ui/button";
-
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../shadcn-ui/tabs";
 const firstName = z.string().min(2).max(32);
 const lastName = z.string().min(2).max(32);
 const email = z.string().email("Invalid Email").min(4).max(48);
@@ -29,17 +29,20 @@ const Contact = () => {
 		phoneNumber: "",
 	});
 
-	const handleSubmit = async () => {
+	const handleSubmit = async (type: "client" | "agent") => {
 		try {
 			if (formSchema.parse(formData)) {
 				setSubmitLoading(true);
-				const response = await fetch("/api/submit", {
-					body: JSON.stringify(formData),
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-				});
+				const response = await fetch(
+					type === "agent" ? "/api/agents" : "/api/submit",
+					{
+						body: JSON.stringify(formData),
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+						},
+					}
+				);
 				if (response.status === 200) {
 					toast.success("Successfully submitted form!");
 					setSubmitLoading(false);
@@ -61,7 +64,10 @@ const Contact = () => {
 		}
 	};
 	return (
-		<section className="relative mt-8 flex h-full w-full items-center justify-center gap-20 px-5 lg:mt-0 lg:flex-row lg:py-20">
+		<Tabs
+			defaultValue="clients"
+			className="relative mt-8 flex h-full w-full items-center justify-center gap-20 px-5 lg:mt-0 lg:flex-row lg:py-20"
+		>
 			<div className="z-10 flex h-full w-fit flex-row items-start justify-start rounded-xl border-opacity-25 bg-background md:border md:border-primary-foreground lg:w-fit lg:gap-12 lg:px-8 lg:py-10">
 				<Image
 					src="/family.png"
@@ -71,122 +77,257 @@ const Contact = () => {
 					className="z-10 hidden lg:block"
 					quality="100"
 				/>
-				<div className="rounded-lg border border-muted-foreground bg-muted px-8 py-10">
+				<div className="flex flex-col gap-4 rounded-lg border border-muted-foreground bg-muted px-8 py-10">
 					<div className="flex w-full max-w-sm flex-col gap-4 text-primary">
-						<span className="text-4xl font-bold uppercase sm:text-5xl">
-							Contact Us
-						</span>
-						<span>
-							Fill out this form and our team will get back to you within 24
-							hours
-						</span>
+						<TabsList className="grid h-full w-full grid-cols-2 gap-2 rounded-lg">
+							<TabsTrigger
+								value="clients"
+								className="flex items-center justify-center rounded-lg text-center text-2xl"
+							>
+								<span>Clients</span>
+							</TabsTrigger>
+							<TabsTrigger
+								value="agents"
+								className="flex items-center justify-center rounded-lg text-center text-2xl"
+							>
+								<span>Agents</span>
+							</TabsTrigger>
+						</TabsList>
 					</div>
-					<form
-						onSubmit={(e) => {
-							e.preventDefault();
-							handleSubmit();
-						}}
-						className="mt-4 flex w-full max-w-sm flex-col gap-1 text-primary"
-					>
-						<div className="flex gap-2 sm:gap-4">
-							<div className="flex flex-col">
-								<label>First Name:</label>
-								<input
-									type="text"
-									placeholder="First name..."
-									className={
-										formData.firstName !== "" &&
-										!firstName.safeParse(formData.firstName).success
-											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
-											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
-									}
-									value={formData.firstName}
-									onChange={(e) => {
-										setFormData((prevFormData) => ({
-											...prevFormData,
-											firstName: e.target.value,
-										}));
-									}}
-									required
-								/>
-							</div>
-							<div className="flex flex-col">
-								<label>Last Name:</label>
-								<input
-									type="text"
-									placeholder="Last Name..."
-									className={
-										formData.lastName !== "" &&
-										!lastName.safeParse(formData.lastName).success
-											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
-											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
-									}
-									value={formData.lastName}
-									onChange={(e) => {
-										setFormData((prevFormData) => ({
-											...prevFormData,
-											lastName: e.target.value,
-										}));
-									}}
-									required
-								/>
-							</div>
+					<TabsContent value="clients" className="flex flex-col gap-2">
+						<div className="flex w-full max-w-sm flex-col">
+							<span className="text-4xl font-bold uppercase sm:text-5xl">
+								Contact Us
+							</span>
+							<span>
+								Fill out this form and our team will get back to you within 24
+								hours
+							</span>
 						</div>
-						<label>Email:</label>
-						<input
-							type="email"
-							placeholder="Enter Email..."
-							className={
-								formData.email !== "" &&
-								!email.safeParse(formData.email).success
-									? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
-									: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
-							}
-							value={formData.email}
-							onChange={(e) => {
-								setFormData((prevFormData) => ({
-									...prevFormData,
-									email: e.target.value,
-								}));
+						<form
+							onSubmit={(e) => {
+								e.preventDefault();
+								handleSubmit("client");
 							}}
-							required
-						/>
-						<label>Phone Number:</label>
-						<input
-							type="tel"
-							placeholder="000-000-0000"
-							className={
-								formData.phoneNumber !== "" &&
-								!phoneNumber.safeParse(formData.phoneNumber).success
-									? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
-									: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
-							}
-							value={formData.phoneNumber}
-							onChange={(e) => {
-								const rawValue = e.target.value.replace(/\D/g, "");
-								const formattedValue = rawValue
-									.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")
-									.replace(/(\d{3})(\d{3})(\d{0,4})/, "($1) $2-$3");
-								setFormData((prevFormData) => ({
-									...prevFormData,
-									phoneNumber: formattedValue,
-								}));
-							}}
-							required
-						/>
-						<Button
-							type="submit"
-							disabled={!formSchema.safeParse(formData).success}
+							className="mt-4 flex w-full max-w-sm flex-col gap-1 text-primary"
 						>
-							{submitLoading ? (
-								<LoadingSpinner className="mr-2 h-4 w-4 animate-spin fill-black text-white dark:text-primary" />
-							) : formSchema.safeParse(formData).success ? (
-								"Submit"
-							) : (
-								"Enter Your Info"
-							)}
-						</Button>
-					</form>
+							<div className="flex gap-2 sm:gap-4">
+								<div className="flex flex-col">
+									<label>First Name:</label>
+									<input
+										type="text"
+										placeholder="First name..."
+										className={
+											formData.firstName !== "" &&
+											!firstName.safeParse(formData.firstName).success
+												? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+												: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
+										}
+										value={formData.firstName}
+										onChange={(e) => {
+											setFormData((prevFormData) => ({
+												...prevFormData,
+												firstName: e.target.value,
+											}));
+										}}
+										required
+									/>
+								</div>
+								<div className="flex flex-col">
+									<label>Last Name:</label>
+									<input
+										type="text"
+										placeholder="Last Name..."
+										className={
+											formData.lastName !== "" &&
+											!lastName.safeParse(formData.lastName).success
+												? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+												: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
+										}
+										value={formData.lastName}
+										onChange={(e) => {
+											setFormData((prevFormData) => ({
+												...prevFormData,
+												lastName: e.target.value,
+											}));
+										}}
+										required
+									/>
+								</div>
+							</div>
+							<label>Email:</label>
+							<input
+								type="email"
+								placeholder="Enter Email..."
+								className={
+									formData.email !== "" &&
+									!email.safeParse(formData.email).success
+										? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+										: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
+								}
+								value={formData.email}
+								onChange={(e) => {
+									setFormData((prevFormData) => ({
+										...prevFormData,
+										email: e.target.value,
+									}));
+								}}
+								required
+							/>
+							<label>Phone Number:</label>
+							<input
+								type="tel"
+								placeholder="000-000-0000"
+								className={
+									formData.phoneNumber !== "" &&
+									!phoneNumber.safeParse(formData.phoneNumber).success
+										? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+										: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
+								}
+								value={formData.phoneNumber}
+								onChange={(e) => {
+									const rawValue = e.target.value.replace(/\D/g, "");
+									const formattedValue = rawValue
+										.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")
+										.replace(/(\d{3})(\d{3})(\d{0,4})/, "($1) $2-$3");
+									setFormData((prevFormData) => ({
+										...prevFormData,
+										phoneNumber: formattedValue,
+									}));
+								}}
+								required
+							/>
+							<Button
+								type="submit"
+								disabled={!formSchema.safeParse(formData).success}
+							>
+								{submitLoading ? (
+									<LoadingSpinner className="mr-2 h-4 w-4 animate-spin fill-black text-white dark:text-primary" />
+								) : formSchema.safeParse(formData).success ? (
+									"Submit"
+								) : (
+									"Enter Your Info"
+								)}
+							</Button>
+						</form>
+					</TabsContent>
+					<TabsContent value="agents" className="flex flex-col gap-2">
+						<div className="flex w-full max-w-sm flex-col">
+							<span className="text-4xl font-bold uppercase sm:text-5xl">
+								Work with Us
+							</span>
+							<span>
+								Fill out this form and our team will get back to you within 24
+								hours
+							</span>
+						</div>
+						<form
+							onSubmit={(e) => {
+								e.preventDefault();
+								handleSubmit("agent");
+							}}
+							className="mt-4 flex w-full max-w-sm flex-col gap-1 text-primary"
+						>
+							<div className="flex gap-2 sm:gap-4">
+								<div className="flex flex-col">
+									<label>First Name:</label>
+									<input
+										type="text"
+										placeholder="First name..."
+										className={
+											formData.firstName !== "" &&
+											!firstName.safeParse(formData.firstName).success
+												? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+												: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
+										}
+										value={formData.firstName}
+										onChange={(e) => {
+											setFormData((prevFormData) => ({
+												...prevFormData,
+												firstName: e.target.value,
+											}));
+										}}
+										required
+									/>
+								</div>
+								<div className="flex flex-col">
+									<label>Last Name:</label>
+									<input
+										type="text"
+										placeholder="Last Name..."
+										className={
+											formData.lastName !== "" &&
+											!lastName.safeParse(formData.lastName).success
+												? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+												: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
+										}
+										value={formData.lastName}
+										onChange={(e) => {
+											setFormData((prevFormData) => ({
+												...prevFormData,
+												lastName: e.target.value,
+											}));
+										}}
+										required
+									/>
+								</div>
+							</div>
+							<label>Email:</label>
+							<input
+								type="email"
+								placeholder="Enter Email..."
+								className={
+									formData.email !== "" &&
+									!email.safeParse(formData.email).success
+										? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+										: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
+								}
+								value={formData.email}
+								onChange={(e) => {
+									setFormData((prevFormData) => ({
+										...prevFormData,
+										email: e.target.value,
+									}));
+								}}
+								required
+							/>
+							<label>Phone Number:</label>
+							<input
+								type="tel"
+								placeholder="000-000-0000"
+								className={
+									formData.phoneNumber !== "" &&
+									!phoneNumber.safeParse(formData.phoneNumber).success
+										? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+										: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
+								}
+								value={formData.phoneNumber}
+								onChange={(e) => {
+									const rawValue = e.target.value.replace(/\D/g, "");
+									const formattedValue = rawValue
+										.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")
+										.replace(/(\d{3})(\d{3})(\d{0,4})/, "($1) $2-$3");
+									setFormData((prevFormData) => ({
+										...prevFormData,
+										phoneNumber: formattedValue,
+									}));
+								}}
+								required
+							/>
+							<Button
+								type="submit"
+								disabled={!formSchema.safeParse(formData).success}
+							>
+								{submitLoading ? (
+									<LoadingSpinner className="mr-2 h-4 w-4 animate-spin fill-black text-white dark:text-primary" />
+								) : formSchema.safeParse(formData).success ? (
+									"Submit"
+								) : (
+									"Enter Your Info"
+								)}
+							</Button>
+						</form>
+					</TabsContent>
 				</div>
 			</div>
 			<svg
@@ -218,7 +359,7 @@ const Contact = () => {
 					fill="#006762"
 				></path>
 			</svg>
-		</section>
+		</Tabs>
 	);
 };
 
