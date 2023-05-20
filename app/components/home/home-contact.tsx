@@ -79,16 +79,16 @@ const Contact = () => {
 				/>
 				<div className="flex flex-col gap-4 rounded-lg border border-muted-foreground bg-muted px-8 py-10">
 					<div className="flex w-full max-w-sm flex-col gap-4 text-primary">
-						<TabsList className="grid h-full w-full grid-cols-2 gap-2 rounded-lg">
+						<TabsList className="flex h-full w-full gap-2 rounded-lg">
 							<TabsTrigger
 								value="clients"
-								className="flex items-center justify-center rounded-lg text-center text-2xl"
+								className="flex w-full items-center justify-center rounded-lg text-center text-2xl"
 							>
 								<span>Clients</span>
 							</TabsTrigger>
 							<TabsTrigger
 								value="agents"
-								className="flex items-center justify-center rounded-lg text-center text-2xl"
+								className="flex w-full items-center justify-center rounded-lg text-center text-2xl"
 							>
 								<span>Agents</span>
 							</TabsTrigger>
@@ -213,11 +213,11 @@ const Contact = () => {
 						</form>
 					</TabsContent>
 					<TabsContent value="agents" className="flex flex-col gap-2">
-						<div className="flex w-full max-w-sm flex-col">
+						<div className="flex w-full max-w-sm flex-col gap-4">
 							<span className="text-4xl font-bold uppercase sm:text-5xl">
 								Work with Us
 							</span>
-							<span>
+							<span className="text-xl">
 								Fill out this form and our team will get back to you within 24
 								hours
 							</span>
@@ -227,7 +227,7 @@ const Contact = () => {
 								e.preventDefault();
 								handleSubmit("agent");
 							}}
-							className="mt-4 flex w-full max-w-sm flex-col gap-1 text-primary"
+							className="mt-4 flex w-full max-w-sm flex-col gap-1 text-xl text-primary"
 						>
 							<div className="flex gap-2 sm:gap-4">
 								<div className="flex flex-col">
@@ -318,6 +318,7 @@ const Contact = () => {
 							<Button
 								type="submit"
 								disabled={!formSchema.safeParse(formData).success}
+								className="mt-2 text-xl"
 							>
 								{submitLoading ? (
 									<LoadingSpinner className="mr-2 h-4 w-4 animate-spin fill-black text-white dark:text-primary" />
