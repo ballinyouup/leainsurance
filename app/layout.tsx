@@ -4,7 +4,6 @@ import Navbar from "./components/ui/navbar";
 import QueryProvider from "./providers/query-provider";
 import { ThemeProvider } from "./providers/theme-provider";
 import "./globals.css";
-import { Toaster }  from "react-hot-toast";
 
 export const metadata = {
 	title: "Lea Insurance",
@@ -27,7 +26,6 @@ export default function RootLayout({
 				<body className={inter.className}>
 					<QueryProvider>
 						<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-							<Toaster />
 							<Navbar />
 							<div>{children}</div>
 							<Footer />

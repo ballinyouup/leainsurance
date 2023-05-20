@@ -20,7 +20,7 @@ const WhyCard: React.FC<IWhyCard> = ({
 	inverted = false,
 }) => {
 	return (
-		<div className="z-20 flex w-full items-center justify-center p-5">
+		<div className="z-20 flex h-full w-full items-center justify-center p-5">
 			<div
 				className={`mt-8 flex w-full max-w-7xl flex-col gap-2 self-center rounded-lg border border-primary p-8 md:flex-row ${
 					inverted ? "bg-accent text-white md:flex-row-reverse" : "text-primary"
@@ -67,7 +67,7 @@ const WhyCard: React.FC<IWhyCard> = ({
 
 const WhySection = () => {
 	return (
-		<section className="flex w-full flex-col items-center justify-center gap-6 bg-background lg:items-start">
+		<section className="z-10 flex w-full flex-col items-center justify-center gap-6 bg-background lg:items-start">
 			<WhyCard
 				alt={"Heart Icon"}
 				src={
