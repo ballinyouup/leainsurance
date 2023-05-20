@@ -1,8 +1,10 @@
 import Logo from "./logo";
 import DropMenu from "./dropdown";
 import MobileMenu from "./mobile-menu";
-import { PhoneCall } from "lucide-react";
+import { Home, PhoneCall } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
+import { Button } from "../shadcn-ui/button";
+import Link from "next/link";
 const Navbar = () => {
 	return (
 		<header className="relative z-20 flex w-full flex-col items-center">
@@ -28,6 +30,11 @@ const Navbar = () => {
 				<div className="flex h-16 w-full flex-row items-center justify-between bg-black px-4 py-10">
 					<Logo />
 					<div className="hidden w-fit items-center gap-2 sm:flex">
+						<Button variant={"ghost"}>
+							<Link href="/" className="flex items-center">
+								<Home className="h-6 w-6 text-white" />
+							</Link>
+						</Button>
 						<ThemeToggle variant="ghost" />
 						<DropMenu />
 					</div>

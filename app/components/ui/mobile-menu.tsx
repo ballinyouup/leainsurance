@@ -12,6 +12,7 @@ import {
 	Store,
 	Mail,
 	Phone,
+	Home,
 } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { useState } from "react";
@@ -27,6 +28,10 @@ const MobileMenu = () => {
 				<Menu className="h-8 w-8 text-white" />
 			</SheetTrigger>
 			<SheetContent className="flex w-full flex-col">
+				<Link href="/" className="flex items-center" onClick={handleOpen}>
+					<Home className="mr-2 h-4 w-4" />
+					<span>Return Home</span>
+				</Link>
 				<SheetTitle>Insurance</SheetTitle>
 				<Link
 					href="/medicare"
