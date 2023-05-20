@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<main className="flex w-full items-center justify-center">
-			<div className="w-full max-w-5xl">
+			<div className="w-full max-w-7xl">
 				<div className="relative h-40 w-full overflow-hidden bg-teal-900 bg-opacity-50 sm:h-64">
 					<span className="absolute bottom-4 left-4 text-4xl font-bold text-white sm:bottom-8 sm:left-8 sm:text-6xl md:text-8xl">
 						OBAMACARE

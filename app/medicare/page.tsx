@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<main className="flex w-full items-center justify-center">
-			<div className="w-full max-w-5xl">
+			<div className="w-full max-w-7xl">
 				<div className="relative h-40 w-full overflow-hidden bg-teal-900 bg-opacity-50 sm:h-64">
 					<span className="absolute bottom-4 left-4 text-4xl font-bold text-white sm:bottom-8 sm:left-8 sm:text-6xl md:text-8xl">
 						MEDICARE
 					</span>
 					<Image
 						alt="Medicare Image"
-						className="relative -left-20 -top-24 w-full min-w-[1200px] mix-blend-screen brightness-50"
+						className="relative -left-0 -top-24 w-full min-w-[1200px] mix-blend-screen brightness-50"
 						src="/familyreal.jpg"
 						width={1200}
 						height={1200}
@@ -228,20 +228,21 @@ export default function Page() {
 							<span>
 								You must follow the rules of your MA plan to get covered
 								services. For example, you may need to use providers in your
-								plan&apos;s network, get referrals from your primary care provider
-								(PCP), or get prior authorization for certain services.
+								plan&apos;s network, get referrals from your primary care
+								provider (PCP), or get prior authorization for certain services.
 							</span>
 							<span>
 								You can enroll in an MA plan during your IEP or OEP or during a
 								special enrollment period (SEP) if you qualify for one. Some
-								examples of SEPs are when you move out of your plan&apos;s service
-								area, lose your employer-sponsored coverage, or have a change in
-								your Medicaid or Extra Help status. You can also switch from one
-								MA plan to another during the Medicare Advantage open enrollment
-								period (MA OEP), which runs from January 1 to March 31 each
-								year. During this time, you can also switch from an MA plan to
-								Original Medicare and join a Part D plan. However, you cannot
-								switch from Original Medicare to an MA plan during the MA OEP.
+								examples of SEPs are when you move out of your plan&apos;s
+								service area, lose your employer-sponsored coverage, or have a
+								change in your Medicaid or Extra Help status. You can also
+								switch from one MA plan to another during the Medicare Advantage
+								open enrollment period (MA OEP), which runs from January 1 to
+								March 31 each year. During this time, you can also switch from
+								an MA plan to Original Medicare and join a Part D plan. However,
+								you cannot switch from Original Medicare to an MA plan during
+								the MA OEP.
 							</span>
 						</div>
 					</TabsContent>
