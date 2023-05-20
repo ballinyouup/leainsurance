@@ -110,12 +110,12 @@ const Cards = () => {
 		},
 		{
 			src: "/image1.jpg",
-			alt: "Funeral Assistance Image",
-			text: "Funeral Assistance",
+			alt: "Final Expenses Image",
+			text: "Final Expenses",
 			href: "/funeral-assistance",
 			image: {
 				src: "/funeralAssistanceIcon.png",
-				alt: "Funeral Assistance Icon",
+				alt: "Final Expenses Icon",
 			},
 		},
 	];

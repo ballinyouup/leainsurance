@@ -58,12 +58,12 @@ const MobileMenu = () => {
 					<span>Life Insurance</span>
 				</Link>
 				<Link
-					href="/funeral-assistance"
+					href="/final-expenses"
 					className="flex items-center"
 					onClick={handleOpen}
 				>
 					<Sprout className="mr-2 h-4 w-4" />
-					<span>Funeral Assistance</span>
+					<span>Final Expenses</span>
 				</Link>
 				<SheetTitle>Contact Us</SheetTitle>
 				<Link

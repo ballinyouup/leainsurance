@@ -7,11 +7,11 @@ import {
 } from "../components/shadcn-ui/tabs";
 import Image from "next/image";
 export const metadata: Metadata = {
-	title: "Funeral Assistance",
+	title: "Final Expenses",
 	description:
-		"At HealthServicesFL.com, we understand the importance of good health and financial security. That's why we offer a range of insurance options, including Obamacare, Medicare, Funeral Assistance, and Life Insurance. Our commitment to excellence in customer service means you can trust us to take care of all your insurance needs.",
+		"At HealthServicesFL.com, we understand the importance of good health and financial security. That's why we offer a range of insurance options, including Obamacare, Medicare, Final Expenses, and Life Insurance. Our commitment to excellence in customer service means you can trust us to take care of all your insurance needs.",
 	keywords: [
-		"Funeral Assistance, Health Insurance, Health Services, Funeral Assistance FL, Funeral Assistance Broward, Funeral Assistance Miami, Health Insurance Miami, Health Insurance Broward",
+		"Final Expenses, Health Insurance, Health Services, Final Expenses FL, Final Expenses Broward, Final Expenses Miami, Health Insurance Miami, Health Insurance Broward",
 	],
 };
 
@@ -21,11 +21,11 @@ export default function Page() {
 			<div className="w-full max-w-7xl">
 				<div className="relative h-40 w-full overflow-hidden bg-teal-900 bg-opacity-50 sm:h-64">
 					<div className="absolute bottom-4 left-4 flex flex-col text-4xl font-bold text-white sm:bottom-8 sm:left-8 sm:text-6xl md:text-8xl">
-						<span>FUNERAL</span>
-						<span>ASSISTANCE</span>
+						<span>FINAL</span>
+						<span>EXPENSES</span>
 					</div>
 					<Image
-						alt="Funeral Assistance Image"
+						alt="Final Expenses Image"
 						className="relative -left-20 -top-24 w-full min-w-[1200px] mix-blend-screen brightness-50"
 						src="/familyreal.jpg"
 						width={600}
@@ -155,7 +155,7 @@ export default function Page() {
 							Benefits
 						</div>
 						<span>
-							The amount of funeral assistance you can receive depends on
+							The amount of final expenses you can receive depends on
 							several factors, such as:
 						</span>
 						<ul className="list-disc">
@@ -172,11 +172,11 @@ export default function Page() {
 							</li>
 						</ul>
 						<span>
-							The maximum amount of funeral assistance you can receive is $9,000
+							The maximum amount of final expenses you can receive is $9,000
 							per funeral for expenses related to COVID-19 deaths. For other
 							types of deaths, the maximum amount is $5,000 per funeral.
 						</span>
-						<span>Funeral assistance can cover expenses such as:</span>
+						<span>final expenses can cover expenses such as:</span>
 						<ul className="list-disc">
 							<li className="ml-6">Funeral services</li>
 							<li className="ml-6">Cremation</li>
@@ -199,7 +199,7 @@ export default function Page() {
 							<li className="ml-6">Funeral ceremony</li>
 							<li className="ml-6">Funeral home equipment or staff</li>
 						</ul>
-						<span>Funeral assistance cannot cover expenses such as:</span>
+						<span>final expenses cannot cover expenses such as:</span>
 						<ul className="list-disc">
 							<li className="ml-6">Flowers</li>
 							<li className="ml-6">Food</li>

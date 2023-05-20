@@ -46,8 +46,8 @@ const Footer = () => {
 			text: "Life Insurance",
 		},
 		{
-			href: "/funeral-assistance",
-			text: "Funeral Assistance",
+			href: "/final-expenses",
+			text: "Final Expenses",
 		},
 	];
 	const policies = [

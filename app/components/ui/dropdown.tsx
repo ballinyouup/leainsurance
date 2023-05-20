@@ -45,10 +45,10 @@ const DropMenu = () => {
 						<span>Life Insurance</span>
 					</DropdownMenuItem>
 				</Link>
-				<Link href="/funeral-assistance">
+				<Link href="/final-expenses">
 					<DropdownMenuItem className="flex items-center">
 						<Sprout className="mr-2 h-4 w-4" />
-						<span>Funeral Assistance</span>
+						<span>Final Expenses</span>
 					</DropdownMenuItem>
 				</Link>
 			</DropdownMenuContent>
