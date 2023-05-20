@@ -12,32 +12,51 @@ import {
 	Store,
 	Mail,
 	Phone,
-
 } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
+import { useState } from "react";
 
 const MobileMenu = () => {
-
+	const [open, setOpen] = useState(false);
+	function handleOpen() {
+		setOpen(!open);
+	}
 	return (
-		<Sheet>
+		<Sheet open={open} onOpenChange={setOpen}>
 			<SheetTrigger>
 				<Menu className="h-8 w-8 text-white" />
 			</SheetTrigger>
 			<SheetContent className="flex w-full flex-col">
 				<SheetTitle>Insurance</SheetTitle>
-				<Link href="/medicare" className="flex items-center">
+				<Link
+					href="/medicare"
+					className="flex items-center"
+					onClick={handleOpen}
+				>
 					<Stethoscope className="mr-2 h-4 w-4" />
 					<span>Medicare</span>
 				</Link>
-				<Link href="/obamacare" className="flex items-center">
+				<Link
+					href="/obamacare"
+					className="flex items-center"
+					onClick={handleOpen}
+				>
 					<Baby className="mr-2 h-4 w-4" />
 					<span>Obamacare</span>
 				</Link>
-				<Link href="/life-insurance" className="flex items-center">
+				<Link
+					href="/life-insurance"
+					className="flex items-center"
+					onClick={handleOpen}
+				>
 					<FileHeart className="mr-2 h-4 w-4" />
 					<span>Life Insurance</span>
 				</Link>
-				<Link href="/funeral-assistance" className="flex items-center">
+				<Link
+					href="/funeral-assistance"
+					className="flex items-center"
+					onClick={handleOpen}
+				>
 					<Sprout className="mr-2 h-4 w-4" />
 					<span>Funeral Assistance</span>
 				</Link>
