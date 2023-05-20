@@ -47,7 +47,7 @@ const WhyCard: React.FC<IWhyCard> = ({
 						<span className="text-xl">{text}</span>
 					</div>
 				</div>
-				<div className="relative h-40 w-full overflow-hidden rounded-lg p-2 sm:h-96 md:w-1/2">
+				<div className="relative h-40 w-full overflow-hidden rounded-lg sm:h-96 md:w-1/2">
 					<Image
 						src={ImageSrc}
 						alt={ImageAlt}
