@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
 	title: "Medicare",
 	description:
-		"At HealthServicesFL.com, we understand the importance of good health and financial security. That's why we offer a range of insurance options, including Obamacare, Medicare, Funeral Assistance, and Life Insurance. Our commitment to excellence in customer service means you can trust us to take care of all your insurance needs.",
+		"At L.E.A Insurance, we understand the importance of good health and financial security. That's why we offer a range of insurance options, including Obamacare, Medicare, Funeral Assistance, and Life Insurance. Our commitment to excellence in customer service means you can trust us to take care of all your insurance needs.",
 	keywords: [
 		"Medicare, Health Insurance, Health Services, Medicare FL, Medicare Broward, Medicare Miami, Health Insurance Miami, Health Insurance Broward",
 	],
