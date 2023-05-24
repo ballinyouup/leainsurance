@@ -30,45 +30,45 @@ const Footer = () => {
 	];
 	const insuranceLinks = [
 		{
-			href: "/",
+			href: "/es/",
 			text: "Learn",
 		},
 		{
-			href: "/medicare",
+			href: "/es/medicare",
 			text: "Medicare",
 		},
 		{
-			href: "/obamacare",
+			href: "/es/obamacare",
 			text: "Obamacare",
 		},
 		{
-			href: "/seguro-de-vida",
+			href: "/es/seguro-de-vida",
 			text: "Seguro De Vida",
 		},
 		{
-			href: "/gastos-finales",
+			href: "/es/gastos-finales",
 			text: "Gastos Finales",
 		},
 	];
 	const policies = [
 		{
-			href: "",
+			href: "/es/",
 			text: "Policies",
 		},
 		{
-			href: "/",
+			href: "/es/",
 			text: "Condiciones de uso",
 		},
 		{
-			href: "/",
+			href: "/es/",
 			text: "Avisos legales",
 		},
 		{
-			href: "/",
+			href: "/es/",
 			text: "política de privacidad",
 		},
 		{
-			href: "/",
+			href: "/es/",
 			text: "Mapa del sitio",
 		},
 	];

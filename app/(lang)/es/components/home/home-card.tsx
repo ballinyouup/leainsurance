@@ -82,7 +82,7 @@ const Cards = () => {
 			src: "/image4.jpg",
 			alt: "Medicare Image",
 			text: "Medicare",
-			href: "/medicare",
+			href: "/es/medicare",
 			image: {
 				src: "/medicareIcon.png",
 				alt: "Medicare Icon",
@@ -92,7 +92,7 @@ const Cards = () => {
 			src: "/family1.jpg",
 			alt: "Obamacare Image",
 			text: "Obamacare",
-			href: "/obamacare",
+			href: "/es/obamacare",
 			image: {
 				src: "/obamacareIcon.png",
 				alt: "Obamacare Icon",
@@ -102,7 +102,7 @@ const Cards = () => {
 			src: "/image2.jpg",
 			alt: "Seguro De Vida Image",
 			text: "Seguro De Vida",
-			href: "/seguro-de-vida",
+			href: "/es/seguro-de-vida",
 			image: {
 				src: "/lifeInsuranceIcon.png",
 				alt: "Seguro De Vida Icon",
@@ -112,7 +112,7 @@ const Cards = () => {
 			src: "/image1.jpg",
 			alt: "Gastos Finales Image",
 			text: "Gastos Finales",
-			href: "/gastos-finales",
+			href: "/es/gastos-finales",
 			image: {
 				src: "/funeralAssistanceIcon.png",
 				alt: "Gastos Finales Icon",

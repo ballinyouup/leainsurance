@@ -28,13 +28,13 @@ const MobileMenu = () => {
 				<Menu className="h-8 w-8 text-white" />
 			</SheetTrigger>
 			<SheetContent className="flex w-full flex-col text-lg">
-				<Link href="/" className="flex items-center" onClick={handleOpen}>
+				<Link href="/es/" className="flex items-center" onClick={handleOpen}>
 					<Home className="mr-2 h-6 w-6" />
 					<span>Volver a casa</span>
 				</Link>
 				<SheetTitle>Seguros</SheetTitle>
 				<Link
-					href="/medicare"
+					href="/es/medicare"
 					className="flex items-center"
 					onClick={handleOpen}
 				>
@@ -42,7 +42,7 @@ const MobileMenu = () => {
 					<span>Medicare</span>
 				</Link>
 				<Link
-					href="/obamacare"
+					href="/es/obamacare"
 					className="flex items-center"
 					onClick={handleOpen}
 				>
@@ -50,7 +50,7 @@ const MobileMenu = () => {
 					<span>Obamacare</span>
 				</Link>
 				<Link
-					href="/seguros-de-vida"
+					href="/es/seguros-de-vida"
 					className="flex items-center"
 					onClick={handleOpen}
 				>
@@ -58,7 +58,7 @@ const MobileMenu = () => {
 					<span>Seguros De Vida</span>
 				</Link>
 				<Link
-					href="/gastos-finales"
+					href="/es/gastos-finales"
 					className="flex items-center"
 					onClick={handleOpen}
 				>

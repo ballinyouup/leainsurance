@@ -27,25 +27,25 @@ const DropMenu = () => {
 			<DropdownMenuContent align="end">
 				<DropdownMenuLabel className="text-lg">Seguros</DropdownMenuLabel>
 				<DropdownMenuSeparator />
-				<Link href="/medicare">
+				<Link href="/es/medicare">
 					<DropdownMenuItem className="flex items-center text-lg">
 						<Stethoscope className="mr-2 h-4 w-4" />
 						<span>Medicare</span>
 					</DropdownMenuItem>
 				</Link>
-				<Link href="/obamacare">
+				<Link href="/es/obamacare">
 					<DropdownMenuItem className="flex items-center text-lg">
 						<Baby className="mr-2 h-4 w-4" />
 						<span>Obamacare</span>
 					</DropdownMenuItem>
 				</Link>
-				<Link href="/seguro-de-vida">
+				<Link href="/es/seguro-de-vida">
 					<DropdownMenuItem className="flex items-center text-lg">
 						<FileHeart className="mr-2 h-4 w-4" />
 						<span>Seguro De Vida</span>
 					</DropdownMenuItem>
 				</Link>
-				<Link href="/gastos-finales">
+				<Link href="/es/gastos-finales">
 					<DropdownMenuItem className="flex items-center text-lg">
 						<Sprout className="mr-2 h-4 w-4" />
 						<span>Gastos Finales</span>

@@ -31,7 +31,7 @@ const Navbar = () => {
 					<Logo />
 					<div className="hidden w-fit items-center gap-2 sm:flex">
 						<Button variant={"ghost"}>
-							<Link href="/" className="flex items-center">
+							<Link href="/es/" className="flex items-center">
 								<Home className="h-6 w-6 text-white" />
 							</Link>
 						</Button>

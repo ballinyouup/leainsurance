@@ -3,7 +3,7 @@ import Image from "next/image";
 const Logo = () => {
 	return (
 		<Link
-			href="/"
+			href="/es/"
 			className="relative flex h-16 w-fit cursor-pointer items-center overflow-hidden rounded-lg transition-all hover:bg-accent"
 		>
 			<Image

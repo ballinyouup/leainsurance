@@ -6,8 +6,6 @@ import WhySection from "./components/home/home-why";
 import { Separator } from "$/separator";
 import Cards from "./components/home/home-card";
 import Waves from "./components/home/home-waves";
-import Navbar from "./components/ui/navbar";
-import Footer from "./components/ui/footer";
 export const metadata: Metadata = {
 	title: "L.E.A Insurance",
 	description:
