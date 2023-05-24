@@ -1,7 +1,7 @@
 import Logo from "./logo";
 import DropMenu from "./dropdown";
 import MobileMenu from "./mobile-menu";
-import { Home, PhoneCall } from "lucide-react";
+import { Home, Languages, PhoneCall } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { Button } from "$/button";
 import Link from "next/link";
@@ -31,6 +31,12 @@ const Navbar = () => {
 					<Logo />
 					<div className="hidden w-fit items-center gap-2 sm:flex">
 						<Button variant={"ghost"}>
+							<Link href="/" className="flex items-center gap-2">
+								<Languages className="h-6 w-6 text-white" />
+								<span>English</span>
+							</Link>
+						</Button>
+						<Button variant={"ghost"} className="p-1.5">
 							<Link href="/es/" className="flex items-center">
 								<Home className="h-6 w-6 text-white" />
 							</Link>
