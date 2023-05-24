@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import Footer from "./components/ui/footer";
 import Navbar from "./components/ui/navbar";
-import QueryProvider from "./providers/query-provider";
-import { ThemeProvider } from "./providers/theme-provider";
-import "./globals.css";
+import QueryProvider from "../../providers/query-provider";
+import { ThemeProvider } from "../../providers/theme-provider";
+import "../../globals.css";
 
 export const metadata = {
 	title: "Lea Insurance",
@@ -23,15 +23,15 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-				<body className={inter.className}>
-					<QueryProvider>
-						<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-							<Navbar />
-							<div>{children}</div>
-							<Footer />
-						</ThemeProvider>
-					</QueryProvider>
-				</body>
+			<body className={inter.className}>
+				<QueryProvider>
+					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+						<Navbar />
+						<div>{children}</div>
+						<Footer />
+					</ThemeProvider>
+				</QueryProvider>
+			</body>
 		</html>
 	);
 }

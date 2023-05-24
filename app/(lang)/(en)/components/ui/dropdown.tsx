@@ -10,7 +10,7 @@ import {
 } from "$/dropdown-menu";
 import { BookDown, Stethoscope, Baby, FileHeart, Sprout } from "lucide-react";
 import Link from "next/link";
-import { Button } from "../shadcn-ui/button";
+import { Button } from "$/button";
 
 const DropMenu = () => {
 	return (

@@ -3,7 +3,7 @@ import DropMenu from "./dropdown";
 import MobileMenu from "./mobile-menu";
 import { Home, PhoneCall } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
-import { Button } from "../shadcn-ui/button";
+import { Button } from "$/button";
 import Link from "next/link";
 const Navbar = () => {
 	return (

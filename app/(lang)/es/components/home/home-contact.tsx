@@ -4,8 +4,8 @@ import { toast } from "react-hot-toast";
 import { z } from "zod";
 import LoadingSpinner from "../ui/spinner";
 import Image from "next/image";
-import { Button } from "../shadcn-ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../shadcn-ui/tabs";
+import { Button } from "$/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "$/tabs";
 const firstName = z.string().min(2).max(32);
 const lastName = z.string().min(2).max(32);
 const email = z.string().email("Invalid Email").min(4).max(48);
@@ -84,24 +84,24 @@ const Contact = () => {
 								value="clients"
 								className="flex w-full items-center justify-center rounded-lg text-center text-2xl"
 							>
-								<span>Clients</span>
+								<span>Clientes</span>
 							</TabsTrigger>
 							<TabsTrigger
 								value="agents"
 								className="flex w-full items-center justify-center rounded-lg text-center text-2xl"
 							>
-								<span>Agents</span>
+								<span>Agentes</span>
 							</TabsTrigger>
 						</TabsList>
 					</div>
 					<TabsContent value="clients" className="flex flex-col gap-2">
 						<div className="flex w-full max-w-sm flex-col gap-4">
-							<span className="text-4xl font-bold uppercase sm:text-5xl">
-								Contact Us
+							<span className="text-4xl font-bold uppercase">
+								Contacta con nosotros
 							</span>
 							<span className="text-xl">
-								Fill out this form and our team will get back to you within 24
-								hours
+								Complete este formulario y nuestro equipo se comunicará con
+								usted dentro de las 24 horas
 							</span>
 						</div>
 						<form
@@ -113,10 +113,10 @@ const Contact = () => {
 						>
 							<div className="flex flex-col gap-2 sm:flex-row sm:gap-4">
 								<div className="flex flex-col">
-									<label>First Name:</label>
+									<label>Primer Nombre:</label>
 									<input
 										type="text"
-										placeholder="First name..."
+										placeholder="Primer Nombre..."
 										className={
 											formData.firstName !== "" &&
 											!firstName.safeParse(formData.firstName).success
@@ -134,10 +134,10 @@ const Contact = () => {
 									/>
 								</div>
 								<div className="flex flex-col">
-									<label>Last Name:</label>
+									<label>Apellido:</label>
 									<input
 										type="text"
-										placeholder="Last Name..."
+										placeholder="Apellido..."
 										className={
 											formData.lastName !== "" &&
 											!lastName.safeParse(formData.lastName).success
@@ -155,10 +155,10 @@ const Contact = () => {
 									/>
 								</div>
 							</div>
-							<label>Email:</label>
+							<label>Correo Electrónico:</label>
 							<input
 								type="email"
-								placeholder="Enter Email..."
+								placeholder="Correo Electrónico..."
 								className={
 									formData.email !== "" &&
 									!email.safeParse(formData.email).success
@@ -174,7 +174,7 @@ const Contact = () => {
 								}}
 								required
 							/>
-							<label>Phone Number:</label>
+							<label>Número De Teléfono:</label>
 							<input
 								type="tel"
 								placeholder="000-000-0000"
@@ -205,21 +205,21 @@ const Contact = () => {
 								{submitLoading ? (
 									<LoadingSpinner className="mr-2 h-4 w-4 animate-spin fill-black text-white dark:text-primary" />
 								) : formSchema.safeParse(formData).success ? (
-									"Submit"
+									"Entregar"
 								) : (
-									"Enter Your Info"
+									"Ingresa tu información"
 								)}
 							</Button>
 						</form>
 					</TabsContent>
 					<TabsContent value="agents" className="flex flex-col gap-2">
 						<div className="flex w-full max-w-sm flex-col gap-4">
-							<span className="text-4xl font-bold uppercase sm:text-5xl">
-								Work with Us
+							<span className="text-4xl font-bold uppercase">
+								Trabaja con nosotros
 							</span>
 							<span className="text-xl">
-								Fill out this form and our team will get back to you within 24
-								hours
+								Complete este formulario y nuestro equipo se comunicará con
+								usted dentro de las 24 horas
 							</span>
 						</div>
 						<form
@@ -231,10 +231,10 @@ const Contact = () => {
 						>
 							<div className="flex flex-col gap-2 sm:flex-row sm:gap-4">
 								<div className="flex flex-col">
-									<label>First Name:</label>
+									<label>Primer Nombre:</label>
 									<input
 										type="text"
-										placeholder="First name..."
+										placeholder="Primer Nombre..."
 										className={
 											formData.firstName !== "" &&
 											!firstName.safeParse(formData.firstName).success
@@ -252,10 +252,10 @@ const Contact = () => {
 									/>
 								</div>
 								<div className="flex flex-col">
-									<label>Last Name:</label>
+									<label>Apellido:</label>
 									<input
 										type="text"
-										placeholder="Last Name..."
+										placeholder="Apellido..."
 										className={
 											formData.lastName !== "" &&
 											!lastName.safeParse(formData.lastName).success
@@ -273,10 +273,10 @@ const Contact = () => {
 									/>
 								</div>
 							</div>
-							<label>Email:</label>
+							<label>Correo Electrónico:</label>
 							<input
 								type="email"
-								placeholder="Enter Email..."
+								placeholder="Correo Electrónico..."
 								className={
 									formData.email !== "" &&
 									!email.safeParse(formData.email).success
@@ -292,7 +292,7 @@ const Contact = () => {
 								}}
 								required
 							/>
-							<label>Phone Number:</label>
+							<label>Número De Teléfono:</label>
 							<input
 								type="tel"
 								placeholder="000-000-0000"
@@ -323,9 +323,9 @@ const Contact = () => {
 								{submitLoading ? (
 									<LoadingSpinner className="mr-2 h-4 w-4 animate-spin fill-black text-white dark:text-primary" />
 								) : formSchema.safeParse(formData).success ? (
-									"Submit"
+									"Entregar"
 								) : (
-									"Enter Your Info"
+									"Ingresa tu Información"
 								)}
 							</Button>
 						</form>

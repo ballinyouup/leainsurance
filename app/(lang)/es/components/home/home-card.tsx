@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { AspectRatio } from "../shadcn-ui/aspect-ratio";
+import { AspectRatio } from "$/aspect-ratio";
 interface ICard {
 	src: string;
 	alt: string;
@@ -100,22 +100,22 @@ const Cards = () => {
 		},
 		{
 			src: "/image2.jpg",
-			alt: "Life Insurance Image",
-			text: "Life Insurance",
-			href: "/life-insurance",
+			alt: "Seguro De Vida Image",
+			text: "Seguro De Vida",
+			href: "/seguro-de-vida",
 			image: {
 				src: "/lifeInsuranceIcon.png",
-				alt: "Life Insurance Icon",
+				alt: "Seguro De Vida Icon",
 			},
 		},
 		{
 			src: "/image1.jpg",
-			alt: "Final Expenses Image",
-			text: "Final Expenses",
-			href: "/funeral-assistance",
+			alt: "Gastos Finales Image",
+			text: "Gastos Finales",
+			href: "/gastos-finales",
 			image: {
 				src: "/funeralAssistanceIcon.png",
-				alt: "Final Expenses Icon",
+				alt: "Gastos Finales Icon",
 			},
 		},
 	];

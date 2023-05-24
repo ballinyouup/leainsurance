@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "$/tabs";
 import Image from "next/image";
+import Navbar from "../components/ui/navbar";
 export const metadata: Metadata = {
 	title: "Obamacare",
 	description:
@@ -12,6 +13,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
 	return (
+		<>
+		<Navbar />
 		<main className="flex w-full items-center justify-center">
 			<div className="w-full max-w-7xl">
 				<div className="relative h-40 w-full overflow-hidden bg-teal-900 bg-opacity-50 sm:h-64">
@@ -435,5 +438,6 @@ export default function Page() {
 				</Tabs>
 			</div>
 		</main>
+		</>
 	);
 }
