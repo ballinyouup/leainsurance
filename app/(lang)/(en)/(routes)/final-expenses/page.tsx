@@ -4,7 +4,7 @@ import {
 	TabsContent,
 	TabsList,
 	TabsTrigger,
-} from "../components/shadcn-ui/tabs";
+} from "$/tabs";
 import Image from "next/image";
 export const metadata: Metadata = {
 	title: "Final Expenses",
