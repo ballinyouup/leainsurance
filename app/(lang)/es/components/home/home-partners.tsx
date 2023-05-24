@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 
 export default function Partners() {
 	return (
-		<section className="z-30 flex h-full w-full items-center justify-center p-5">
-			<div className="flex h-36 w-full max-w-5xl flex-col items-center justify-center self-center overflow-hidden rounded-lg bg-white">
+		<section className="!z-30 flex h-full w-full items-center justify-center p-5">
+			<div className="!z-30 flex h-36 w-full max-w-5xl flex-col items-center justify-center self-center overflow-hidden rounded-lg bg-white">
 				<motion.div
 					animate={{ x: ["-50%", "50%"] }}
 					transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
-					className="flex w-[2000px] flex-nowrap items-center justify-center gap-10 rounded-lg md:w-[3200px]"
+					className="!z-30 flex w-[2000px] flex-nowrap items-center justify-center gap-10 rounded-lg md:w-[3200px]"
 				>
 					<Image
 						src={"/insurance/humana.png"}

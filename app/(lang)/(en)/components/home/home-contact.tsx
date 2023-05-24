@@ -68,7 +68,7 @@ const Contact = () => {
 			defaultValue="clients"
 			className="relative mt-8 flex h-full w-full items-center justify-center gap-20 px-5 lg:mt-0 lg:flex-row lg:py-20"
 		>
-			<div className="z-10 flex h-full w-fit flex-row items-start justify-start rounded-xl border-opacity-25 bg-background md:border md:border-primary-foreground lg:w-fit lg:gap-12 lg:px-8 lg:py-10">
+			<div className="z-10 flex h-full w-fit flex-row items-center justify-start rounded-xl border-opacity-25 bg-background md:border md:border-primary-foreground lg:w-fit lg:gap-12 lg:px-8 lg:py-10">
 				<Image
 					src="/family.png"
 					alt="Family Image"
@@ -111,7 +111,7 @@ const Contact = () => {
 							}}
 							className="mt-4 flex w-full max-w-sm flex-col gap-1 text-xl text-primary"
 						>
-							<div className="flex flex-col gap-2 sm:flex-row sm:gap-4">
+							<div className="flex flex-col gap-2 sm:gap-4">
 								<div className="flex flex-col">
 									<label>First Name:</label>
 									<input
@@ -229,7 +229,7 @@ const Contact = () => {
 							}}
 							className="mt-4 flex w-full max-w-sm flex-col gap-1 text-xl text-primary"
 						>
-							<div className="flex flex-col gap-2 sm:flex-row sm:gap-4">
+							<div className="flex flex-col gap-2 sm:gap-4">
 								<div className="flex flex-col">
 									<label>First Name:</label>
 									<input

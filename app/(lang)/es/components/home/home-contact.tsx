@@ -111,7 +111,7 @@ const Contact = () => {
 							}}
 							className="mt-4 flex w-full max-w-sm flex-col gap-1 text-xl text-primary"
 						>
-							<div className="flex flex-col gap-2 sm:flex-row sm:gap-4">
+							<div className="flex flex-col gap-2 sm:gap-4">
 								<div className="flex flex-col">
 									<label>Primer Nombre:</label>
 									<input
@@ -229,7 +229,7 @@ const Contact = () => {
 							}}
 							className="mt-4 flex w-full max-w-sm flex-col gap-1 text-xl text-primary"
 						>
-							<div className="flex flex-col gap-2 sm:flex-row sm:gap-4">
+							<div className="flex flex-col gap-2 sm:gap-4">
 								<div className="flex flex-col">
 									<label>Primer Nombre:</label>
 									<input
