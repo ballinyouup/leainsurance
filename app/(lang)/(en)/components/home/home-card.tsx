@@ -112,7 +112,7 @@ const Cards = () => {
 			src: "/image1.jpg",
 			alt: "Final Expenses Image",
 			text: "Final Expenses",
-			href: "/funeral-assistance",
+			href: "/final-expenses",
 			image: {
 				src: "/funeralAssistanceIcon.png",
 				alt: "Final Expenses Icon",
