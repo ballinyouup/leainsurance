@@ -19,19 +19,19 @@ const Footer = () => {
 		},
 		{
 			href: "tel:+18886954221",
-			text: "Call Us",
+			text: "Llámanos",
 			icon: <Phone className="mr-2 h-5 w-5" />,
 		},
 		{
 			href: "mailto:lea.info@leainsurance.onmicrosoft.com",
-			text: "Email",
+			text: "Correo Electrónico",
 			icon: <Mail className="mr-2 h-5 w-5" />,
 		},
 	];
 	const insuranceLinks = [
 		{
 			href: "/es/",
-			text: "Learn",
+			text: "Aprender",
 		},
 		{
 			href: "/es/medicare",
@@ -53,7 +53,7 @@ const Footer = () => {
 	const policies = [
 		{
 			href: "/es/",
-			text: "Policies",
+			text: "Policias",
 		},
 		{
 			href: "/es/",

@@ -34,7 +34,7 @@ const MobileMenu = () => {
 					<span>Return Home</span>
 				</Link>
 				<Link href="/es/" className="flex items-center gap-2">
-					<Languages className="h-6 w-6 text-white" />
+					<Languages className="mr-2 h-6 w-6" />
 					<span>Español</span>
 				</Link>
 				<SheetTitle>Insurance</SheetTitle>

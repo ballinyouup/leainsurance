@@ -33,7 +33,7 @@ const Navbar = () => {
 						<Button variant={"ghost"}>
 							<Link href="/es/" className="flex items-center gap-2">
 								<Languages className="h-6 w-6 text-white" />
-								<span>Español</span>
+								<span className="text-white">Español</span>
 							</Link>
 						</Button>
 						<Button variant={"ghost"} className="p-1.5">
