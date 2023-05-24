@@ -13,6 +13,7 @@ import {
 	Mail,
 	Phone,
 	Home,
+	Languages,
 } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { useState } from "react";
@@ -31,6 +32,10 @@ const MobileMenu = () => {
 				<Link href="/es/" className="flex items-center" onClick={handleOpen}>
 					<Home className="mr-2 h-6 w-6" />
 					<span>Volver a casa</span>
+				</Link>
+				<Link href="/es/" className="flex items-center gap-2">
+					<Languages className="h-6 w-6 text-white" />
+					<span>English</span>
 				</Link>
 				<SheetTitle>Seguros</SheetTitle>
 				<Link
