@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import {
 	Tabs,
 	TabsContent,
@@ -6,14 +5,6 @@ import {
 	TabsTrigger,
 } from "$/tabs";
 import Image from "next/image";
-export const metadata: Metadata = {
-	title: "Final Expenses",
-	description:
-		"At L.E.A Insurance, we understand the importance of good health and financial security. That's why we offer a range of insurance options, including Obamacare, Medicare, Final Expenses, and Life Insurance. Our commitment to excellence in customer service means you can trust us to take care of all your insurance needs.",
-	keywords: [
-		"Final Expenses, Health Insurance, Health Services, Final Expenses FL, Final Expenses Broward, Final Expenses Miami, Health Insurance Miami, Health Insurance Broward",
-	],
-};
 
 export default function Page() {
 	return (
