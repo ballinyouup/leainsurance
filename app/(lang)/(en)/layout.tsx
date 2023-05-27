@@ -47,6 +47,11 @@ export const metadata: Metadata = {
 	  "Funeral Assistance Miami",
 	  "Funeral Assistance Broward",
 	  "Funeral Assistance West Palm",
+	  "LEA Insurance",
+	  "LEAInsurance",
+	  "Insurance LEA",
+	  "InsuranceLEA",
+	"Seguro De LEA"
 	],
 	authors: [
 	  {

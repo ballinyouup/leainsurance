@@ -1,7 +1,13 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "$/tabs";
 import Image from "next/image";
 import Navbar from "../../components/ui/navbar";
+import { metadata as meta } from "../../layout";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+	title: "Obamacare",
+	...meta,
+};
 export default function Page() {
 	return (
 		<>

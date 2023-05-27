@@ -1,13 +1,11 @@
-import { Metadata } from "next";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "$/tabs";
 import Image from "next/image";
+import { metadata as meta } from "../../layout";
+import { Metadata } from "next";
+
 export const metadata: Metadata = {
 	title: "Obamacare",
-	description:
-		"En HealthServicesFL.com, entendemos la importancia de la buena salud y la seguridad financiera. Es por eso que ofrecemos una variedad de opciones de seguro, que incluyen Obamacare, Medicare, asistencia funeraria y seguro de vida. Nuestro compromiso con la excelencia en el servicio al cliente significa que puede confiar en nosotros para atender todas sus necesidades de seguros.",
-	keywords: [
-		"Obamacare, Seguro médico, Servicios de salud, ACA, ACA FL, Obamacare FL, Obamacare Broward, Obamacare Miami, Seguro médico Miami, Seguro médico Broward",
-	],
+	...meta,
 };
 
 export default function Page() {

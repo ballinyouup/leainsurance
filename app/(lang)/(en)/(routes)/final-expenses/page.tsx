@@ -1,10 +1,12 @@
-import {
-	Tabs,
-	TabsContent,
-	TabsList,
-	TabsTrigger,
-} from "$/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "$/tabs";
 import Image from "next/image";
+import { metadata as meta } from "../../layout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Final Expenses",
+	...meta,
+};
 
 export default function Page() {
 	return (

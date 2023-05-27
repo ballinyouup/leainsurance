@@ -1,5 +1,12 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "$/tabs";
 import Image from "next/image";
+import { metadata as meta } from "../../layout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Life Insurance",
+	...meta,
+};
 
 export default function Page() {
 	return (
@@ -210,10 +217,10 @@ export default function Page() {
 						</span>
 						<span>
 							Permanent life insurance also pays dividends to policyholders
-							based on the company&apos;s performance and profitability. Dividends
-							are not guaranteed, but they can be used to increase your death
-							benefit, reduce your premiums, or add more cash value to your
-							policy
+							based on the company&apos;s performance and profitability.
+							Dividends are not guaranteed, but they can be used to increase
+							your death benefit, reduce your premiums, or add more cash value
+							to your policy
 						</span>
 						<span>
 							Permanent life insurance is a good option if you want to leave a

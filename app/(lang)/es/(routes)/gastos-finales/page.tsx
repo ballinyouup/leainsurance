@@ -1,18 +1,11 @@
-import { Metadata } from "next";
-import {
-	Tabs,
-	TabsContent,
-	TabsList,
-	TabsTrigger,
-} from "$/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "$/tabs";
 import Image from "next/image";
+import { metadata as meta } from "../../layout";
+import { Metadata } from "next";
+
 export const metadata: Metadata = {
 	title: "Gastos Finales",
-	description:
-		"En L.E.A Insurance, entendemos la importancia de la buena salud y la seguridad financiera. Es por eso que ofrecemos una variedad de opciones de seguro, que incluyen Obamacare, Medicare, gastos finales y seguro de vida. Nuestro compromiso con la excelencia en el servicio al cliente significa que puede confiar en nosotros para atender todas sus necesidades de seguros.",
-	keywords: [
-		"Gastos Finales, Seguro Médico, Servicios de Salud, Gastos Finales FL, Gastos Finales Broward, Gastos Finales Miami, Seguros Médicos Miami, Seguros Médicos Broward",
-	],
+	...meta,
 };
 
 export default function Page() {
