@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { createClient } from "next-sanity";
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextComponents } from "@portabletext/react";
 import urlBuilder from "@sanity/image-url";
+import { type SanityImageSource } from "@sanity/image-url/lib/types/types";
+
 const client = createClient({
 	projectId: "be20oshw",
 	dataset: "production",
@@ -9,7 +11,7 @@ const client = createClient({
 	useCdn: false,
 });
 
-const ImageComponent = ({ value }: any) => {
+const ImageComponent = ({ value }: { value: SanityImageSource }) => {
 	return (
 		<img
 			src={urlBuilder(client)
@@ -26,10 +28,12 @@ const ImageComponent = ({ value }: any) => {
 
 const components = {
 	block: {
-		h1: ({ children }: any) => <h1 className="text-4xl">{children}</h1>,
+		h1: ({ children }: { children?: React.ReactNode }) => (
+			<h1 className="text-4xl">{children}</h1>
+		),
 	},
 	listItem: {
-		bullet: ({ children }: any) => (
+		bullet: ({ children }: { children?: React.ReactNode }) => (
 			<li className="ml-4 list-disc">{children}</li>
 		),
 	},
@@ -42,7 +46,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
 	const post = await client.fetch(`*[slug.current == "${params.slug}"]`);
 	return (
 		<div className="h-screen w-full p-8">
-			{post && <PortableText value={post[0]?.body} components={components} />}
+			{post && (
+				<PortableText
+					value={post[0]?.body}
+					components={components}
+					onMissingComponent={false}
+				/>
+			)}
 		</div>
 	);
 }
