@@ -41,7 +41,7 @@ const components = {
 export default async function Page({ params }: { params: { slug: string } }) {
 	const post = await client.fetch(`*[slug.current == "${params.slug}"]`);
 	return (
-		<div className="h-full w-full p-8">
+		<div className="h-screen w-full p-8">
 			{post && <PortableText value={post[0]?.body} components={components} />}
 		</div>
 	);
