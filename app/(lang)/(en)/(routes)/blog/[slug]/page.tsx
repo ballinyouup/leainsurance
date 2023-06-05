@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { createClient } from "next-sanity";
-import { PortableText, PortableTextComponents } from "@portabletext/react";
+import { PortableText } from "@portabletext/react";
 import urlBuilder from "@sanity/image-url";
 import { type SanityImageSource } from "@sanity/image-url/lib/types/types";
 
