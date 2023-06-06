@@ -54,7 +54,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 	  }`);
 
 	return (
-		<div className="flex h-full w-full flex-col items-center p-4">
+		<div className="flex w-full flex-col items-center p-4">
 			<div className="flex w-full max-w-5xl flex-col">
 				<div className="py-4">
 					<h1>{post[0].title}</h1>
