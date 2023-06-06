@@ -18,12 +18,12 @@ const TextSection = () => {
 					}}
 					className="z-10 flex w-full max-w-3xl flex-col items-start justify-center gap-4 p-5 sm:flex-row sm:items-center sm:p-2"
 				>
-					<div className="flex w-fit flex-wrap gap-2 text-start text-4xl font-bold uppercase text-primary sm:flex-col sm:gap-0 sm:text-end sm:text-5xl">
+					<div className="flex w-fit flex-wrap gap-2 text-start text-3xl font-bold uppercase text-primary sm:flex-col sm:gap-0 sm:text-end md:text-5xl">
 						<span>Porque</span>
 						<span>ESCOGERNOS?</span>
 					</div>
 					<span className="w-full border-[1.5px] border-primary sm:h-56 sm:w-fit" />
-					<span className="text-xl">
+					<span className="text-lg lg:text-xl">
 						Nuestros planes no solo brindan una protección completa para
 						exámenes de rutina y tratamientos médicos de importancia, sino que
 						nuestros agentes también ofrecen un servicio personalizado y

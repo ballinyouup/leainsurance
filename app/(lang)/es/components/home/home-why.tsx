@@ -42,8 +42,8 @@ const WhyCard: React.FC<IWhyCard> = ({
 							src={src}
 						/>
 					</div>
-					<div className="flex max-w-lg flex-col">
-						<span className="text-3xl font-bold">{title}</span>
+					<div className="flex w-full max-w-lg flex-col">
+						<span className="mb-2 text-2xl font-bold md:text-3xl">{title}</span>
 						<span className="text-xl">{text}</span>
 					</div>
 				</div>
