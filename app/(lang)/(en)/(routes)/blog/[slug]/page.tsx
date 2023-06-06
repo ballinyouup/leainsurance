@@ -3,8 +3,6 @@ import { createClient } from "next-sanity";
 import { PortableText } from "@portabletext/react";
 import urlBuilder from "@sanity/image-url";
 import { type SanityImageSource } from "@sanity/image-url/lib/types/types";
-import { Link as LinkIcon } from "lucide-react";
-import Link from "next/link";
 const client = createClient({
 	projectId: "be20oshw",
 	dataset: "production",
