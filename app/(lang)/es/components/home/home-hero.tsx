@@ -21,7 +21,7 @@ const Hero = () => {
 						transition={{
 							duration: 0.5,
 						}}
-						className="font-poppins max-w-xl text-5xl font-semibold uppercase text-white sm:text-6xl"
+						className="font-poppins max-w-xl text-5xl font-semibold uppercase text-white sm:text-5xl"
 					>
 						SEGURO CONFIABLE PARA TODAS LA ETAPAS DE TU VIDA
 					</motion.span>
