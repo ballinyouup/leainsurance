@@ -44,7 +44,7 @@ export default async function Page() {
 								<p className="text-lg">By: {post.author}</p>
 							</div>
 
-							<div className="line-clamp-3 h-[80px]">
+							<div className="line-clamp-3 h-full">
 								{toPlainText(post.body)}
 							</div>
 						</div>
