@@ -7,7 +7,7 @@ const Waves = () => {
 				alt="waves"
 				width={1000}
 				height={800}
-				className="!absolute top-0 z-20 hidden sm:-left-20 sm:top-[550px] lg:block xl:left-0"
+				className="!absolute top-0 z-0 hidden sm:-left-20 sm:top-[550px] lg:block xl:left-0"
 			/>
 		</>
 	);

@@ -28,9 +28,7 @@ const ImageComponent = ({ value }: { value: SanityImageSource }) => {
 
 const components = {
 	block: {
-		h1: ({ children }: { children?: React.ReactNode }) => (
-			<h1 className="text-4xl">{children}</h1>
-		),
+		h1: ({ children }: { children?: React.ReactNode }) => <h1>{children}</h1>,
 	},
 	listItem: {
 		bullet: ({ children }: { children?: React.ReactNode }) => (
@@ -43,16 +41,25 @@ const components = {
 };
 
 export default async function Page({ params }: { params: { slug: string } }) {
-	const post = await client.fetch(`*[slug.current == "${params.slug}"]`);
+	const post =
+		await client.fetch(`*[slug.current == "${params.slug}" && defined(author->name)]{
+		"author": author->name,
+		  body, title
+	  }`);
+
 	return (
-		<div className="h-screen w-full p-8">
-			{post && (
+		<div className="flex h-screen w-full flex-col p-8">
+			<div className="py-4">
+				<h1>{post[0].title}</h1>
+				<p className="text-lg">By: {post[0].author}</p>
+			</div>
+			{post ? (
 				<PortableText
-					value={post[0]?.body}
+					value={post[0].body ?? {}}
 					components={components}
 					onMissingComponent={false}
 				/>
-			)}
+			) : null}
 		</div>
 	);
 }
