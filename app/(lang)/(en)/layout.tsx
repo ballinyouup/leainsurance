@@ -101,7 +101,7 @@ export default function RootLayout({
 				<QueryProvider>
 					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 						<Navbar />
-						<div>{children}</div>
+						{children}
 						<Footer />
 					</ThemeProvider>
 				</QueryProvider>
