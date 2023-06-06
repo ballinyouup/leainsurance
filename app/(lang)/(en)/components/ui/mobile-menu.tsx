@@ -34,7 +34,7 @@ const MobileMenu = () => {
 					<span>Return Home</span>
 				</Link>
 				<Link
-					href="https://www.leainsurance.com"
+					href="/es"
 					className="flex items-center gap-2"
 				>
 					<Languages className="mr-2 h-6 w-6" />
