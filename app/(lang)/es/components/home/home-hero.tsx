@@ -23,7 +23,7 @@ const Hero = () => {
 						}}
 						className="font-poppins max-w-xl text-5xl font-semibold uppercase text-white sm:text-6xl"
 					>
-						Seguro con el que puede contar en cada etapa
+						SEGURO CONFIABLE PARA TODAS LA ETAPAS DE TU VIDA
 					</motion.span>
 					<motion.span
 						initial={{
@@ -40,17 +40,17 @@ const Hero = () => {
 						}}
 						className="font-poppins w-full max-w-xl whitespace-normal text-xl font-normal text-white"
 					>
-						Todos merecen acceso a una cobertura de seguro de calidad que se
-						ajuste sus necesidades y presupuesto
+						Todos merecen tener acceso a una cobertura de seguro de calidad que
+						se ajuste a sus necesidades y presupuesto
 					</motion.span>
 					<div className="flex w-full flex-row justify-start gap-4 sm:max-w-xl">
 						<Button
 							onClick={() => scrollTo({ top: 9999999, behavior: "smooth" })}
 						>
-							Contacta con nosotros
+							Contáctanos
 						</Button>
 						<Button>
-							<a href="tel:+18886954221">Llama hoy</a>
+							<a href="tel:+18886954221">Llama hoy mismo</a>
 						</Button>
 					</div>
 				</div>

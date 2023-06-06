@@ -97,11 +97,11 @@ const Contact = () => {
 					<TabsContent value="clients" className="flex flex-col gap-2">
 						<div className="flex w-full max-w-sm flex-col gap-4">
 							<span className="text-4xl font-bold uppercase">
-								Contacta con nosotros
+								¡Contáctanos!
 							</span>
 							<span className="text-xl">
-								Complete este formulario y nuestro equipo se comunicará con
-								usted dentro de las 24 horas
+								Completa este formulario y nuestro equipo te responderá en 24
+								horas.
 							</span>
 						</div>
 						<form
