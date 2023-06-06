@@ -27,12 +27,24 @@ const ImageComponent = ({ value }: { value: SanityImageSource }) => {
 
 const components = {
 	block: {
-		h1: ({ children }: { children?: React.ReactNode }) => <h1>{children}</h1>,
-		h2: ({ children }: { children?: React.ReactNode }) => <h2>{children}</h2>,
-		h3: ({ children }: { children?: React.ReactNode }) => <h3>{children}</h3>,
-		h4: ({ children }: { children?: React.ReactNode }) => <h4>{children}</h4>,
-		h5: ({ children }: { children?: React.ReactNode }) => <h5>{children}</h5>,
-		h6: ({ children }: { children?: React.ReactNode }) => <h6>{children}</h6>,
+		h1: ({ children }: { children?: React.ReactNode }) => (
+			<h1 className="text-6xl font-bold">{children}</h1>
+		),
+		h2: ({ children }: { children?: React.ReactNode }) => (
+			<h2 className="text-5xl font-bold">{children}</h2>
+		),
+		h3: ({ children }: { children?: React.ReactNode }) => (
+			<h3 className="text-4xl font-bold">{children}</h3>
+		),
+		h4: ({ children }: { children?: React.ReactNode }) => (
+			<h4 className="text-3xl font-bold">{children}</h4>
+		),
+		h5: ({ children }: { children?: React.ReactNode }) => (
+			<h5 className="text-2xl font-bold">{children}</h5>
+		),
+		h6: ({ children }: { children?: React.ReactNode }) => (
+			<h6 className="text-xl font-bold">{children}</h6>
+		),
 		normal: ({ children }: { children?: React.ReactNode }) => (
 			<p className="[&>a]:font-medium [&>a]:text-primary [&>a]:underline">
 				{children}
@@ -61,7 +73,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 		<div className="flex w-full flex-col items-center p-4">
 			<div className="flex w-full max-w-5xl flex-col">
 				<div className="py-4">
-					<h1>{post[0].title}</h1>
+					<h1 className="text-5xl font-bold capitalize">{post[0].title}</h1>
 					<p className="text-lg">By: {post[0].author}</p>
 				</div>
 				{post ? (
