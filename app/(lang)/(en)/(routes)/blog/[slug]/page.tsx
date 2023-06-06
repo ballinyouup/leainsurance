@@ -29,6 +29,11 @@ const ImageComponent = ({ value }: { value: SanityImageSource }) => {
 const components = {
 	block: {
 		h1: ({ children }: { children?: React.ReactNode }) => <h1>{children}</h1>,
+		h2: ({ children }: { children?: React.ReactNode }) => <h2>{children}</h2>,
+		h3: ({ children }: { children?: React.ReactNode }) => <h3>{children}</h3>,
+		h4: ({ children }: { children?: React.ReactNode }) => <h4>{children}</h4>,
+		h5: ({ children }: { children?: React.ReactNode }) => <h5>{children}</h5>,
+		h6: ({ children }: { children?: React.ReactNode }) => <h6>{children}</h6>,
 	},
 	listItem: {
 		bullet: ({ children }: { children?: React.ReactNode }) => (
@@ -37,6 +42,7 @@ const components = {
 	},
 	types: {
 		image: ImageComponent,
+		lineBreak: () => <br />,
 	},
 };
 
@@ -48,18 +54,20 @@ export default async function Page({ params }: { params: { slug: string } }) {
 	  }`);
 
 	return (
-		<div className="flex h-screen w-full flex-col p-8">
-			<div className="py-4">
-				<h1>{post[0].title}</h1>
-				<p className="text-lg">By: {post[0].author}</p>
+		<div className="flex h-full w-full flex-col items-center p-4">
+			<div className="flex w-full max-w-5xl flex-col">
+				<div className="py-4">
+					<h1>{post[0].title}</h1>
+					<p className="text-lg">By: {post[0].author}</p>
+				</div>
+				{post ? (
+					<PortableText
+						value={post[0].body ?? {}}
+						components={components}
+						onMissingComponent={false}
+					/>
+				) : null}
 			</div>
-			{post ? (
-				<PortableText
-					value={post[0].body ?? {}}
-					components={components}
-					onMissingComponent={false}
-				/>
-			) : null}
 		</div>
 	);
 }
