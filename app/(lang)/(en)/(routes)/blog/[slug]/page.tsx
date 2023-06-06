@@ -3,7 +3,8 @@ import { createClient } from "next-sanity";
 import { PortableText } from "@portabletext/react";
 import urlBuilder from "@sanity/image-url";
 import { type SanityImageSource } from "@sanity/image-url/lib/types/types";
-
+import { Link as LinkIcon } from "lucide-react";
+import Link from "next/link";
 const client = createClient({
 	projectId: "be20oshw",
 	dataset: "production",
@@ -34,6 +35,11 @@ const components = {
 		h4: ({ children }: { children?: React.ReactNode }) => <h4>{children}</h4>,
 		h5: ({ children }: { children?: React.ReactNode }) => <h5>{children}</h5>,
 		h6: ({ children }: { children?: React.ReactNode }) => <h6>{children}</h6>,
+		normal: ({ children }: { children?: React.ReactNode }) => (
+			<p className="[&>a]:font-medium [&>a]:text-primary [&>a]:underline">
+				{children}
+			</p>
+		),
 	},
 	listItem: {
 		bullet: ({ children }: { children?: React.ReactNode }) => (
