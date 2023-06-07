@@ -8,7 +8,13 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuItem,
 } from "$/dropdown-menu";
-import { BookDown, Stethoscope, Baby, FileHeart, Sprout } from "lucide-react";
+import {
+	ChevronDown,
+	Stethoscope,
+	Baby,
+	FileHeart,
+	Sprout,
+} from "lucide-react";
 import Link from "next/link";
 import { Button } from "$/button";
 
@@ -18,10 +24,10 @@ const DropMenu = () => {
 			<DropdownMenuTrigger asChild className="w-full rounded-md p-1.5">
 				<Button
 					variant="ghost"
-					className="flex items-center gap-2 text-accent-foreground"
+					className="flex items-center gap-1 text-accent-foreground [&>svg]:aria-expanded:rotate-180"
 				>
-					<BookDown className="h-5 w-5" />
 					<span>Learn</span>
+					<ChevronDown className="h-5 w-5 transition" />
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align="end">

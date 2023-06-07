@@ -13,6 +13,15 @@ const Navbar = () => {
 				<div className="flex w-full flex-col items-center">
 					<div className="flex w-full flex-row items-center justify-end bg-teal-950 sm:h-6">
 						<div className="flex w-full items-center justify-center gap-3 p-0 sm:h-6 sm:justify-end sm:gap-4 sm:pr-3">
+							<div className="flex items-center gap-1">
+								<Link
+									href="/"
+									className="flex items-center gap-1 text-sm font-semibold text-white hover:underline"
+								>
+									<Languages className="h-[18px] w-[18px] text-white" />
+									English
+								</Link>
+							</div>
 							<span className="whitespace-nowrap text-sm font-semibold text-white">
 								Horario: 9am - 5pm
 							</span>
@@ -30,19 +39,13 @@ const Navbar = () => {
 				<div className="flex h-16 w-full flex-row items-center justify-between bg-black px-4 py-10">
 					<Logo />
 					<div className="hidden w-fit items-center gap-2 sm:flex">
-						<Button variant={"ghost"}>
-							<Link href="/" className="flex items-center gap-2">
-								<Languages className="h-6 w-6 text-white" />
-								<span className="text-white">English</span>
-							</Link>
-						</Button>
 						<Button variant={"ghost"} className="p-1.5">
 							<Link href="/es/" className="flex items-center">
-								<Home className="h-6 w-6 text-white" />
+								Home
 							</Link>
 						</Button>
-						<ThemeToggle variant="ghost" />
 						<DropMenu />
+						<ThemeToggle variant="ghost" />
 					</div>
 					<div className="flex w-fit sm:hidden">
 						<MobileMenu />

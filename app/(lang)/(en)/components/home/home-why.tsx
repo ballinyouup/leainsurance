@@ -29,25 +29,33 @@ const WhyCard: React.FC<IWhyCard> = ({
 				<div
 					className={`flex w-full flex-col items-start justify-center gap-8 rounded-lg p-2 sm:p-8 md:w-1/2`}
 				>
-					<div
-						className={`w-fit rounded-lg border border-primary ${
-							inverted ? "bg-accent-foreground" : "bg-accent"
-						} p-2`}
-					>
-						<Image
-							className={inverted ? "" : "invert"}
-							alt={alt}
-							width={24}
-							height={24}
-							src={src}
-						/>
+					<div className="flex items-center gap-3">
+						<div
+							className={`w-fit rounded-lg border border-primary ${
+								inverted ? "bg-accent-foreground" : "bg-accent"
+							} p-2`}
+						>
+							<Image
+								className={
+									inverted
+										? "min-h-[32px] min-w-[32px]"
+										: "min-h-[32px] min-w-[32px] invert"
+								}
+								alt={alt}
+								width={32}
+								height={32}
+								src={src}
+							/>
+						</div>
+						<span className="w-full break-words text-2xl font-bold lg:text-3xl">
+							{title}
+						</span>
 					</div>
 					<div className="flex max-w-lg flex-col">
-						<span className="text-3xl font-bold">{title}</span>
 						<span className="text-xl">{text}</span>
 					</div>
 				</div>
-				<div className="relative h-40 w-full overflow-hidden rounded-lg sm:h-96 md:w-1/2">
+				<div className="relative flex h-40 w-full items-center overflow-hidden rounded-lg sm:h-96 md:w-1/2">
 					<Image
 						src={ImageSrc}
 						alt={ImageAlt}
