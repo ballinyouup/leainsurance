@@ -93,12 +93,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="es" suppressHydrationWarning>
+		<html lang="es">
 			<body className={inter.className}>
 				<QueryProvider>
 					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 						<Navbar />
-						<div>{children}</div>
+						{children}
 						<Footer />
 					</ThemeProvider>
 				</QueryProvider>

@@ -30,14 +30,17 @@ export default function Page() {
 					orientation="horizontal"
 				>
 					<TabsList className="col-span-4 grid h-fit grid-cols-1">
-						<TabsTrigger value="overview">Descripción general</TabsTrigger>
+						<TabsTrigger value="overview" className="flex flex-wrap">
+							<span>DESCRIPCIÓN GENERAL&nbsp;</span>
+							<span>DEL SEGURO DE VIDA</span>
+						</TabsTrigger>
 						<TabsTrigger value="eligibility" className="flex flex-wrap">
 							<span>Elegibilidad e &nbsp;</span>
 							<span>Inscripción</span>
 						</TabsTrigger>
 						<TabsTrigger value="term" className="flex flex-wrap">
-							<span>Seguro De Termino&nbsp;</span>
-							<span>De vida</span>
+							<span>Seguro De Vida&nbsp;</span>
+							<span>A Termino</span>
 						</TabsTrigger>
 						<TabsTrigger value="permanent" className="flex flex-wrap">
 							<span>Seguro de Vida&nbsp;</span>
@@ -66,24 +69,25 @@ export default function Page() {
 						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
 					>
 						<div className="flex w-full flex-col gap-4">
-							<div className="pb-2 text-4xl font-bold sm:text-5xl">
-								DESCRIPCIÓN GENERAL
+							<div className="flex flex-wrap pb-2 text-4xl font-bold sm:text-5xl">
+								<span>DESCRIPCIÓN GENERAL&nbsp;</span>
+								<span>DEL SEGURO DE VIDA</span>
 							</div>
 							<span>
-								El seguro de vida es un contrato entre usted y un seguro
-								compañía que paga un beneficio por muerte a sus beneficiarios
-								cuando usted fallecer El beneficio por fallecimiento se puede
-								utilizar para varios gastos, como facturas, hipoteca,
-								universidad o costos de entierro El seguro de vida puede también
-								brinde tranquilidad y seguridad financiera a sus seres queridos
-								después de que te hayas ido.
+								El seguro de vida es un contrato entre tú y una compañía de
+								seguros que paga un beneficio por fallecimiento a tus
+								beneficiarios cuando mueras. Este beneficio por fallecimiento se
+								puede utilizar para diferentes gastos, como facturas, hipoteca,
+								colegio o costos funerarios. Además, el seguro de vida puede
+								brindar tranquilidad y seguridad financiera a tus seres queridos
+								después de tu partida.
 							</span>
 							<span>
 								Existen diferentes tipos de seguros de vida, como el seguro de
-								vida a término seguro, que brinda protección por un período
-								específico, y seguro de vida permanente, que brinda cobertura de
-								por vida Cada tipo tiene sus propias ventajas y desventajas,
-								dependiendo de su necesidades y preferencias.
+								vida a plazo, que ofrece protección por un período específico, y
+								el seguro de vida permanente, que brinda cobertura de por vida.
+								Cada tipo tiene sus propias ventajas y desventajas, según tus
+								necesidades y preferencias.
 							</span>
 						</div>
 					</TabsContent>
@@ -96,76 +100,76 @@ export default function Page() {
 							<span>Inscripción</span>
 						</div>
 						<span>
-							Para comprar una póliza de seguro de vida, debe cumplir con
+							Para comprar una póliza de seguro de vida, debes cumplir con
 							ciertos criterios de elegibilidad, como la edad, la salud y los
-							ingresos. Diferente tipos de seguros de vida pueden tener
-							diferentes elegibilidad requisitos Por ejemplo, el seguro de vida
-							a término puede ser más fácil de calificar para un seguro de vida
-							permanente, ya que no implica un componente de valor en efectivo.
-							Algunos tipos de seguros de vida pueden requerir una examen médico
-							o un cuestionario de salud, mientras que otros pueden ofrecer
-							pólizas simplificadas o de emisión garantizada que no requieren
-							suscripción médica.
+							ingresos. Los diferentes tipos de seguros de vida pueden tener
+							diferentes requisitos de elegibilidad. Por ejemplo, es posible que
+							sea más fácil calificar para un seguro de vida a término que para
+							un seguro de vida permanente, ya que no incluye un componente de
+							valor en efectivo. Algunos tipos de seguros de vida pueden
+							requerir un examen médico o un cuestionario de salud, mientras que
+							otros pueden ofrecer pólizas simplificadas o de emisión
+							garantizada que no requieren ningún proceso de evaluación médica.
 						</span>
 						<span>
-							Para inscribirse en una póliza de seguro de vida, debe completar
-							un formulario de solicitud y proporcionar la información necesaria
-							y documentos. Es posible que también deba designar un beneficiario
-							o beneficiarios que recibirán el beneficio por fallecimiento
-							cuando usted muera. Dependiendo del tipo de póliza y la cantidad
-							de cobertura que usted desea, es posible que también deba pagar
-							una prima por adelantado o en forma regular base.
+							Para inscribirte en una póliza de seguro de vida, debes completar
+							un formulario de solicitud y proporcionar la información y los
+							documentos necesarios. Es posible que también debas designar un
+							beneficiario o beneficiarios que recibirán el beneficio por
+							fallecimiento cuando mueras. Dependiendo del tipo de póliza y la
+							cantidad de cobertura que desees, es posible que también debas
+							pagar una prima por adelantado o de forma regular.
 						</span>
 						<span>
-							Puede comprar una póliza de seguro de vida de varias fuentes,
+							Puedes comprar una póliza de seguro de vida de diversas fuentes,
 							como:
 						</span>
 						<ul className="list-disc">
 							<li className="ml-6">
 								Una compañía de seguros o un agente que representa a uno o más
-								aseguradoras
+								aseguradores.
 							</li>
 							<li className="ml-6">
-								Un empleador o un grupo que ofrece un seguro de vida grupal como
-								parte de un paquete de beneficios.
+								Un empleador o un grupo que ofrece seguros de vida colectivos
+								como parte de un paquete de beneficios.
 							</li>
 							<li className="ml-6">
-								Una asociación o una organización que ofrece vida en grupo.
-								seguro a sus afiliados.
+								Una asociación u organización que ofrece seguros de vida
+								colectivos a sus miembros.
 							</li>
 							<li className="ml-6">
-								Un planificador financiero o un asesor que pueda ayudarlo a
-								comparar diferentes opciones y encuentre la mejor póliza para
-								sus necesidades.
+								Un planificador financiero o asesor que puede ayudarte a
+								comparar diferentes opciones y encontrar la mejor póliza para
+								tus necesidades.
 							</li>
 						</ul>
 						<span>
-							También puede cambiar o cancelar su póliza de seguro de vida en
-							cualquier tiempo, dependiendo de los términos y condiciones de su
-							contrato. Sin embargo, puede enfrentar algunas consecuencias, como
-							perder su cobertura, pagando tarifas o multas, o perdiendo su
-							valor en efectivo.
+							También puedes cambiar o cancelar tu póliza de seguro de vida en
+							cualquier momento, según los términos y condiciones de tu
+							contrato. Sin embargo, es posible que enfrentes algunas
+							consecuencias, como perder tu cobertura, pagar tarifas o
+							penalidades o renunciar al valor en efectivo.
 						</span>
 						<span>
-							Algunos eventos de la vida también pueden afectar su elegibilidad
-							e inscripción en una póliza de seguro de vida, tales como:
+							Algunos eventos de vida también pueden afectar tu elegibilidad e
+							inscripción en una póliza de seguro de vida, como:
 						</span>
 						<ul className="list-disc">
 							<li className="ml-6">Casarse o divorciarse</li>
 							<li className="ml-6">Tener un hijo o adoptar un hijo</li>
 							<li className="ml-6">Perder o cambiar de trabajo</li>
 							<li className="ml-6">Jubilarse o llegar a cierta edad</li>
-							<li className="ml-6">Mudanza a otro estado o país</li>
+							<li className="ml-6">Mudarse a otro estado o país.</li>
 							<li className="ml-6">
-								Desarrollar una condición de salud o quedar discapacitado
+								Desarrollar una condición de salud o quedar discapacitado.
 							</li>
 						</ul>
 						<span>
-							Estos eventos de la vida pueden requerir que actualice su
-							información, cambiar el monto de su cobertura, cambiar su tipo de
-							póliza o agregar o quitar beneficiarios. También puede calificar
-							para un programa especial período de inscripción que le permite
-							inscribirse en una nueva póliza o modificar su póliza existente
+							Estos eventos de vida pueden requerir que actualices tu
+							información, cambies la cantidad de cobertura, cambies el tipo de
+							póliza o agregues o elimines beneficiarios. También puedes
+							calificar para un período de inscripción especial que te permite
+							inscribirte en una nueva póliza o modificar tu póliza existente
 							fuera del período de inscripción regular.
 						</span>
 					</TabsContent>
@@ -174,35 +178,35 @@ export default function Page() {
 						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
 					>
 						<div className="pb-2 text-4xl font-bold uppercase sm:text-5xl">
-							Seguro de término de vida
+							SEGURO DE VIDA A TÉRMINO
 						</div>
 						<span>
 							El seguro de vida a término está diseñado para durar un cierto
-							número de años, luego terminar El plazo lo eliges tú cuando
-							contratas la póliza. Común son 10, 20 o 30 años El seguro de vida
-							a término suele ser el tipo de seguro de vida más asequible porque
-							sólo paga una beneficio por muerte si muere dentro del plazo. No
-							genera efectivo valor o pago de dividendos
+							número de años y luego finalizar. Tú eliges el plazo al contratar
+							la póliza. Los plazos comunes son 10, 20 o 30 años. El seguro de
+							vida a término suele ser el tipo de seguro de vida más económico
+							porque solo paga un beneficio por fallecimiento si mueres dentro
+							del plazo. No genera valor en efectivo ni paga dividendos.
 						</span>
 						<span>
-							El seguro de vida a término es una buena opción si desea cubrir un
-							obligación financiera específica, como una hipoteca, un préstamo o
-							una educación del niño. También puede proporcionar un reemplazo de
-							ingresos para su dependientes durante sus años de trabajo. Sin
-							embargo, el seguro de vida a término tiene algunos inconvenientes.
-							Si sobrevive al término, su cobertura terminará y tendrás que
-							renovarlo a un precio más alto o comprar uno nuevo política.
-							Además, el seguro de vida a término no ofrece ninguna
-							flexibilidad. o beneficios adicionales más allá del beneficio por
-							muerte
+							El seguro de vida a término es una buena opción si deseas cubrir
+							una obligación financiera específica, como una hipoteca, un
+							préstamo o la educación de un hijo. También puede proporcionar
+							reemplazo de ingresos para tus dependientes durante tus años
+							laborales. Sin embargo, el seguro de vida a término tiene algunas
+							desventajas. Si sobrevives al plazo, tu cobertura terminará y
+							deberás renovarla a una tarifa más alta o comprar una nueva
+							póliza. Además, el seguro de vida a término no ofrece flexibilidad
+							ni beneficios adicionales más allá del beneficio por
+							fallecimiento.
 						</span>
 						<span>
-							Algunas pólizas de seguro de vida a término pueden permitirle
-							convertirlas en pólizas permanentes sin tener que someterse a un
-							examen médico o proporcionar prueba de asegurabilidad. Esto puede
-							ser útil si su cambios en su situación financiera o de salud y
-							desea mantener su cobertura. Busque una póliza a término
-							convertible si esto es importante A usted
+							Algunas pólizas de seguro de vida a término pueden permitirte
+							convertirlas en pólizas permanentes sin tener que someterte a un
+							examen médico o proporcionar pruebas de asegurabilidad. Esto puede
+							ser útil si tu situación de salud o financiera cambia y deseas
+							mantener tu cobertura. Busca una póliza de plazo convertible si
+							esto es importante para ti.
 						</span>
 					</TabsContent>
 					<TabsContent
@@ -213,38 +217,38 @@ export default function Page() {
 							Seguro de Vida Permanente
 						</div>
 						<span>
-							El seguro de vida permanente se mantiene vigente durante toda su
-							vida a menos que deje de pagar las primas o cancele la póliza Es
-							más caro que el seguro de vida a término porque proporciona
-							cobertura de por vida y acumula valor en efectivo con el tiempo.
-							El valor en efectivo es un porción de su prima que se acumula en
-							una cuenta con impuestos diferidos dentro de su póliza. Puede
-							acceder a su valor en efectivo a través de préstamos o retiros
-							para cualquier propósito, como ingreso de jubilación, gastos de
-							educación, o emergencias
+							El seguro de vida permanente se mantiene vigente durante toda tu
+							vida a menos que dejes de pagar las primas o cedas la póliza. Es
+							más costoso que el seguro de vida a plazo porque ofrece cobertura
+							de por vida y acumula valor en efectivo con el tiempo. El valor en
+							efectivo es una parte de tu prima que se acumula en una cuenta
+							diferida de impuestos dentro de tu póliza. Puedes acceder a tu
+							valor en efectivo a través de préstamos o retiros para cualquier
+							propósito, como ingresos para la jubilación, gastos educativos o
+							emergencias.
 						</span>
 						<span>
 							El seguro de vida permanente también paga dividendos a los
-							asegurados con base en el desempeño y la rentabilidad de la
-							empresa. Los dividendos no están garantizados, pero se pueden
-							utilizar para aumentar su beneficio por fallecimiento, reducir sus
-							primas o agregar más valor en efectivo a su póliza
+							asegurados basados en el desempeño y la rentabilidad de la
+							compañía. Los dividendos no están garantizados, pero se pueden
+							utilizar para aumentar el beneficio por fallecimiento, reducir tus
+							primas o agregar más valor en efectivo a tu póliza.
 						</span>
 						<span>
-							El seguro de vida permanente es una buena opción si desea dejar un
-							legado para sus herederos, complementar sus ingresos de
-							jubilación, o proteger su patrimonio de los impuestos. También
-							puede proporcionar otros beneficios, como los beneficios por
-							muerte acelerada, que le permiten recibir una parte de su
-							beneficio por muerte antes de morir si está diagnosticado con una
-							enfermedad terminal o necesita atención a largo plazo
+							El seguro de vida permanente es una buena opción si deseas dejar
+							un legado para tus herederos, complementar tus ingresos de
+							jubilación o proteger tu patrimonio de impuestos. También puede
+							proporcionar otros beneficios, como beneficios de fallecimiento
+							acelerados, que te permiten recibir una parte de tu beneficio por
+							fallecimiento antes de morir si te diagnostican una enfermedad
+							terminal o necesitas atención a largo plazo.
 						</span>
 						<span>
-							Existen diferentes tipos de seguros de vida permanentes, tales
-							como seguro de vida entera, seguro de vida universal, vida
-							variable y seguro de vida universal indexado. Cada tipo tiene su
-							propias características y riesgos que debe comprender antes de
-							comprar.
+							Existen diferentes tipos de seguros de vida permanentes, como el
+							seguro de vida entera, el seguro de vida universal, el seguro de
+							vida variable y el seguro de vida universal indexado. Cada tipo
+							tiene sus propias características y riesgos que debes entender
+							antes de comprar.
 						</span>
 					</TabsContent>
 					<TabsContent
@@ -256,51 +260,54 @@ export default function Page() {
 								Seguro de Vida Entera
 							</div>
 							<span>
-								El seguro de vida entera es el tipo más simple y tradicional. de
-								seguro de vida permanente. Proporciona una muerte garantizada.
-								beneficio, una prima fija y un crecimiento de valor en efectivo
-								garantizado rate El seguro de vida entera es adecuado para
-								personas que desean Cobertura predecible y estable con riesgo
-								mínimo.
+								Seguro de vida entera es el tipo más simple y tradicional de
+								seguro de vida permanente. Ofrece un beneficio por fallecimiento
+								garantizado, una prima fija y una tasa de crecimiento de valor
+								en efectivo garantizada. El seguro de vida entera es adecuado
+								para personas que desean una cobertura predecible y estable con
+								riesgo mínimo.
 							</span>
 							<span>
 								Algunas de las ventajas del seguro de vida entera son:
 							</span>
 							<ul className="list-disc">
 								<li className="ml-6">
-									Dura toda la vida y no caduca mientras usted paga sus primas
+									Dura toda la vida y no vence siempre que pagues tus primas.
 								</li>
 								<li className="ml-6">
-									Crea un valor en efectivo con impuestos diferidos que se puede
-									pedir prestado contra o retirado para cualquier propósito
+									Genera un valor en efectivo diferido de impuestos que se puede
+									tomar prestado o retirar para cualquier propósito.
 								</li>
 								<li className="ml-6">
-									Paga dividendos a los asegurados con base en los rendimiento y
-									rentabilidad
+									Paga dividendos a los asegurados basados en el rendimiento y
+									la rentabilidad de la compañía.
 								</li>
 								<li className="ml-6">
 									Puede ser útil para fines de planificación patrimonial, como
-									crear un fideicomiso o financiar una donación caritativa
+									la creación de un fideicomiso o financiamiento de donaciones
+									benéficas.
 								</li>
 							</ul>
-							<span>Algunos de los contras del seguro de vida entera son:</span>
+							<span>
+								Algunas de las desventajas del seguro de vida entera son:
+							</span>
 							<ul className="list-disc">
 								<li className="ml-6">
-									Es más caro que el seguro de vida a término y puede que no sea
-									asequible para algunas personas
+									Es más costoso que el seguro de vida a término y puede no ser
+									asequible para algunas personas.
 								</li>
 								<li className="ml-6">
-									Tiene rendimientos más bajos que otros tipos de vida
-									permanente. seguros u otras inversiones3.
+									Tiene retornos más bajos que otros tipos de seguros de vida
+									permanentes o inversiones.
 								</li>
 								<li className="ml-6">
-									Tiene menos flexibilidad que otros tipos de vida permanente.
-									seguro y puede no adaptarse a necesidades o preferencias
-									cambiantes
+									Tiene menos flexibilidad que otros tipos de seguros de vida
+									permanentes y puede no adaptarse a necesidades o preferencias
+									cambiantes.
 								</li>
 								<li className="ml-6">
-									Puede tener cargos por rescate o multas si cancela o retirarse
-									de su póliza antes de un período determinado
+									Puede tener cargos por cancelación o penalidades si cancelas o
+									retiras tu póliza antes de cierto período.
 								</li>
 							</ul>
 						</div>
@@ -314,63 +321,61 @@ export default function Page() {
 								Seguro de Vida Universal
 							</div>
 							<span>
-								El seguro de vida universal es un tipo de seguro permanente más
-								flexible. seguro de vida que te permite ajustar tu prima y
-								muerte monto del beneficio dentro de ciertos límites Seguro de
-								vida universal también tiene una cuenta de valor en efectivo que
-								devenga intereses que varía según las tarifas vigentes en el
-								mercado Seguro de vida universal es adecuado para personas que
-								desean tener más control sobre su cobertura y acumulación de
-								valor en efectivo.
+								Seguro de vida universal es un tipo de seguro de vida permanente
+								más flexible que te permite ajustar tu prima y el monto del
+								beneficio por fallecimiento dentro de ciertos límites. El seguro
+								de vida universal también tiene una cuenta de valor en efectivo
+								que genera intereses y varía según las tasas del mercado actual.
+								El seguro de vida universal es adecuado para personas que desean
+								tener más control sobre su cobertura y acumulación de valor en
+								efectivo.
 							</span>
-							<span>
-								Algunas de las ventajas del seguro de vida universal son:
-							</span>
+							<span>Algunas ventajas del seguro de vida universal son:</span>
 							<ul className="list-disc">
 								<li className="ml-6">
-									Le permite aumentar o reducir su prima y beneficio por
-									fallecimiento de acuerdo a tus necesidades y presupuesto
+									Te permite aumentar o disminuir tu prima y el monto del
+									beneficio por fallecimiento según tus necesidades y
+									presupuesto.
 								</li>
 								<li className="ml-6">
-									Tiene un mayor potencial para el crecimiento del valor en
-									efectivo que todo seguro de vida, en función de la evolución
-									del mercado
+									Tiene un mayor potencial de crecimiento del valor en efectivo
+									que el seguro de vida entera, según el rendimiento del
+									mercado.
 								</li>
 								<li className="ml-6">
-									Ofrece ventajas fiscales, como valor en efectivo con impuestos
-									diferidos crecimiento y préstamos y retiros libres de
-									impuestos
+									Ofrece ventajas fiscales, como el crecimiento del valor en
+									efectivo diferido de impuestos y préstamos y retiros libres de
+									impuestos.
 								</li>
 								<li className="ml-6">
-									Proporciona otros beneficios, como la muerte acelerada.
-									beneficios, que le permiten recibir una parte de su muerte
-									beneficio antes de morir si se le diagnostica una enfermedad
-									terminal enfermedad o necesidad de atención a largo plazo
+									Proporciona otros beneficios, como beneficios por
+									fallecimiento acelerados, que te permiten recibir una parte de
+									tu beneficio por fallecimiento antes de fallecer si te
+									diagnostican una enfermedad terminal o necesitas atención a
+									largo plazo.
 								</li>
 							</ul>
-							<span>
-								Algunas de las desventajas del seguro de vida universal son:
-							</span>
+							<span>Algunas desventajas del seguro de vida universal son:</span>
 							<ul className="list-disc">
 								<li className="ml-6">
 									Tiene tarifas y cargos más altos que el seguro de vida entera,
-									como como costos administrativos, cargos por mortalidad y
-									entrega cargos
+									como costos administrativos, cargos de mortalidad y cargos por
+									cancelación.
 								</li>
 								<li className="ml-6">
-									No tiene garantías sobre el monto de su prima o los
-									rendimientos del mercado, lo que significa que es posible que
-									tenga que pagar más o recibir menos de esperado
+									No ofrece garantías sobre el monto de tu prima o los
+									rendimientos del mercado, lo que significa que puedes tener
+									que pagar más o recibir menos de lo esperado.
 								</li>
 								<li className="ml-6">
-									Tiene más riesgo que el seguro de vida entera, ya que su valor
+									Tiene más riesgo que el seguro de vida entera, ya que el valor
 									en efectivo puede disminuir o incluso desaparecer si el
-									mercado funciona mal o si te saltas los pagos
+									mercado tiene un mal desempeño o si no realizas los pagos.
 								</li>
 								<li className="ml-6">
-									Requiere una gestión y un seguimiento más activos que la
-									totalidad seguro de vida, ya que tienes que ajustar tu prima y
-									muerte Benefíciese de acuerdo con sus necesidades cambiantes y
+									Requiere una gestión y monitoreo más activos que el seguro de
+									vida entera, ya que debes ajustar tu prima y el monto del
+									beneficio por fallecimiento según tus necesidades cambiantes y
 									las condiciones del mercado.
 								</li>
 							</ul>
@@ -384,63 +389,60 @@ export default function Page() {
 							Seguro de Vida Variable
 						</div>
 						<span>
-							El seguro de vida variable es un tipo de seguro de vida permanente
-							que le permite invertir su valor en efectivo en varias subcuentas
-							que son similares a los fondos mutuos El seguro de vida variable
-							ofrece la potencial de mayores rendimientos pero también mayores
-							riesgos que otros tipos de seguros de vida permanentes. Puede
-							perder dinero si el las subcuentas funcionan mal. El seguro de
-							vida variable también tiene tarifas y cargos más altos que otros
-							tipos de vida permanente El seguro de vida variable es adecuado
-							para personas que están dispuestos a asumir más riesgos y tener
-							más conocimientos de inversión.
+							Seguro de vida variable es un tipo de seguro de vida permanente
+							que te permite invertir el valor en efectivo en diferentes
+							subcuentas similares a fondos mutuos. El seguro de vida variable
+							ofrece el potencial de obtener mayores rendimientos, pero también
+							conlleva mayores riesgos que otros tipos de seguros de vida
+							permanentes. Puedes perder dinero si las subcuentas tienen un
+							rendimiento deficiente. Además, el seguro de vida variable tiene
+							tarifas y cargos más altos que otros tipos de seguros de vida
+							permanentes. El seguro de vida variable es adecuado para personas
+							dispuestas a asumir más riesgos y que poseen más conocimientos en
+							inversiones.
 						</span>
-						<span>
-							Algunas de las ventajas del seguro de vida variable son:
-						</span>
+						<span>Algunas ventajas del seguro de vida variable son:</span>
 						<ul className="list-disc">
 							<li className="ml-6">
-								Le da más control sobre cómo se invierte su valor en efectivo,
-								ofreciéndote una cartera de subcuentas entre las que elegir
+								Te brinda mayor control sobre cómo se invierte el valor en
+								efectivo, ofreciéndote una cartera de subcuentas para elegir.
 							</li>
 							<li className="ml-6">
 								Tiene un mayor potencial de crecimiento del valor en efectivo
-								que otros tipos de seguro de vida permanente, dependiendo de la
-								subcuenta actuación
+								que otros tipos de seguros de vida permanentes, dependiendo del
+								rendimiento de las subcuentas.
 							</li>
 							<li className="ml-6">
 								Ofrece ventajas fiscales, como el crecimiento del valor en
-								efectivo con impuestos diferidos y transferencias libres de
-								impuestos entre subcuentas
+								efectivo diferido de impuestos y transferencias libres de
+								impuestos entre subcuentas.
 							</li>
 							<li className="ml-6">
-								Proporciona un beneficio por muerte mínimo garantizado,
-								independientemente de cómo funcionan sus subcuentas
+								Proporciona un beneficio de fallecimiento garantizado mínimo,
+								independientemente del rendimiento de las subcuentas.
 							</li>
 						</ul>
-						<span>
-							Algunas de las desventajas del seguro de vida variable son:
-						</span>
+						<span>Algunas desventajas del seguro de vida variable son:</span>
 						<ul className="list-disc">
 							<li className="ml-6">
-								Tiene tarifas y cargos más altos que otros tipos de permanentes
-								seguros de vida, tales como costos administrativos, cargos por
-								mortalidad, cargos de rescate y tarifas de gestión de
-								inversiones
+								Tiene tarifas y cargos más altos que otros tipos de seguros de
+								vida permanentes, como costos administrativos, cargos por
+								mortalidad, cargos por cancelación y tarifas de gestión de
+								inversiones.
 							</li>
 							<li className="ml-6">
-								No tiene garantías sobre el monto de su prima o los rendimientos
-								del mercado, lo que significa que es posible que tenga que pagar
-								más o recibir menos de esperado
+								No garantiza el monto de tu prima o los rendimientos del
+								mercado, lo que significa que puedes tener que pagar más o
+								recibir menos de lo esperado.
 							</li>
 							<li className="ml-6">
-								Tiene más riesgo que otros tipos de seguros de vida permanente,
-								ya que su valor en efectivo puede disminuir o incluso
-								desaparecer si el las subcuentas funcionan mal
+								Tiene más riesgo que otros tipos de seguros de vida permanentes,
+								ya que el valor en efectivo puede disminuir o incluso
+								desaparecer si las subcuentas tienen un rendimiento deficiente.
 							</li>
 							<li className="ml-6">
-								Requiere una gestión y un seguimiento más activos que otros
-								tipos de seguros de vida permanentes.
+								Requiere una gestión y monitoreo más activos que otros tipos de
+								seguros de vida permanentes.
 							</li>
 						</ul>
 					</TabsContent>
@@ -449,116 +451,117 @@ export default function Page() {
 						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
 					>
 						<div className="pb-2 text-4xl font-bold uppercase sm:text-5xl">
-							Seguro indexado
+							Seguro De Vida Indexado
 						</div>
 						<span>
-							El seguro de vida universal indexado es un tipo más flexible de
-							seguro de vida permanente que te permite ajustar tu prima y el
-							monto del beneficio por muerte dentro de ciertos límites Indexado
-							universal el seguro de vida también tiene una cuenta de valor en
-							efectivo que gana intereses basado en el rendimiento de un índice
-							de acciones o bonos, como el S&P 500 o el seguro de vida universal
-							indexado Nasdaq-100 ofrece la potencial de rendimientos más altos
-							que otros tipos de vida permanente seguro, sino que también tiene
-							una tasa de rendimiento mínima garantizada para protegerlo de las
-							pérdidas del mercado
+							Seguro de vida indexado es un tipo de seguro de vida permanente
+							más flexible que te permite ajustar tu prima y el monto del
+							beneficio por fallecimiento dentro de ciertos límites. El seguro
+							de vida indexado también cuenta con una cuenta de valor en
+							efectivo que gana intereses basados en el desempeño de un índice
+							de acciones o bonos, como el S&P 500 o el Nasdaq-100. El seguro de
+							vida indexado ofrece el potencial de obtener mayores rendimientos
+							que otros tipos de seguros de vida permanentes, pero también tiene
+							una tasa de rendimiento mínima garantizada para protegerte de
+							pérdidas en el mercado.
 						</span>
 						<span>
-							El seguro de vida universal indexado es adecuado para personas que
-							desean beneficiarse de las ganancias del mercado sin invertir
-							directamente en el mercado. También puede proporcionar ventajas
-							fiscales, como impuestos diferidos crecimiento del valor en
-							efectivo y préstamos y retiros libres de impuestos Sin embargo, El
-							seguro de vida universal indexado también tiene algunos
-							inconvenientes. Tiene topes en los rendimientos que limitan su
-							potencial alcista. También tiene tarifas y cargos más altos que
-							otros tipos de vida permanente seguro. Y no garantiza el monto de
-							su prima ni el mercado devoluciones
+							El seguro de vida indexado es adecuado para personas que desean
+							beneficiarse de las ganancias del mercado sin invertir
+							directamente en él. También puede proporcionar ventajas fiscales,
+							como el crecimiento del valor en efectivo diferido de impuestos y
+							préstamos y retiros libres de impuestos. Sin embargo, el seguro de
+							vida indexado también tiene algunas desventajas. Tiene límites en
+							los rendimientos que limitan tu potencial de ganancias. También
+							tiene tarifas y cargos más altos que otros tipos de seguros de
+							vida permanentes. Y no garantiza el monto de tu prima o los
+							rendimientos del mercado.
 						</span>
 					</TabsContent>
 					<TabsContent
 						value="howto"
 						className="col-span-8 flex flex-col gap-4 p-4 text-lg"
 					>
-						<div className="flex flex-col pb-2 text-4xl font-bold uppercase sm:text-5xl">
-							<span>Cómo</span>
+						<div className="flex flex-col flex-wrap pb-2 text-4xl font-bold uppercase sm:text-5xl">
+							<span>CÓMO ELEGIR UNA PÓLIZA&nbsp;</span>
+							<span>DE SEGURO DE VIDA</span>
 						</div>
 						<span>
-							La elección de una póliza de seguro de vida depende de sus
-							necesidades personales y objetivos financieros, su presupuesto y
-							su tolerancia al riesgo. Aquí están algunas preguntas que debes
-							hacerte antes de contratar un seguro de vida política:
+							Elegir una póliza de seguro de vida depende de tus metas
+							personales y financieras, tu presupuesto y tu tolerancia al
+							riesgo. Aquí tienes algunas preguntas que debes hacerte antes de
+							comprar una póliza de seguro de vida:
 						</span>
 						<ul className="flex list-disc flex-col gap-4">
 							<li className="ml-6">
 								¿Cuánta cobertura necesito? La cantidad de cobertura que
-								necesita depende de varios factores, como sus ingresos, sus
-								deudas, sus gastos y las necesidades de sus dependientes. Una
-								regla común de pulgar es multiplicar su ingreso anual por 10 o
-								15, pero puede quiere usar una calculadora de seguros de vida o
-								consultar con un planificador financiero para obtener una
+								necesitas depende de diversos factores, como tus ingresos, tus
+								deudas, tus gastos y las necesidades de tus dependientes. Una
+								regla general común es multiplicar tus ingresos anuales por 10 o
+								15, pero tal vez quieras utilizar una calculadora de seguro de
+								vida o consultar con un planificador financiero para obtener una
 								estimación más precisa.
 							</li>
 							<li className="ml-6">
-								¿Por cuánto tiempo necesito cobertura? La duración de la
-								cobertura que necesita depende de cuánto tiempo desee
-								proporcionar apoyo financiero para tus beneficiarios. Por
-								ejemplo, si tiene niños pequeños o un hipoteca, es posible que
-								desee un plazo más largo que si ha crecido hijos o sin deudas.
-								El seguro de vida a término ofrece cobertura para un período
-								específico, como 10, 20 o 30 años, mientras que permanente El
-								seguro de vida ofrece cobertura para toda su vida.
+								¿Por cuánto tiempo necesito cobertura? El tiempo de cobertura
+								que necesitas depende de cuánto tiempo deseas proporcionar apoyo
+								financiero a tus beneficiarios. Por ejemplo, si tienes hijos
+								pequeños o una hipoteca, es posible que desees un plazo más
+								largo que si tienes hijos adultos o no tienes deudas. El seguro
+								de vida a término ofrece cobertura por un período específico,
+								como 10, 20 o 30 años, mientras que el seguro de vida permanente
+								ofrece cobertura durante toda tu vida.
 							</li>
 							<li className="ml-6">
-								¿Cuánto puedo pagar en primas? El monto de las primas lo que
-								paga depende del tipo y la cantidad de cobertura que elija, así
-								como su edad, salud y estilo de vida. Seguro de término de vida
-								típicamente tiene primas más bajas que el seguro de vida
-								permanente, pero tampoco tiene valor en efectivo u otros
-								beneficios. Vida permanente seguro tiene primas más altas que el
-								seguro de vida a término, pero también genera valor en efectivo
-								y paga dividendos. Es posible que desee compare cotizaciones de
-								diferentes aseguradoras y encuentre una póliza que se ajusta a
-								tu presupuesto.
+								¿Cuánto puedo permitirme pagar en primas? La cantidad de primas
+								que pagas depende del tipo y la cantidad de cobertura que
+								elijas, así como de tu edad, salud y estilo de vida. El seguro
+								de vida a término suele tener primas más bajas que el seguro de
+								vida permanente, pero tampoco tiene valor en efectivo ni otros
+								beneficios. El seguro de vida permanente tiene primas más altas
+								que el seguro de vida a término, pero también acumula valor en
+								efectivo y paga dividendos. Puede que desees comparar
+								cotizaciones de diferentes aseguradoras y encontrar una póliza
+								que se ajuste a tu presupuesto.
 							</li>
 							<li className="ml-6">
 								¿Quiero acumular valor en efectivo o simplemente tener un
 								beneficio por fallecimiento? El componente de valor en efectivo
-								del seguro de vida permanente puede ser un herramienta de ahorro
-								o inversión que puede ayudarlo a lograr varios objetivos
-								financieros, tales como ingresos de jubilación, gastos de
-								educación, o emergencias. Sin embargo, también viene con costos
-								más altos y riesgos que el seguro de vida a término. Si solo
-								desea proporcionar una beneficio por muerte para sus
-								beneficiarios y no necesita ningún beneficios adicionales, el
+								del seguro de vida permanente puede ser una herramienta útil de
+								ahorro o inversión que te ayude a alcanzar diversas metas
+								financieras, como ingresos para la jubilación, gastos de
+								educación o emergencias. Sin embargo, también conlleva costos y
+								riesgos más altos que el seguro de vida a término. Si solo
+								deseas proporcionar un beneficio por fallecimiento a tus
+								beneficiarios y no necesitas ningún beneficio adicional, el
 								seguro de vida a término puede ser una mejor opción para ti.
 							</li>
 							<li className="ml-6">
-								¿Quiero participar en el mercado o tener una tarifa garantizada?
-								de regreso? Algunos tipos de seguro de vida permanente le
-								permiten invertir su valor en efectivo en varias subcuentas que
-								son similares a fondos mutuos, como seguros de vida variable o
-								indexados seguro de vida universal. Este tipo de pólizas ofrecen
-								la potencial de mayores rendimientos pero también mayores
-								riesgos que otros tipos de seguros de vida permanentes. Puede
-								perder dinero si el las subcuentas funcionan mal. Si prefieres
-								un estilo más conservador enfoque, es posible que desee elegir
-								un tipo de vida permanente seguro que ofrece una tasa de
-								rendimiento garantizada, como seguro de vida o seguro de vida
-								universal.
+								¿Quiero participar en el mercado o tener una tasa de rendimiento
+								garantizada? Algunos tipos de seguro de vida permanente te
+								permiten invertir el valor en efectivo en diversas subcuentas
+								similares a fondos mutuos, como el seguro de vida variable o el
+								seguro de vida universal indexado. Estos tipos de pólizas
+								ofrecen el potencial de mayores rendimientos, pero también
+								mayores riesgos que otros tipos de seguro de vida permanente.
+								Puedes perder dinero si las subcuentas tienen un mal desempeño.
+								Si prefieres un enfoque más conservador, es posible que desees
+								elegir un tipo de seguro de vida permanente que ofrezca una tasa
+								de rendimiento garantizada, como el seguro de vida entera o el
+								seguro de vida universal.
 							</li>
 							<li className="ml-6">
-								¿Quiero tener flexibilidad o estabilidad en mi póliza? Alguno
-								tipos de seguros de vida permanentes le permiten ajustar su la
-								prima y el monto del beneficio por muerte dentro de ciertos
-								límites, como seguro de vida universal o seguro de vida
+								¿Quiero tener flexibilidad o estabilidad en mi póliza? Algunos
+								tipos de seguro de vida permanente te permiten ajustar tu prima
+								y la cantidad del beneficio por fallecimiento dentro de ciertos
+								límites, como el seguro de vida universal o el seguro de vida
 								universal indexado. Estos tipos de pólizas ofrecen más
 								flexibilidad que otros tipos de seguro de vida permanente, pero
-								también requieren más activo gestión y seguimiento. Si prefiere
-								un lugar más estable y política predecible, es posible que desee
-								elegir un tipo de permanente seguro de vida que tiene una prima
-								fija y beneficio por muerte cantidad, como un seguro de vida
-								entera o un seguro de vida variable.
+								también requieren una gestión y supervisión más activas. Si
+								prefieres una póliza más estable y predecible, es posible que
+								desees elegir un tipo de seguro de vida permanente con prima
+								fija y cantidad del beneficio por fallecimiento fija, como el
+								seguro de vida entera o el seguro de vida variable.
 							</li>
 						</ul>
 					</TabsContent>
