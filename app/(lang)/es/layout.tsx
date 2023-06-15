@@ -46,6 +46,8 @@ export const metadata: Metadata = {
 		"Asistencia para Funerales en Miami",
 		"Asistencia para Funerales en Broward",
 		"Asistencia para Funerales en West Palm",
+		"LEA Insurance",
+		"LEAInsurance"
 	],
 	authors: [
 		{
@@ -91,7 +93,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="es">
+		<html lang="es" suppressHydrationWarning>
 			<body className={inter.className}>
 				<QueryProvider>
 					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>

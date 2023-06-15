@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Partners from "./home-partners";
 interface IWhyCard {
 	alt: string;
 	src: string;
@@ -105,7 +104,7 @@ const WhySection = () => {
 				ImageSrc={"/why3image.jpg"}
 				ImageAlt={"Patient consulting a doctor"}
 			/>
-			<Partners />
+			
 		</section>
 	);
 };

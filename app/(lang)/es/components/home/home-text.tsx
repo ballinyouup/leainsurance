@@ -1,9 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
+import Partners from "./home-partners";
 const TextSection = () => {
 	return (
 		<section className="w-full">
-			<div className="flex items-center justify-center sm:h-72">
+			<div className="flex flex-col items-center justify-center sm:h-fit">
 				<motion.div
 					initial={{
 						opacity: 0,
@@ -30,6 +31,7 @@ const TextSection = () => {
 						encontrar el plan que bien por ti.
 					</span>
 				</motion.div>
+				<Partners />
 			</div>
 		</section>
 	);
