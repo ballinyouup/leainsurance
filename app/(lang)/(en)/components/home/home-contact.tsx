@@ -5,63 +5,116 @@ import { z } from "zod";
 import LoadingSpinner from "../ui/spinner";
 import Image from "next/image";
 import { Button } from "$/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "$/tabs";
 const firstName = z.string().min(2).max(32);
 const lastName = z.string().min(2).max(32);
 const email = z.string().email("Invalid Email").min(4).max(48);
 const phoneNumber = z.string().min(14).max(14);
+const zipCode = z.string().min(5).max(5);
 
-export const formSchema = z.object({
+export const clientFormSchema = z.object({
+	firstName: firstName,
+	lastName: lastName,
+	email: email,
+	phoneNumber: phoneNumber,
+	zipCode: zipCode,
+});
+
+export const agentFormSchema = z.object({
 	firstName: firstName,
 	lastName: lastName,
 	email: email,
 	phoneNumber: phoneNumber,
 });
 
-export type Form = z.infer<typeof formSchema>;
+export type clientForm = z.infer<typeof clientFormSchema>;
+export type agentForm = z.infer<typeof agentFormSchema>;
 
 const Contact = () => {
 	const [submitLoading, setSubmitLoading] = useState(false);
-	const [formData, setFormData] = useState<Form>({
+	const [agentFormData, setAgentFormData] = useState<agentForm>({
 		firstName: "",
 		lastName: "",
 		email: "",
 		phoneNumber: "",
 	});
+	const [clientFormData, setClientFormData] = useState<clientForm>({
+		firstName: "",
+		lastName: "",
+		email: "",
+		phoneNumber: "",
+		zipCode: "",
+	});
 
 	const handleSubmit = async (type: "client" | "agent") => {
-		try {
-			if (formSchema.parse(formData)) {
-				setSubmitLoading(true);
-				const response = await fetch(
-					type === "agent" ? "/api/agents" : "/api/submit",
-					{
-						body: JSON.stringify(formData),
-						method: "POST",
-						headers: {
-							"Content-Type": "application/json",
-						},
+		if(type === "agent"){
+			try {
+				if (agentFormSchema.parse(agentFormData)) {
+					setSubmitLoading(true);
+					const response = await fetch(
+						"/api/agents" ,
+						{
+							body: JSON.stringify(agentFormData),
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+							},
+						}
+					);
+					if (response.status === 200) {
+						toast.success("Successfully submitted form!");
+						setSubmitLoading(false);
+						setAgentFormData({
+							firstName: "",
+							lastName: "",
+							email: "",
+							phoneNumber: "",
+						});
 					}
-				);
-				if (response.status === 200) {
-					toast.success("Successfully submitted form!");
-					setSubmitLoading(false);
-					setFormData({
-						firstName: "",
-						lastName: "",
-						email: "",
-						phoneNumber: "",
-					});
+				} else {
+					toast.error("Error Submitting Form.");
 				}
-			} else {
-				toast.error("Error Submitting Form.");
+			} catch (error) {
+				if (error) {
+					setSubmitLoading(false);
+					toast.error("Error submitting form");
+				}
 			}
-		} catch (error) {
-			if (error) {
-				setSubmitLoading(false);
-				toast.error("Error submitting form");
+		} else {
+			try {
+				if (clientFormSchema.parse(clientFormData)) {
+					setSubmitLoading(true);
+					const response = await fetch(
+						"/api/submit" ,
+						{
+							body: JSON.stringify(clientFormData),
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+							},
+						}
+					);
+					if (response.status === 200) {
+						toast.success("Successfully submitted form!");
+						setSubmitLoading(false);
+						setClientFormData({
+							firstName: "",
+							lastName: "",
+							email: "",
+							phoneNumber: "",
+							zipCode: ""
+						});
+					}
+				} else {
+					toast.error("Error Submitting Form.");
+				}
+			} catch (error) {
+				if (error) {
+					setSubmitLoading(false);
+					toast.error("Error submitting form");
+				}
 			}
 		}
+		
 	};
 	return (
 		<div className="bg-[#041e1c]">
@@ -79,7 +132,7 @@ const Contact = () => {
 						<div className="flex flex-col gap-2">
 							<div className="flex w-full max-w-sm flex-col gap-4">
 								<span className="text-4xl font-bold uppercase sm:text-5xl">
-									Contact Us
+									Questions?
 								</span>
 								<span className="text-xl">
 									Fill out this form and our team will get back to you within 24
@@ -100,14 +153,14 @@ const Contact = () => {
 											type="text"
 											placeholder="First name..."
 											className={
-												formData.firstName !== "" &&
-												!firstName.safeParse(formData.firstName).success
+												clientFormData.firstName !== "" &&
+												!firstName.safeParse(clientFormData.firstName).success
 													? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 													: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 											}
-											value={formData.firstName}
+											value={clientFormData.firstName}
 											onChange={(e) => {
-												setFormData((prevFormData) => ({
+												setClientFormData((prevFormData) => ({
 													...prevFormData,
 													firstName: e.target.value,
 												}));
@@ -121,14 +174,14 @@ const Contact = () => {
 											type="text"
 											placeholder="Last Name..."
 											className={
-												formData.lastName !== "" &&
-												!lastName.safeParse(formData.lastName).success
+												clientFormData.lastName !== "" &&
+												!lastName.safeParse(clientFormData.lastName).success
 													? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 													: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 											}
-											value={formData.lastName}
+											value={clientFormData.lastName}
 											onChange={(e) => {
-												setFormData((prevFormData) => ({
+												setClientFormData((prevFormData) => ({
 													...prevFormData,
 													lastName: e.target.value,
 												}));
@@ -142,14 +195,14 @@ const Contact = () => {
 									type="email"
 									placeholder="Enter Email..."
 									className={
-										formData.email !== "" &&
-										!email.safeParse(formData.email).success
+										clientFormData.email !== "" &&
+										!email.safeParse(clientFormData.email).success
 											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 									}
-									value={formData.email}
+									value={clientFormData.email}
 									onChange={(e) => {
-										setFormData((prevFormData) => ({
+										setClientFormData((prevFormData) => ({
 											...prevFormData,
 											email: e.target.value,
 										}));
@@ -161,18 +214,18 @@ const Contact = () => {
 									type="tel"
 									placeholder="000-000-0000"
 									className={
-										formData.phoneNumber !== "" &&
-										!phoneNumber.safeParse(formData.phoneNumber).success
+										clientFormData.phoneNumber !== "" &&
+										!phoneNumber.safeParse(clientFormData.phoneNumber).success
 											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 									}
-									value={formData.phoneNumber}
+									value={clientFormData.phoneNumber}
 									onChange={(e) => {
 										const rawValue = e.target.value.replace(/\D/g, "");
 										const formattedValue = rawValue
 											.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")
 											.replace(/(\d{3})(\d{3})(\d{0,4})/, "($1) $2-$3");
-										setFormData((prevFormData) => ({
+										setClientFormData((prevFormData) => ({
 											...prevFormData,
 											phoneNumber: formattedValue,
 										}));
@@ -181,12 +234,12 @@ const Contact = () => {
 								/>
 								<Button
 									type="submit"
-									disabled={!formSchema.safeParse(formData).success}
+									disabled={!clientFormSchema.safeParse(clientFormData).success}
 									className="mt-2 text-xl"
 								>
 									{submitLoading ? (
 										<LoadingSpinner className="mr-2 h-4 w-4 animate-spin fill-black text-white dark:text-primary" />
-									) : formSchema.safeParse(formData).success ? (
+									) : clientFormSchema.safeParse(clientFormData).success ? (
 										"Submit"
 									) : (
 										"Enter Your Info"
@@ -262,14 +315,14 @@ const Contact = () => {
 											type="text"
 											placeholder="First name..."
 											className={
-												formData.firstName !== "" &&
-												!firstName.safeParse(formData.firstName).success
+												agentFormData.firstName !== "" &&
+												!firstName.safeParse(agentFormData.firstName).success
 													? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 													: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 											}
-											value={formData.firstName}
+											value={agentFormData.firstName}
 											onChange={(e) => {
-												setFormData((prevFormData) => ({
+												setAgentFormData((prevFormData) => ({
 													...prevFormData,
 													firstName: e.target.value,
 												}));
@@ -283,14 +336,14 @@ const Contact = () => {
 											type="text"
 											placeholder="Last Name..."
 											className={
-												formData.lastName !== "" &&
-												!lastName.safeParse(formData.lastName).success
+												agentFormData.lastName !== "" &&
+												!lastName.safeParse(agentFormData.lastName).success
 													? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 													: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 											}
-											value={formData.lastName}
+											value={agentFormData.lastName}
 											onChange={(e) => {
-												setFormData((prevFormData) => ({
+												setAgentFormData((prevFormData) => ({
 													...prevFormData,
 													lastName: e.target.value,
 												}));
@@ -304,14 +357,14 @@ const Contact = () => {
 									type="email"
 									placeholder="Enter Email..."
 									className={
-										formData.email !== "" &&
-										!email.safeParse(formData.email).success
+										agentFormData.email !== "" &&
+										!email.safeParse(agentFormData.email).success
 											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 									}
-									value={formData.email}
+									value={agentFormData.email}
 									onChange={(e) => {
-										setFormData((prevFormData) => ({
+										setAgentFormData((prevFormData) => ({
 											...prevFormData,
 											email: e.target.value,
 										}));
@@ -323,18 +376,18 @@ const Contact = () => {
 									type="tel"
 									placeholder="000-000-0000"
 									className={
-										formData.phoneNumber !== "" &&
-										!phoneNumber.safeParse(formData.phoneNumber).success
+										agentFormData.phoneNumber !== "" &&
+										!phoneNumber.safeParse(agentFormData.phoneNumber).success
 											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 									}
-									value={formData.phoneNumber}
+									value={agentFormData.phoneNumber}
 									onChange={(e) => {
 										const rawValue = e.target.value.replace(/\D/g, "");
 										const formattedValue = rawValue
 											.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")
 											.replace(/(\d{3})(\d{3})(\d{0,4})/, "($1) $2-$3");
-										setFormData((prevFormData) => ({
+										setAgentFormData((prevFormData) => ({
 											...prevFormData,
 											phoneNumber: formattedValue,
 										}));
@@ -343,12 +396,12 @@ const Contact = () => {
 								/>
 								<Button
 									type="submit"
-									disabled={!formSchema.safeParse(formData).success}
+									disabled={!agentFormSchema.safeParse(agentFormData).success}
 									className="mt-2 text-xl"
 								>
 									{submitLoading ? (
 										<LoadingSpinner className="mr-2 h-4 w-4 animate-spin fill-black text-white dark:text-primary" />
-									) : formSchema.safeParse(formData).success ? (
+									) : agentFormSchema.safeParse(agentFormData).success ? (
 										"Submit"
 									) : (
 										"Enter Your Info"

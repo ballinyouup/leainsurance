@@ -6,12 +6,14 @@ const firstName = z.string().min(2).max(32);
 const lastName = z.string().min(2).max(32);
 const email = z.string().email("Invalid Email").min(4).max(48);
 const phoneNumber = z.string().min(14).max(14);
+const zipCode = z.string().min(5).max(5);
 
 const formSchema = z.object({
 	firstName: firstName,
 	lastName: lastName,
 	email: email,
 	phoneNumber: phoneNumber,
+	zipCode: zipCode,
 });
 export async function POST(request: NextRequest) {
 	try {
@@ -32,6 +34,7 @@ export async function POST(request: NextRequest) {
 								"Last Name": parsedBody.lastName,
 								"Phone Number": parsedBody.phoneNumber,
 								Email: parsedBody.email,
+								"Zip Code": parsedBody.zipCode ?? "",
 							},
 						},
 					],
