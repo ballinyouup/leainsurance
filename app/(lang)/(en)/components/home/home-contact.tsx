@@ -141,10 +141,10 @@ const Contact = () => {
 							>
 								<div className="flex flex-col gap-2 sm:gap-4">
 									<div className="flex flex-col">
-										<label>First Name:</label>
+										<label>First Name*:</label>
 										<input
 											type="text"
-											placeholder="First name..."
+											placeholder="type here..."
 											className={
 												clientFormData.firstName !== "" &&
 												!firstName.safeParse(clientFormData.firstName).success
@@ -162,10 +162,10 @@ const Contact = () => {
 										/>
 									</div>
 									<div className="flex flex-col">
-										<label>Last Name:</label>
+										<label>Last Name*:</label>
 										<input
 											type="text"
-											placeholder="Last Name..."
+											placeholder="type here..."
 											className={
 												clientFormData.lastName !== "" &&
 												!lastName.safeParse(clientFormData.lastName).success
@@ -183,10 +183,10 @@ const Contact = () => {
 										/>
 									</div>
 								</div>
-								<label>Email:</label>
+								<label>Email*:</label>
 								<input
 									type="email"
-									placeholder="Enter Email..."
+									placeholder="type here..."
 									className={
 										clientFormData.email !== "" &&
 										!email.safeParse(clientFormData.email).success
@@ -202,7 +202,7 @@ const Contact = () => {
 									}}
 									required
 								/>
-								<label>Phone Number:</label>
+								<label>Phone Number*:</label>
 								<input
 									type="tel"
 									placeholder="000-000-0000"
@@ -226,7 +226,7 @@ const Contact = () => {
 									required
 								/>
 								<div className="flex flex-col">
-									<label>Zip Code:</label>
+									<label>Zip Code*:</label>
 									<input
 										type="text"
 										placeholder="00000"
@@ -246,6 +246,9 @@ const Contact = () => {
 										required
 									/>
 								</div>
+								<span className="text-base font-semibold italic">
+									* - required
+								</span>
 								<Button
 									type="submit"
 									disabled={!clientFormSchema.safeParse(clientFormData).success}
@@ -263,6 +266,7 @@ const Contact = () => {
 						</div>
 					</div>
 				</div>
+
 				<svg
 					id="visual"
 					viewBox="0 0 960 540"
@@ -293,6 +297,9 @@ const Contact = () => {
 					></path>
 				</svg>
 			</div>
+			<span className="relative z-50 flex h-full w-full items-center justify-center gap-3 p-16 text-3xl font-bold text-white before:w-1/4 before:border-2 before:border-white after:w-1/4 after:border-2 after:border-white sm:h-full lg:p-0">
+				OR
+			</span>
 			{/** ---------------------- SECOND FORM ----------------------- */}
 			<div className="relative mt-8 flex h-full w-full items-center justify-center gap-20 px-5 lg:mt-0 lg:flex-row lg:py-20">
 				<div className="z-10 flex h-full w-fit flex-row-reverse items-center justify-start rounded-xl border-opacity-25 bg-background md:border md:border-primary-foreground lg:w-fit lg:gap-12 lg:px-8 lg:py-10">
@@ -324,10 +331,10 @@ const Contact = () => {
 							>
 								<div className="flex flex-col gap-2 sm:gap-4">
 									<div className="flex flex-col">
-										<label>First Name:</label>
+										<label>First Name*:</label>
 										<input
 											type="text"
-											placeholder="First name..."
+											placeholder="type here..."
 											className={
 												agentFormData.firstName !== "" &&
 												!firstName.safeParse(agentFormData.firstName).success
@@ -345,10 +352,10 @@ const Contact = () => {
 										/>
 									</div>
 									<div className="flex flex-col">
-										<label>Last Name:</label>
+										<label>Last Name*:</label>
 										<input
 											type="text"
-											placeholder="Last Name..."
+											placeholder="type here..."
 											className={
 												agentFormData.lastName !== "" &&
 												!lastName.safeParse(agentFormData.lastName).success
@@ -366,10 +373,10 @@ const Contact = () => {
 										/>
 									</div>
 								</div>
-								<label>Email:</label>
+								<label>Email*:</label>
 								<input
 									type="email"
-									placeholder="Enter Email..."
+									placeholder="type here..."
 									className={
 										agentFormData.email !== "" &&
 										!email.safeParse(agentFormData.email).success
@@ -385,7 +392,7 @@ const Contact = () => {
 									}}
 									required
 								/>
-								<label>Phone Number:</label>
+								<label>Phone Number*:</label>
 								<input
 									type="tel"
 									placeholder="000-000-0000"
@@ -408,6 +415,9 @@ const Contact = () => {
 									}}
 									required
 								/>
+								<span className="text-base font-semibold italic">
+									* - required
+								</span>
 								<Button
 									type="submit"
 									disabled={!agentFormSchema.safeParse(agentFormData).success}
