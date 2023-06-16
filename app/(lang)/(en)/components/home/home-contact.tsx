@@ -46,20 +46,17 @@ const Contact = () => {
 	});
 
 	const handleSubmit = async (type: "client" | "agent") => {
-		if(type === "agent"){
+		if (type === "agent") {
 			try {
 				if (agentFormSchema.parse(agentFormData)) {
 					setSubmitLoading(true);
-					const response = await fetch(
-						"/api/agents" ,
-						{
-							body: JSON.stringify(agentFormData),
-							method: "POST",
-							headers: {
-								"Content-Type": "application/json",
-							},
-						}
-					);
+					const response = await fetch("/api/agents", {
+						body: JSON.stringify(agentFormData),
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+						},
+					});
 					if (response.status === 200) {
 						toast.success("Successfully submitted form!");
 						setSubmitLoading(false);
@@ -83,16 +80,13 @@ const Contact = () => {
 			try {
 				if (clientFormSchema.parse(clientFormData)) {
 					setSubmitLoading(true);
-					const response = await fetch(
-						"/api/submit" ,
-						{
-							body: JSON.stringify(clientFormData),
-							method: "POST",
-							headers: {
-								"Content-Type": "application/json",
-							},
-						}
-					);
+					const response = await fetch("/api/submit", {
+						body: JSON.stringify(clientFormData),
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+						},
+					});
 					if (response.status === 200) {
 						toast.success("Successfully submitted form!");
 						setSubmitLoading(false);
@@ -101,7 +95,7 @@ const Contact = () => {
 							lastName: "",
 							email: "",
 							phoneNumber: "",
-							zipCode: ""
+							zipCode: "",
 						});
 					}
 				} else {
@@ -114,7 +108,6 @@ const Contact = () => {
 				}
 			}
 		}
-		
 	};
 	return (
 		<div className="bg-[#041e1c]">
@@ -232,6 +225,27 @@ const Contact = () => {
 									}}
 									required
 								/>
+								<div className="flex flex-col">
+									<label>Zip Code:</label>
+									<input
+										type="text"
+										placeholder="00000"
+										className={
+											clientFormData.zipCode !== "" &&
+											!lastName.safeParse(clientFormData.zipCode).success
+												? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+												: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
+										}
+										value={clientFormData.zipCode}
+										onChange={(e) => {
+											setClientFormData((prevFormData) => ({
+												...prevFormData,
+												zipCode: e.target.value,
+											}));
+										}}
+										required
+									/>
+								</div>
 								<Button
 									type="submit"
 									disabled={!clientFormSchema.safeParse(clientFormData).success}
@@ -283,8 +297,8 @@ const Contact = () => {
 			<div className="relative mt-8 flex h-full w-full items-center justify-center gap-20 px-5 lg:mt-0 lg:flex-row lg:py-20">
 				<div className="z-10 flex h-full w-fit flex-row-reverse items-center justify-start rounded-xl border-opacity-25 bg-background md:border md:border-primary-foreground lg:w-fit lg:gap-12 lg:px-8 lg:py-10">
 					<Image
-						src="/family.png"
-						alt="Family Image"
+						src="/team.png"
+						alt="Team Image"
 						width={500}
 						height={500}
 						className="z-10 hidden lg:block"
@@ -294,7 +308,7 @@ const Contact = () => {
 						<div className="flex flex-col gap-2">
 							<div className="flex w-full max-w-sm flex-col gap-4">
 								<span className="text-4xl font-bold uppercase sm:text-5xl">
-									Work with Us
+									Join Our Team!
 								</span>
 								<span className="text-xl">
 									Fill out this form and our team will get back to you within 24
