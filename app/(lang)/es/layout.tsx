@@ -52,13 +52,13 @@ export const metadata: Metadata = {
 	authors: [
 		{
 			name: "LEA Insurance",
-			url: "https://www.leainsurance.com",
+			url: "https://www.leainsurance.com/es",
 		},
 	],
 	creator: "LEA Insurance",
 	openGraph: {
 		type: "website",
-		locale: "en_US",
+		locale: "es_US",
 		url: siteConfig.url,
 		title: siteConfig.name,
 		description: siteConfig.description,
