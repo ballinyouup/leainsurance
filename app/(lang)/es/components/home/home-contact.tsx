@@ -26,7 +26,6 @@ export const agentFormSchema = z.object({
 	phoneNumber: phoneNumber,
 });
 
-
 export type clientForm = z.infer<typeof clientFormSchema>;
 export type agentForm = z.infer<typeof agentFormSchema>;
 
@@ -226,6 +225,30 @@ const Contact = () => {
 									}}
 									required
 								/>
+								<div className="flex flex-col">
+									<label>Zip Code*:</label>
+									<input
+										type="text"
+										placeholder="00000"
+										className={
+											clientFormData.zipCode !== "" &&
+											!lastName.safeParse(clientFormData.zipCode).success
+												? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
+												: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
+										}
+										value={clientFormData.zipCode}
+										onChange={(e) => {
+											setClientFormData((prevFormData) => ({
+												...prevFormData,
+												zipCode: e.target.value,
+											}));
+										}}
+										required
+									/>
+								</div>
+								<span className="text-base font-semibold italic">
+									* - required
+								</span>
 								<Button
 									type="submit"
 									disabled={!clientFormSchema.safeParse(clientFormData).success}
