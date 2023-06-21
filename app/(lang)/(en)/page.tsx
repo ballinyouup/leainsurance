@@ -5,6 +5,9 @@ import WhySection from "./components/home/home-why";
 import { Separator } from "$/separator";
 import Cards from "./components/home/home-card";
 import Waves from "./components/home/home-waves";
+import Events from "./components/home/home-events";
+import { Suspense } from "react";
+import { EventsLoading } from "./components/home/home-events-loading";
 
 export default function Page() {
 	return (
@@ -16,6 +19,9 @@ export default function Page() {
 					<Separator className="hidden max-w-xl lg:block" />
 				</div>
 				<Cards />
+				<Suspense fallback={<EventsLoading />}>
+					<Events />
+				</Suspense>
 				<WhySection />
 				<Separator />
 				<Contact />
