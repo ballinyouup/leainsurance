@@ -29,6 +29,6 @@
     "noImplicitThis": true,
     "alwaysStrict": true,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(lang)/(en)/(routes)/blog/[slug]"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(lang)/(en)/(routes)/blog/[slug]", "app/(lang)/(en)/(routes)/blog"],
   "exclude": ["node_modules"]
 }

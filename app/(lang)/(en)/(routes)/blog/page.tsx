@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { createClient } from "next-sanity";
-import { PortableText, toPlainText } from "@portabletext/react";
+import { toPlainText } from "@portabletext/react";
 import Link from "next/link";
 const client = createClient({
 	projectId: "be20oshw",
@@ -13,6 +13,7 @@ const components = {
 	block: {
 		normal: ({ children }: { children?: React.ReactNode }) => <p>{children}</p>,
 	},
+	
 };
 
 interface Post {
