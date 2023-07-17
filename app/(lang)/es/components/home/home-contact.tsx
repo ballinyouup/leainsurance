@@ -251,6 +251,28 @@ const Contact = () => {
 										required
 									/>
 								</div>
+								<Select
+									required
+									onValueChange={(selectedValue) => {
+										setClientFormData((prevFormData) => ({
+											...prevFormData,
+											insurance: selectedValue,
+										}));
+									}}
+								>
+									<SelectTrigger className="w-full bg-accent">
+										<SelectValue placeholder="Select Insurance" />
+									</SelectTrigger>
+									<SelectContent>
+										<SelectGroup>
+											<SelectItem value="Medicare">Medicare</SelectItem>
+											<SelectItem value="ACA">ACA</SelectItem>
+											<SelectItem value="Life Insurance">
+												Life Insurance
+											</SelectItem>
+										</SelectGroup>
+									</SelectContent>
+								</Select>
 								<span className="text-base font-semibold italic">
 									* - requerido
 								</span>
@@ -416,28 +438,6 @@ const Contact = () => {
 									}}
 									required
 								/>
-								<Select
-									required
-									onValueChange={(selectedValue) => {
-										setClientFormData((prevFormData) => ({
-											...prevFormData,
-											insurance: selectedValue,
-										}));
-									}}
-								>
-									<SelectTrigger className="w-full bg-accent">
-										<SelectValue placeholder="Select Insurance" />
-									</SelectTrigger>
-									<SelectContent>
-										<SelectGroup>
-											<SelectItem value="Medicare">Medicare</SelectItem>
-											<SelectItem value="ACA">ACA</SelectItem>
-											<SelectItem value="Life Insurance">
-												Life Insurance
-											</SelectItem>
-										</SelectGroup>
-									</SelectContent>
-								</Select>
 								<Button
 									type="submit"
 									disabled={!agentFormSchema.safeParse(agentFormData).success}
