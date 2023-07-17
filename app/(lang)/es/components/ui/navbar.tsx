@@ -13,27 +13,28 @@ const Navbar = () => {
 				<div className="flex w-full flex-col items-center">
 					<div className="flex w-full flex-row items-center justify-end bg-teal-950 sm:h-6">
 						<div className="flex w-full items-center justify-center gap-3 p-0 sm:h-6 sm:justify-end sm:gap-4 sm:pr-3 flex-wrap">
+							<span className="whitespace-nowrap text-sm font-semibold text-white">
+								Horario: 9am - 5pm
+							</span>
 							<div className="flex items-center gap-1">
 								<Link
 									href="/"
-									className="flex items-center gap-1 text-sm font-semibold text-white hover:underline"
+									className="flex items-center gap-1 text-sm font-semibold text-white underline"
 								>
 									<Languages className="h-[18px] w-[18px] text-white" />
 									English
 								</Link>
 							</div>
-							<span className="whitespace-nowrap text-sm font-semibold text-white">
-								Horario: 9am - 5pm
-							</span>
-							<Link href="+18886954221" className="flex items-center gap-1 underline">
-								<PhoneCall className="h-4 w-4 text-white" />
-								<span className="whitespace-nowrap text-sm font-semibold text-white">
+
+							<Link href="+18886954221" className="flex items-center gap-1 underline text-white">
+								<PhoneCall className="h-4 w-4" />
+								<span className="whitespace-nowrap text-sm font-semibold">
 									+1 (888)-695-4221
 								</span>
 							</Link>
-							<Link href="tel:+18888081540" className="flex items-center gap-1 underline">
-								<PhoneCall className="h-4 w-4 text-white" />
-								<span className="whitespace-nowrap text-sm font-semibold text-white">
+							<Link href="tel:+18888081540" className="flex items-center gap-1 underline text-white">
+								<PhoneCall className="h-4 w-4" />
+								<span className="whitespace-nowrap text-sm font-semibold">
 									CREOLE: +1 (888)-808-1540
 								</span>
 							</Link>
@@ -45,7 +46,7 @@ const Navbar = () => {
 					<Logo />
 					<div className="hidden w-fit items-center gap-2 sm:flex">
 						<Button variant={"ghost"} className="p-1.5">
-							<Link href="/es/" className="flex items-center">
+							<Link href="/es/" className="flex items-center text-white">
 								Home
 							</Link>
 						</Button>

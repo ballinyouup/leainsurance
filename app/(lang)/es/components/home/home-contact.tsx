@@ -6,6 +6,7 @@ import LoadingSpinner from "../ui/spinner";
 import Image from "next/image";
 import { Button } from "$/button";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/app/components/shadcn-ui/select";
+import { SelectLabel } from "@radix-ui/react-select";
 const firstName = z.string().min(2).max(32);
 const lastName = z.string().min(2).max(32);
 const email = z.string().email("Invalid Email").min(4).max(48);
@@ -260,7 +261,7 @@ const Contact = () => {
 										}));
 									}}
 								>
-									<SelectTrigger className="w-full bg-accent">
+									<SelectTrigger className="w-full bg-accent text-white">
 										<SelectValue placeholder="Select Insurance" />
 									</SelectTrigger>
 									<SelectContent>

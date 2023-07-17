@@ -268,7 +268,7 @@ const Contact = () => {
 										}));
 									}}
 								>
-									<SelectTrigger className="w-full bg-accent">
+									<SelectTrigger className="w-full bg-accent text-white">
 										<SelectValue placeholder="Select Insurance" />
 									</SelectTrigger>
 									<SelectContent>
