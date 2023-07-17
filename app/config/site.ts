@@ -7,7 +7,7 @@ export const siteConfig = {
 	links: {
 		google: "https://g.page/leainsurance",
 		facebook: "https://www.facebook.com/profile.php?id=100091460381816",
-		instagram: "https://www.instagram.com/leainsurance",
+		instagram: "https://www.instagram.com/lea_insurancecorp",
 	},
 };
 
