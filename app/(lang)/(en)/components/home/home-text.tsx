@@ -17,7 +17,7 @@ const TextSection = () => {
 						duration: 0.75,
 						ease: "easeIn",
 					}}
-					className="z-10 flex h-64 w-full max-w-2xl flex-col items-start justify-center gap-4 p-5 sm:flex-row sm:items-center sm:p-2"
+					className="z-10 flex h-full sm:h-64 w-full max-w-2xl flex-col items-start justify-center gap-4 p-5 sm:flex-row sm:items-center sm:p-2"
 				>
 					<div className="flex w-fit flex-wrap gap-2 text-start text-4xl font-bold uppercase text-primary sm:flex-col sm:gap-0 sm:text-end sm:text-5xl">
 						<span>Why</span>
