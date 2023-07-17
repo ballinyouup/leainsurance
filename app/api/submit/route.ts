@@ -7,6 +7,7 @@ const lastName = z.string().min(2).max(32);
 const email = z.string().email("Invalid Email").min(4).max(48);
 const phoneNumber = z.string().min(14).max(14);
 const zipCode = z.string().min(5).max(5);
+const insurance = z.string();
 
 const formSchema = z.object({
 	firstName: firstName,
@@ -14,6 +15,7 @@ const formSchema = z.object({
 	email: email,
 	phoneNumber: phoneNumber,
 	zipCode: zipCode,
+	insurance: insurance
 });
 export async function POST(request: NextRequest) {
 	try {
@@ -35,6 +37,7 @@ export async function POST(request: NextRequest) {
 								"Phone Number": parsedBody.phoneNumber,
 								Email: parsedBody.email,
 								"Zip Code": parsedBody.zipCode ?? "",
+								Insurance: parsedBody.insurance
 							},
 						},
 					],

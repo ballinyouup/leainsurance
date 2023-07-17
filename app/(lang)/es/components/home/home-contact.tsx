@@ -5,11 +5,13 @@ import { z } from "zod";
 import LoadingSpinner from "../ui/spinner";
 import Image from "next/image";
 import { Button } from "$/button";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/app/components/shadcn-ui/select";
 const firstName = z.string().min(2).max(32);
 const lastName = z.string().min(2).max(32);
 const email = z.string().email("Invalid Email").min(4).max(48);
 const phoneNumber = z.string().min(14).max(14);
 const zipCode = z.string().min(5).max(5);
+const insurance = z.string().min(1);
 
 export const clientFormSchema = z.object({
 	firstName: firstName,
@@ -17,6 +19,7 @@ export const clientFormSchema = z.object({
 	email: email,
 	phoneNumber: phoneNumber,
 	zipCode: zipCode,
+	insurance: insurance
 });
 
 export const agentFormSchema = z.object({
@@ -43,6 +46,7 @@ const Contact = () => {
 		email: "",
 		phoneNumber: "",
 		zipCode: "",
+		insurance: ""
 	});
 
 	const handleSubmit = async (type: "client" | "agent") => {
@@ -96,6 +100,7 @@ const Contact = () => {
 							email: "",
 							phoneNumber: "",
 							zipCode: "",
+							insurance: ""
 						});
 					}
 				} else {
@@ -147,7 +152,7 @@ const Contact = () => {
 											placeholder="Primer Nombre..."
 											className={
 												clientFormData.firstName !== "" &&
-												!firstName.safeParse(clientFormData.firstName).success
+													!firstName.safeParse(clientFormData.firstName).success
 													? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 													: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 											}
@@ -168,7 +173,7 @@ const Contact = () => {
 											placeholder="Apellido..."
 											className={
 												clientFormData.lastName !== "" &&
-												!lastName.safeParse(clientFormData.lastName).success
+													!lastName.safeParse(clientFormData.lastName).success
 													? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 													: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 											}
@@ -189,7 +194,7 @@ const Contact = () => {
 									placeholder="Correo Electrónico..."
 									className={
 										clientFormData.email !== "" &&
-										!email.safeParse(clientFormData.email).success
+											!email.safeParse(clientFormData.email).success
 											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 									}
@@ -208,7 +213,7 @@ const Contact = () => {
 									placeholder="000-000-0000"
 									className={
 										clientFormData.phoneNumber !== "" &&
-										!phoneNumber.safeParse(clientFormData.phoneNumber).success
+											!phoneNumber.safeParse(clientFormData.phoneNumber).success
 											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 									}
@@ -232,7 +237,7 @@ const Contact = () => {
 										placeholder="00000"
 										className={
 											clientFormData.zipCode !== "" &&
-											!lastName.safeParse(clientFormData.zipCode).success
+												!lastName.safeParse(clientFormData.zipCode).success
 												? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 												: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 										}
@@ -247,7 +252,7 @@ const Contact = () => {
 									/>
 								</div>
 								<span className="text-base font-semibold italic">
-									* - required
+									* - requerido
 								</span>
 								<Button
 									type="submit"
@@ -333,7 +338,7 @@ const Contact = () => {
 											placeholder="Primer Nombre..."
 											className={
 												agentFormData.firstName !== "" &&
-												!firstName.safeParse(agentFormData.firstName).success
+													!firstName.safeParse(agentFormData.firstName).success
 													? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 													: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 											}
@@ -354,7 +359,7 @@ const Contact = () => {
 											placeholder="Apellido..."
 											className={
 												agentFormData.lastName !== "" &&
-												!lastName.safeParse(agentFormData.lastName).success
+													!lastName.safeParse(agentFormData.lastName).success
 													? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 													: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 											}
@@ -375,7 +380,7 @@ const Contact = () => {
 									placeholder="Correo Electrónico..."
 									className={
 										agentFormData.email !== "" &&
-										!email.safeParse(agentFormData.email).success
+											!email.safeParse(agentFormData.email).success
 											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 									}
@@ -394,7 +399,7 @@ const Contact = () => {
 									placeholder="000-000-0000"
 									className={
 										agentFormData.phoneNumber !== "" &&
-										!phoneNumber.safeParse(agentFormData.phoneNumber).success
+											!phoneNumber.safeParse(agentFormData.phoneNumber).success
 											? "h-10 w-full max-w-sm rounded-xl border border-red-600 border-opacity-50 bg-background indent-3"
 											: "h-10 w-full max-w-sm rounded-xl border border-black border-opacity-25 bg-background indent-3"
 									}
@@ -411,6 +416,28 @@ const Contact = () => {
 									}}
 									required
 								/>
+								<Select
+									required
+									onValueChange={(selectedValue) => {
+										setClientFormData((prevFormData) => ({
+											...prevFormData,
+											insurance: selectedValue,
+										}));
+									}}
+								>
+									<SelectTrigger className="w-full bg-accent">
+										<SelectValue placeholder="Select Insurance" />
+									</SelectTrigger>
+									<SelectContent>
+										<SelectGroup>
+											<SelectItem value="Medicare">Medicare</SelectItem>
+											<SelectItem value="ACA">ACA</SelectItem>
+											<SelectItem value="Life Insurance">
+												Life Insurance
+											</SelectItem>
+										</SelectGroup>
+									</SelectContent>
+								</Select>
 								<Button
 									type="submit"
 									disabled={!agentFormSchema.safeParse(agentFormData).success}

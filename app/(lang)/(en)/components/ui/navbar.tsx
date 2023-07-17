@@ -12,7 +12,7 @@ const Navbar = () => {
 				{/** Top Nav Section */}
 				<div className="flex w-full flex-col items-center">
 					<div className="flex w-full flex-row items-center justify-end bg-teal-950 sm:h-6">
-						<div className="flex w-full items-center justify-center gap-3 p-0 sm:h-6 sm:justify-end sm:gap-4 sm:pr-3">
+						<div className="flex w-full items-center justify-center gap-3 p-0 sm:h-6 sm:justify-end sm:gap-4 sm:pr-3 flex-wrap">
 							<div className="flex items-center gap-1">
 								<Link
 									href="/es/"
@@ -25,12 +25,18 @@ const Navbar = () => {
 							<span className="whitespace-nowrap text-sm font-semibold text-white">
 								Hours: 9am - 5pm
 							</span>
-							<div className="flex items-center gap-1">
+							<Link href="+18886954221" className="flex items-center gap-1 underline">
 								<PhoneCall className="h-4 w-4 text-white" />
 								<span className="whitespace-nowrap text-sm font-semibold text-white">
 									+1 (888)-695-4221
 								</span>
-							</div>
+							</Link>
+							<Link href="tel:+18888081540" className="flex items-center gap-1 underline">
+								<PhoneCall className="h-4 w-4 text-white" />
+								<span className="whitespace-nowrap text-sm font-semibold text-white">
+									CREOLE: +1 (888)-808-1540
+								</span>
+							</Link>
 						</div>
 					</div>
 				</div>

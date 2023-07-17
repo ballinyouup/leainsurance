@@ -3,7 +3,7 @@ import { Instagram, Store, Facebook, Mail, Phone } from "lucide-react";
 const Footer = () => {
 	const socialLinks = [
 		{
-			href: "https://www.instagram.com/leainsurance",
+			href: "https://www.instagram.com/lea_insurancecorp",
 			text: "Instagram",
 			icon: <Instagram className="mr-2 h-5 w-5" />,
 		},
@@ -23,7 +23,7 @@ const Footer = () => {
 			icon: <Phone className="mr-2 h-5 w-5" />,
 		},
 		{
-			href: "mailto:lea.info@leainsurance.onmicrosoft.com",
+			href: "mailto:info@leainsurance.com",
 			text: "Correo Electrónico",
 			icon: <Mail className="mr-2 h-5 w-5" />,
 		},

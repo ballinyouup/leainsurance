@@ -72,7 +72,7 @@ const MobileMenu = () => {
 				</Link>
 				<SheetTitle>Contacta con nosotros</SheetTitle>
 				<Link
-					href="https://www.instagram.com/leainsurance"
+					href="https://www.instagram.com/lea_insurancecorp"
 					className="flex items-center"
 				>
 					<Instagram className="mr-2 h-6 w-6" />
@@ -83,14 +83,14 @@ const MobileMenu = () => {
 					<span>Google</span>
 				</Link>
 				<Link
-					href="mailto:lea.info@leainsurance.onmicrosoft.com"
+					href="mailto:info@leainsurance.com"
 					className="flex items-center"
 				>
 					<Mail className="mr-2 h-6 w-6" />
 					<span>Correo Electrónico De Clientes</span>
 				</Link>
 				<Link
-					href="mailto:lea.contracts@leainsurance.onmicrosoft.com"
+					href="mailto:contracts@leainsurance.com"
 					className="flex items-center"
 				>
 					<Mail className="mr-2 h-6 w-6" />
@@ -99,6 +99,10 @@ const MobileMenu = () => {
 				<Link href="tel:+18886954221" className="flex items-center">
 					<Phone className="mr-2 h-6 w-6" />
 					<span>Llámenos hoy</span>
+				</Link>
+				<Link href="tel:+18888081540" className="flex items-center">
+					<Phone className="mr-2 h-6 w-6" />
+					<span>CREOLE</span>
 				</Link>
 				<div className="flex w-full flex-col gap-2">
 					<ThemeToggle variant="default" />
