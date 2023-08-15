@@ -1,8 +1,8 @@
-###Overview
+### Overview
 
 LEA Insurance is a local insurance agency, where users can submit a contact form for inquiring leads, and potential agents. They can also learn about Medicare, Obamacare, Funeral Assistance, and Final Expenses. Created the content for both English and Spanish.
 
-##Tech Stack
+## Tech Stack
 Next.js: A React framework for building server-rendered and statically exported applications.
 Typescript: A statically typed superset of JavaScript.
 React: A JavaScript library for building user interfaces.
@@ -12,8 +12,6 @@ Shadcn-ui - Headless UI library built on Radix UI for accessibility
 Airtable - a excel like document storage platform for user data
 Framer Motion - Client side Animation library for React.js
 Next-Themes - Dark mode provider
-
-[Line Break]
 
 Pages:
 Home
