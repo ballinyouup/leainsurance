@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+###Overview
 
-## Getting Started
+LEA Insurance is a local insurance agency, where users can submit a contact form for inquiring leads, and potential agents. They can also learn about Medicare, Obamacare, Funeral Assistance, and Final Expenses. Created the content for both English and Spanish.
 
-First, run the development server:
+##Tech Stack
+Next.js: A React framework for building server-rendered and statically exported applications.
+Typescript: A statically typed superset of JavaScript.
+React: A JavaScript library for building user interfaces.
+TailwindCSS: A utility-first CSS framework.
+Zod: A TypeScript-first schema validation library.
+Shadcn-ui - Headless UI library built on Radix UI for accessibility
+Airtable - a excel like document storage platform for user data
+Framer Motion - Client side Animation library for React.js
+Next-Themes - Dark mode provider
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+[Line Break]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Pages:
+Home
+![LEA Insurance Home Page](https://www.bryanhuici.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fem0qyevz%2Fproduction%2F7fde3ad343d037aa8c3f5fbbf9ecbc37360e55e2-1863x932.png%3Fw%3D1024%26h%3D512%26min-h%3D512%26min-w%3D1024%26fit%3Dmin%26auto%3Dformat&w=1080&q=75)
+Learn
+![LEA Insurance Learn Page](https://www.bryanhuici.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fem0qyevz%2Fproduction%2Fcd6b52255dd2e03a1924280510269bb3b91da4a7-1861x931.png%3Fw%3D1024%26h%3D512%26min-h%3D512%26min-w%3D1024%26fit%3Dmin%26auto%3Dformat&w=1080&q=75)
