@@ -13,7 +13,8 @@ LEA Insurance is a local insurance agency, where users can submit a contact form
 - Framer Motion - Client side Animation library for React.js
 - Next-Themes - Dark mode provider
 
-Pages:
+### Pages:
+
 Home
 ![LEA Insurance Home Page](https://www.bryanhuici.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fem0qyevz%2Fproduction%2F7fde3ad343d037aa8c3f5fbbf9ecbc37360e55e2-1863x932.png%3Fw%3D1024%26h%3D512%26min-h%3D512%26min-w%3D1024%26fit%3Dmin%26auto%3Dformat&w=1080&q=75)
 Learn
