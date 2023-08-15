@@ -1,4 +1,4 @@
-### Overview
+# Overview
 
 LEA Insurance is a local insurance agency, where users can submit a contact form for inquiring leads, and potential agents. They can also learn about Medicare, Obamacare, Funeral Assistance, and Final Expenses. Created the content for both English and Spanish.
 
